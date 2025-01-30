@@ -135,10 +135,31 @@
               width: 400%;
               
               .contIframe{
-                height: 600px;
+                height: 500px;
               }
             }
           }
+        }
+        
+        button {
+          position: absolute;
+          top: 50%;
+          background-color: transparent;
+          border: none;
+          padding: 5px;
+          cursor: pointer;
+          transform: translateY(-50%);
+          z-index: 1;
+          
+          font-size: 20px;
+          color: #6A3156;
+          height: auto;
+          border-radius: 5px;
+          transition: all 0.5s ease;
+          
+          opacity: 0.5;
+          
+          border: 1px solid rgba(0, 0, 0, 0.5);
         }
       }
 
@@ -149,7 +170,6 @@
     <div class="boxCarrosel">
       <div id="carousel" class="conteinerCarrosel">
       
-        <!-- Primeiro Grupo de 4 Produtos -->
         <div class="grupoProdutos">
           <div class="contIframe">
             <iframe src="produtosCarrosseis/produtoPromocao.html" scrolling="no"></iframe>
@@ -165,7 +185,6 @@
           </div>
         </div>
 
-        <!-- Segundo Grupo de 4 Produtos -->
         <div class="grupoProdutos">
           <div class="contIframe">
             <iframe src="produtosCarrosseis/produtoPromocao.html" scrolling="no"></iframe>
@@ -184,6 +203,43 @@
       </div>
       
     </div>
+    
+    <!--<div class="boxCarrosel">
+      <div id="carousel" class="conteinerCarrosel">
+      
+        <div class="grupoProdutos">
+          <div class="contIframe">
+            <iframe src="produtoPromocao.html" scrolling="no"></iframe>
+          </div>
+          <div class="contIframe">
+            <iframe src="produtoPromocao.html" scrolling="no"></iframe>
+          </div>
+          <div class="contIframe">
+            <iframe src="produtoPromocao.html" scrolling="no"></iframe>
+          </div>
+          <div class="contIframe">
+            <iframe src="produtoPromocao.html" scrolling="no"></iframe>
+          </div>
+        </div>
+
+        <div class="grupoProdutos">
+          <div class="contIframe">
+            <iframe src="produtoPromocao.html" scrolling="no"></iframe>
+          </div>
+          <div class="contIframe">
+            <iframe src="produtoPromocao.html" scrolling="no"></iframe>
+          </div>
+          <div class="contIframe">
+            <iframe src="produtoPromocao.html" scrolling="no"></iframe>
+          </div>
+          <div class="contIframe">
+            <iframe src="produtoPromocao.html" scrolling="no"></iframe>
+          </div>
+        </div>
+
+      </div>
+      
+    </div>-->
     
     <button id="prevBtn" class="prev">&#10094;</button>
     <button id="nextBtn" class="next">&#10095;</button>
@@ -227,7 +283,7 @@
       setTimeout(() => {
         // Muda o grupo do carrossel
         const offset = -(currentIndex * 100);
-        carouselContainer.style.transform = translateX(${offset}%);
+        carouselContainer.style.transform = `translateX(${offset}%)`;
     
         // Depois que a transição do carrossel terminar, restaura a opacidade
         setTimeout(() => {
