@@ -47,6 +47,8 @@
   }
   
   .boxProduto{
+    position: relative;
+    
     border-radius: 5px;
     height: auto;
     width: 250px;
@@ -54,6 +56,52 @@
     margin: 5px;
     transition: all 0.5s ease;
     background-color: var(--branco);
+    
+    .btnFav {
+      opacity: 0;
+      position: absolute;
+      top: 7px;
+      right: 7px;
+      height: 30px;
+      aspect-ratio: 1/1;
+      border: none;
+      border-radius: 100%;
+      background-color: var(--destaque);
+      z-index: 3; /* O selo fica sempre acima das imagens */
+      transition: opacity 0.5s ease;
+      
+      img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centraliza a imagem */
+        z-index: 4;
+        height: 70%;
+        width: auto;
+        transition: opacity 0.5s ease;
+      }
+      
+      #fav_1{
+        display: flex;
+        opacity: 1;
+        transition: opacity 0.5s ease;
+      }
+      
+      #fav_2{
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+    }
+    
+    .btnFav:hover #fav_1{
+      display: none;
+      opacity: 0;
+    }
+    
+    .btnFav:hover #fav_2{
+      display: flex;
+      opacity: 1;
+    }
     
     .conteinerImg {
       position: relative;
@@ -274,8 +322,18 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
   
+  .boxProduto:hover .btnFav {
+    display: flex;
+    opacity: 1;
+  }
+  
 </style>
 <div class="boxProduto">
+  
+  <div class="btnFav">
+    <img id="fav_1" src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/fav_empty.png" alt="" />
+    <img id="fav_2" src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/fav.png" alt="" />
+  </div>
   
   <div class="conteinerImg">
     <img src="https://assets.onecompiler.app/42wu6ajnx/437bnvh65/pc_w_1.jpeg" alt="" />
