@@ -398,12 +398,44 @@
   
   // Função para adicionar o produto ao carrinho
   function adicionarProduto(idProduto) {
-      const inputQtd = document.getElementById(`qtd-${idProduto}`);
+      const inputQtd = document.getElementById(`qtd-${idProduto}`); // Corrigido para usar template literal
       const qtd = parseInt(inputQtd.value);
   
       // Obtendo o nome do produto diretamente do HTML
       const nomeProduto = document.querySelector('.contTtitle span').textContent;
   
-      alert(`Você adicionou ${qtd} unidade(s) do produto "${nomeProduto}" ao carrinho!`);
+      // Mensagem de feedback visual
+      const feedback = document.createElement('div');
+      feedback.textContent = `Você adicionou ${qtd} iten(s) ao carrinho!`;
+      feedback.style.position = 'absolute';
+      feedback.style.top = '10px';
+      feedback.style.left = '50%';
+      feedback.style.transform = 'translateX(-50%)';
+      feedback.style.backgroundColor = 'var(--destaque)';
+      feedback.style.color = 'white';
+      feedback.style.padding = '10px';
+      feedback.style.borderRadius = '5px';
+      feedback.style.fontSize = '12px';
+      feedback.style.zIndex = '1000';
+      feedback.style.width = '150px';
+      feedback.style.opacity = '0.8';
+      document.body.appendChild(feedback);
+  
+      // Adiciona a classe fade-in para o efeito de aparecimento
+      feedback.classList.add('fade-in');
+  
+      // Adiciona o feedback ao corpo
+      document.body.appendChild(feedback);
+  
+      // Remover a classe fade-in e adicionar fade-out após 3 segundos
+      setTimeout(() => {
+          feedback.classList.remove('fade-in');
+          feedback.classList.add('fade-out');
+  
+          // Remover o feedback após a animação de fade-out
+          setTimeout(() => {
+              feedback.remove();
+          }, 1000); // Tempo de fade-out (1 segundo)
+      }, 3000); // Tempo de permanência da mensagem (3 segundos)
   }
 </script>
