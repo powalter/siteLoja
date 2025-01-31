@@ -362,7 +362,7 @@
       .contBtnSup{
         height: 45px;
         
-        .btnQtd{
+        .btnQtd{;
           width: 40%;  // A largura foi ajustada em relação ao primeiro código (que era 30%)
         }
         
@@ -377,6 +377,31 @@
         margin-bottom: 5px;
       }
     }
+  }
+  
+  /* Animação de fade-in */
+  .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+  }
+  
+  /* Animação de fade-out */
+  .fade-out {
+      opacity: 1;
+      animation: fadeOut 1s forwards;
+  }
+  
+  /* Definindo o tempo e comportamento da animação */
+  @keyframes fadeIn {
+      to {
+          opacity: 1;
+      }
+  }
+  
+  @keyframes fadeOut {
+      to {
+          opacity: 0;
+      }
   }
 
   
@@ -459,22 +484,37 @@
   
       // Mensagem de feedback visual
       const feedback = document.createElement('div');
-      feedback.textContent = `Você adicionou ${qtd} unidade(s) do produto "${nomeProduto}" ao carrinho!`;
+      feedback.textContent = `Você adicionou ${qtd} iten(s) ao carrinho!`;
       feedback.style.position = 'absolute';
       feedback.style.top = '10px';
       feedback.style.left = '50%';
       feedback.style.transform = 'translateX(-50%)';
-      feedback.style.backgroundColor = 'green';
+      feedback.style.backgroundColor = 'var(--destaque)';
       feedback.style.color = 'white';
       feedback.style.padding = '10px';
       feedback.style.borderRadius = '5px';
-      feedback.style.fontSize = '14px';
+      feedback.style.fontSize = '12px';
+      feedback.style.zIndex = '1000';
+      feedback.style.width = '150px';
+      feedback.style.opacity = '0.8';
       document.body.appendChild(feedback);
   
-      // Removendo a mensagem após 3 segundos
+      // Adiciona a classe fade-in para o efeito de aparecimento
+      feedback.classList.add('fade-in');
+  
+      // Adiciona o feedback ao corpo
+      document.body.appendChild(feedback);
+  
+      // Remover a classe fade-in e adicionar fade-out após 3 segundos
       setTimeout(() => {
-          feedback.remove();
-      }, 3000);
+          feedback.classList.remove('fade-in');
+          feedback.classList.add('fade-out');
+  
+          // Remover o feedback após a animação de fade-out
+          setTimeout(() => {
+              feedback.remove();
+          }, 1000); // Tempo de fade-out (1 segundo)
+      }, 3000); // Tempo de permanência da mensagem (3 segundos)
   }
 
 </script>
