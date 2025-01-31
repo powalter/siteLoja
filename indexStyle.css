@@ -25,7 +25,6 @@ body, header, nav, footer, button{
 }
 
 body{
-  width: 360px;
   flex-direction: column;
   align-items: flex-start;
   padding-top: 97px; /* Para compensar a altura do header fixo */
