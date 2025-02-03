@@ -25,6 +25,9 @@ body, header, nav, footer, button{
 }
 
 body{
+  position: relative;
+  /*width: 360px;
+  margin-left: 100px;*/
   flex-direction: column;
   align-items: flex-start;
   padding-top: 97px; /* Para compensar a altura do header fixo */
@@ -180,6 +183,10 @@ header{
     
   }
   
+}
+
+.btnMenuHidden, .menuHidden{
+  display: none;
 }
 
 nav img{
@@ -539,6 +546,13 @@ footer {
 }
 
 @media screen and (max-width: 760px){
+  /* DISPLAY FLEX CENTER */
+  .menuHidden, .conteinerLoginHidden, .conteinerSubMenuHidden, .celSubMenuHidden, .conteinerMenuHidden, .catMenuHidden, .subMenuHidden, .titleSubMenuHidden{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
   header{
     width: 100%;
     
@@ -591,6 +605,139 @@ footer {
         }
       }
     }
+  }
+  
+  .btnMenuHidden, .menuHidden{
+    display: flex;
+  }
+  
+  .btnMenuHidden{
+    z-index: 1005;
+    
+    position: absolute;
+    top: 0;
+    
+    width: 40px;
+    height: 93px;
+    border: 1px solid red;
+  }
+  
+  .menuHidden{
+    z-index: 1000;
+    position: absolute;
+    top: 97px;
+    /*left: -100%;*/
+    width: 100%;
+    height: auto;
+    background-color: var(--branco);
+    transition: left 0.5s ease;
+    box-shadow: 0 8px 15px -8px rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+    
+    
+    .conteinerLoginHidden{
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      height: 70px;
+      width: 100%;
+      font-size: 15pt;
+      padding: 10px 0;
+      
+      .boxLoginHidden{
+        
+      }
+      
+      img{
+        height: 70%;
+        margin-right: 5px;
+      }
+    }
+    
+    .conteinerSubMenuHidden{
+      flex-direction: column;
+      border: 1px solid red;
+      width: 100%;
+      gap: 15px;
+      
+      .celSubMenuHidden{
+        border: 1px solid blue;
+        
+        img{
+          height: 50px;
+          width: auto;
+          margin-right: 10px;
+        }
+      }
+    }
+    
+    .conteinerMenuHidden {
+      width: 100%;
+      padding: 20px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      
+      .catMenuHidden {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        transition: margin-bottom 1s ease;
+        
+        .titleSubMenuHidden {
+          height: 40px;
+          width: 90%;
+          display: flex;
+          justify-content: space-between;
+          cursor: pointer;
+          
+          img {
+            height: 85%;
+          }
+          
+          span:hover {
+            color: var(--destaque-contraste);
+          }
+        }
+      }
+    }
+    
+    .subMenuHidden {
+      width: 90%;
+      max-height: 0; /* Inicialmente escondido */
+      overflow: hidden;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: max-height 0.5s ease, margin-top 0.5s ease;
+      background-color: rgba(249, 249 ,249);
+      
+      span{
+        padding: 15px;
+        cursor: pointer;
+      }
+      
+      span:hover{
+        color: var(--destaque-contraste);
+      }
+    }
+    
+    .catMenuHidden:hover .subMenuHidden {
+      max-height: 500px; /* Ajuste conforme a altura do conteúdo */
+      /*overflow: visible;*/
+      margin-top: 10px; /* Ajuste a distância entre o submenu e o item acima */
+    }
+    
+    
+    /* Garantir que o hover permaneça ativo enquanto o usuário interage com o submenu */
+    .catMenuHidden:hover .subMenuHidden:hover {
+      max-height: 500px; /* Garante que o submenu fique expandido enquanto hover */
+      /*overflow: visible;*/
+      margin-top: 10px;
+    }
+
+  }
+  
+  .btnMenuHidden:hover + .menuHidden, .menuHidden:hover {
+    left: 0;
   }
   
   nav{
