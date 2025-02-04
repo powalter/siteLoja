@@ -1,0 +1,1007 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  transition: all 0.3s ease;
+}
+
+:root{
+--destaque-contraste: #ff7a00 ;
+--destaque: #6a3156;
+--destaque-escuro: #241023 ;
+
+--branco: #FFFFFF;
+--cinza: #E9EAEB;
+
+--dark: #15161B;
+--dark-soft: #282F37;
+--dark-logo: #1C1C1C;
+}
+
+:is(body, header, nav, footer, button){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body{
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 97px; /* Para compensar a altura do header fixo */
+}
+
+:is(.conteinerHeader, .boxMenuHidden, .conteinerBoxMenuHidden, .boxLogoHeader, .boxSearch, .conteinerSearch,
+    .boxPainel, .conteinerPainel, .boxCart, .conteinerCart,
+    .boxFooterHidden, .conteinerFooterHidden,
+    .boxNav, .conteinerNav, .contNav, .navHidden, .conteinerNavHidden,
+    .bannerNew, .conteinerBannerNew, .boxEmail) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 97px;
+  width: 100%;
+  background-color: var(--dark-logo);
+  z-index: 1000;
+  
+  .conteinerHeader{
+    height: 100%;
+    width: 100%;
+    gap: 15px;
+    
+    .boxMenuHidden{
+      display: none;
+    }
+    
+    .boxLogoHeader{
+      height: 90%;
+      width: auto;
+      
+      img{
+        height: 100%;
+        width: auto;
+      }
+    }
+    
+    .boxSearch{
+      height: 90%;
+      width: 485px;
+      
+      .conteinerSearch{
+        height: 44px;
+        width: 100%;
+        border-radius: 50px;
+        overflow: hidden;
+        background-color: var(--branco);
+        
+        input, button{
+          height: 100%;
+          border: none;
+          background-color: inherit;
+        }
+        
+        input{
+          font-size: 12pt;
+          width: 90%;
+          padding-left: 20px;
+          
+          &:focus{
+            outline: none;
+          }
+        }
+        
+        button{
+          width: 10%;
+          
+          img{
+            height: 50%;
+            width: auto;
+          }
+        }
+      }
+    }
+    
+    .boxPainel{
+      height: 90%;
+      color: var(--branco);
+      gap: 20px;
+      
+      .conteinerPainel{
+        height: 44px;
+        
+        strong{
+          cursor: pointer;
+          
+          &:hover{
+            color: var(--destaque-contraste);
+          }
+        }
+        
+        img{
+          height: 80%;
+          width: auto;
+          padding-right: 5px;
+        }
+        
+        a{
+          text-decoration: none;
+          color: inherit;
+        }
+
+      }
+    }
+    
+    .boxCart{
+      height: 90%;
+      
+      .conteinerCart{
+        height: 44px;
+        width: auto;
+        
+        img{
+          height: 80%;
+        }
+        
+        span{
+          background-color: var(--destaque-contraste);
+          padding: 2px 10px;
+          border-radius: 10px;
+          color: var(--branco);
+          font-weight: bold;
+        }
+      }
+    }
+    
+  }
+  
+}
+
+.btnMenuHidden, .menuHidden{
+  display: none;
+}
+
+nav img{
+  height: 50px;
+  width: auto;
+}
+
+nav{
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  height: 55px;
+  width: 100%;
+  
+  img{
+    height: 20px;
+    width: auto;
+  }
+  
+  .boxNav {
+    height: 100%;
+    width: 60%;
+    flex-direction: row;
+    
+    .conteinerNav{
+      position: relative;
+      height: 100%;
+      width: 100%;
+      
+      .contNav{
+        height: 100%;
+        width: 50%;
+        gap: 5px;
+        
+        img{
+          height: 25px;
+          width: auto;
+        }
+        
+        span{
+          cursor: pointer;
+          
+          &:hover{
+            color: var(--destaque-contraste);
+          }
+        }
+      }
+    }
+  }
+  
+  .navHidden{
+    z-index: 1;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 55px;
+    width: 250px;
+    padding: 20px 10px;
+    flex-direction: column;
+    gap: 15px;
+    background-color: var(--branco);
+    
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s ease; /* Transição mais suave */
+    
+    .conteinerNavHidden{
+      width: 90%;
+      height: 30px;
+      flex-direction: row;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    
+    img{
+      height: 85%;
+    }
+    
+    span:hover{
+      color: var(--destaque-contraste);
+    }
+  }
+  
+  .conteinerNav:hover .navHidden{
+    visibility: visible;
+    opacity: 1;
+    box-shadow: 0 -8px 15px -8px rgba(0, 0, 0, 0.2);
+    transition-delay: 0s;
+  }
+  
+  .conteinerNav:hover ~ .boxBanner{
+    filter: brightness(0.2);
+  }
+
+}
+
+.boxProduct, .boxProduct *{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxProduct{
+  height: 800px;
+  width: 100%;
+  
+  border: 1px solid red;
+  
+  flex-direction: column;
+  
+  .boxProduct_conteiner{
+    height: 80%;
+    width: 80%;
+    
+    .boxProduct_gallery{
+      height: 100%;
+      width: 60%;
+      
+      .boxProduct_gallery_miniature{
+        width: 20%;
+        height: 100%;
+        
+        flex-direction: column;
+        
+        gap: 10px;
+        
+        .boxProduct_gallery_miniatureConteiner{
+          width: 90%;
+          aspect-ratio: 1/1;
+          
+          border: 1px solid var(--dark-logo);
+          border-radius: 5px;
+          overflow: hidden;
+          
+          img{
+            height: auto;
+            width: 100%;
+          }
+        }
+      }
+      
+      .boxProduct_gallery_main{
+        position: relative;
+        width: 80%;
+        height: 100%;
+        
+        flex-direction: column;
+        
+        img{
+          width: 80%;
+          aspect-ratio: 1/1;
+          margin: 0 60px;
+        }
+        
+        .boxProduct_gallery_share{
+          position: absolute;
+          bottom: 0;
+          
+          
+          height: 50px;
+          width: 100%;
+          
+          border: 1px solid red;
+        }
+      }
+    }
+    
+    .boxProduct_description{
+      font-family: 'Open Sans';
+      
+      height: 100%;
+      width: 40%;
+      
+      justify-content: flex-start;
+      
+      flex-direction: column;
+      
+      .boxProduct_descriptionTitle{
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 0;
+        
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        
+        h2{
+          font-size: 18px;
+          font-weight: normal;
+          color: rgba(0, 0, 0, 0.5);
+        }
+        
+        h1{
+          font-size: 24px;
+          font-weight: normal;
+        }
+        
+        span{
+          font-size: 12px;
+          color: rgba(0, 0, 0, 0.5);
+        }
+      }
+      
+      .boxProduct_descriptionPrice{
+        width: 100%;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 15px 0;
+        gap: 10px;
+        
+        p{
+          gap: 5px;
+        }
+      }
+    }
+  }
+}
+
+.boxCarousel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  height: auto;
+  width: 100%;
+  
+  .boxCarouselTitle{
+    color: var(--destaque);
+    display: flex;
+    height: 120px;
+    width: 100%;
+    
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .boxCarouselIframe{
+    height: 520px;
+    width: 95%;
+    
+    iframe{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border: none;
+    }
+  }
+}
+
+.bannerNew{
+  height: 140px;
+  width: 100%;
+  background-color: var(--dark-logo);
+  
+  .conteinerBannerNew{
+    height: 100%;
+    width: 80%;
+    flex-direction: column;
+    gap: 15px;
+    
+    span{
+      text-align: center;
+      font-size: 13px;
+      color: var(--destaque-contraste);
+      
+      strong{
+        font-size: 18px;
+      }
+    }
+    
+    .boxEmail{
+      height: 40px;
+      width: 40%;
+      overflow: hidden;
+      background-color: var(--branco);
+      border-radius: 50px;
+      
+      input, button{
+        height: 100%;
+        background-color: inherit;
+        border: none;
+      }
+      
+      input{
+        width: 90%;
+        padding-left: 20px;
+        
+        &:focus{
+          outline: none;
+        }
+      }
+      button{
+        width: 10%;
+        
+        &:hover{
+          color: var(--destaque-contraste);
+        }
+      }
+    }
+  }
+}
+
+.boxSocial{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: 200px;
+  width: 100%;
+  
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  
+  .conteinerSocial{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    
+    height: 100%;
+    width: 80%;
+    
+    span{
+      font-family: Arial;
+      font-size: 15pt;
+    }
+    
+    .boxIcons{
+      display: flex;
+      
+      gap: 25px;
+      
+      .iconSocial{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        height: 60px;
+        aspect-ratio: 1/1;
+        
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 100%;
+        
+        box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+        
+        transition: all 0.2s ease;
+        
+        img{
+          height: 65%;
+          width: auto;
+          opacity: 0.8;
+        }
+      }
+      
+      /* WHATSAPP */
+      #iconWhats:hover {
+        border: 1px solid rgba(37, 211, 102, 0.1);
+        box-shadow: 
+          4px 4px 8px rgba(37, 211, 102, 0.5),         /* Verde (WhatsApp) */
+          8px 8px 16px rgba(37, 211, 102, 0.5);         /* Verde (WhatsApp) */
+      }
+      
+      /* FACEBOOK */
+       #iconFace:hover{
+        border: 1px solid rgba(24, 119, 242, 0.1);
+        box-shadow: 
+          4px 4px 8px rgba(59, 89, 152, 0.5),          /* Azul Claro (Facebook) */
+          8px 8px 16px rgba(59, 89, 152, 0.5);          /* Azul Claro (Facebook) */
+      }
+      
+      /* INSTAGRAM */
+      #iconInsta:hover{
+        border: 1px solid rgba(193, 53, 132, 0.1);
+        box-shadow: 
+          4px 4px 8px rgba(193, 53, 132, 0.5),        /* Roxo (Instagram) */
+          8px 8px 16px rgba(255, 45, 85, 0.5),         /* Laranja (Instagram) */
+          12px 12px 24px rgba(255, 218, 0, 0.5);       /* Amarelo (Instagram) */
+      }
+      
+      /* LINKEDIN */
+      #iconLink:hover{
+        border: 1px solid rgba(0, 119, 181, 0.1);
+        box-shadow: 
+          4px 4px 8px rgba(0, 119, 181, 0.5),          /* Azul (LinkedIn) */
+          8px 8px 16px rgba(0, 119, 181, 0.5);          /* Azul (LinkedIn) */
+      }
+      
+      /* GITGUB */
+       #iconGit:hover{
+        border: 1px solid rgba(35, 134, 54, 0.1);
+        box-shadow: 
+          4px 4px 8px rgba(24, 23, 23, 0.5),          /* Preto (GitHub) */
+          8px 8px 16px rgba(35, 134, 54, 0.5);         /* Verde (GitHub) */
+      }
+    }
+  }
+}
+
+.boxCopyright{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  text-align: center;
+  
+  height: 60px;
+  width: 100%;
+}
+
+footer {
+  .boxFooterHidden {
+    display: none; /* Inicialmente oculto */
+  }
+}
+
+.conteinerNav:hover ~ .boxBanner{
+  filter: brightness(0.2);
+}
+
+.conteinerNav:hover ~ .boxDiv * {
+  filter: brightness(0.2);
+}
+
+@media screen and (max-width: 760px){
+  /* DISPLAY FLEX CENTER */
+  .menuHidden, .conteinerLoginHidden, .conteinerSubMenuHidden, .celSubMenuHidden, .conteinerMenuHidden, .catMenuHidden, .subMenuHidden, .titleSubMenuHidden, .logoMenuHidden{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header{
+    width: 100%;
+    
+    .conteinerHeader{
+      justify-content: space-between;
+      
+      .boxSearch, .boxPainel{
+        display: none;
+      }
+      
+      .boxLogoHeader{
+        img{
+          height: 80%;
+          cursor: pointer;
+        }
+      }
+      
+      .boxMenuHidden{
+        height: 90%;
+        display: flex;
+        
+        .conteinerBoxMenuHidden{
+          height: 100%;
+          
+          img{
+            height: 50%;
+            cursor: pointer;
+          }
+        }
+        
+        .conteinerBoxMenuHidden:hover{
+          opacity: 0.7;
+        }
+      }
+      
+      .boxCart{
+        
+        .conteinerCart{
+          height: 100%;
+          margin-right: 10px;
+          
+          img{
+            height: 50%;
+            cursor: pointer;
+          }
+        }
+        
+        .conteinerCart:hover{
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+  
+  .btnMenuHidden, .menuHidden{
+    display: flex;
+  }
+  
+  .btnMenuHidden{
+    z-index: 1005;
+    position: fixed;
+    top: 0;
+    width: 40px;
+    height: 93px;
+  }
+  
+  .menuHidden{
+    z-index: 1000;
+    position: absolute;
+    top: 97px;
+    left: -100%;
+    width: 100%;
+    height: auto;
+    background-color: var(--branco);
+    transition: left 0.5s ease;
+    box-shadow: 0 8px 15px -8px rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+    
+    
+    .conteinerLoginHidden{
+      height: 70px;
+      width: 100%;
+      font-size: 15pt;
+      padding: 10px 0;
+      
+      .boxLoginHidden{
+        a{
+          color: var(--destaque);
+          text-decoration: none;
+        }
+      }
+      
+      img{
+        height: 70%;
+        margin-right: 5px;
+      }
+    }
+    
+    .conteinerSubMenuHidden{
+      opacity: 0.8;
+      
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+      padding: 20px 0;
+      
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);;
+      border-top: 1px solid rgba(0, 0, 0, 0.2);;
+      
+      .celSubMenuHidden{
+        justify-content: flex-start;
+        width: 90%;
+        height: 50px;
+        
+        span{
+          font-size: 14pt;
+          cursor: pointer;
+          
+          &:hover{
+            color: var(--destaque-contraste);
+          }
+        }
+        
+        
+        img{
+          height: 70%;
+          width: auto;
+          margin-right: 10px;
+        }
+      }
+    }
+    
+    .conteinerMenuHidden {
+      width: 100%;
+      padding: 20px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      
+      .catMenuHidden {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        transition: margin-bottom 1s ease;
+        
+        .titleSubMenuHidden {
+          height: 40px;
+          width: 90%;
+          display: flex;
+          justify-content: space-between;
+          cursor: pointer;
+          
+          img {
+            height: 85%;
+          }
+          
+          span:hover {
+            color: var(--destaque-contraste);
+          }
+        }
+        
+        &:hover .subMenuHidden{
+          max-height: 500px; /* Ajuste conforme a altura do conteúdo */
+          /*overflow: visible;*/
+          margin-top: 10px; /* Ajuste a distância entre o submenu e o item acima */
+        }
+        
+        &:hover .subMenuHidden:hover {
+          max-height: 500px; /* Garante que o submenu fique expandido enquanto hover */
+          /*overflow: visible;*/
+          margin-top: 10px;
+        }
+        
+      }
+    }
+    
+    .logoMenuHidden{
+      height: 150px;
+      width: 100%;
+      padding: 30px 0;
+      
+      img{
+        height: 100%;
+        width: auto;
+      }
+    }
+    
+    .subMenuHidden {
+      width: 90%;
+      max-height: 0; /* Inicialmente escondido */
+      overflow: hidden;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: max-height 0.5s ease, margin-top 0.5s ease;
+      background-color: rgba(249, 249 ,249);
+      
+      span{
+        padding: 15px;
+        cursor: pointer;
+        
+        &:hover{
+          color: var(--destaque-contraste);
+        }
+      }
+    }
+  }
+  
+  .btnMenuHidden:hover + .menuHidden, .menuHidden:hover {
+    left: 0;
+  }
+  
+  .boxCarousel{
+    height: auto;
+    width: 100%;
+    
+    
+    .boxCarouselTitle{
+      display: flex;
+      height: 60px;
+      width: 100%;
+    }
+    
+    .boxCarouselIframe{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      
+      height: 570px;
+      width: 95%;
+      
+      iframe{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border: none;
+      }
+    }
+  }
+  
+  .bannerNew{
+    width: 100%;
+    
+    .conteinerBannerNew{
+      height: 100%;
+      width: 90%;
+      flex-direction: column;
+      gap: 15px;
+      
+      span{
+        text-align: center;
+        font-size: 13px;
+        color: var(--destaque-contraste);
+        
+        strong{
+          font-size: 18px;
+        }
+      }
+      
+      .boxEmail{
+        height: 40px;
+        width: 100%;
+        overflow: hidden;
+        background-color: var(--branco);
+        border-radius: 50px;
+        
+        input, button{
+          height: 100%;
+          background-color: inherit;
+          border: none;
+        }
+        
+        input{
+          width: 90%;
+          padding-left: 20px;
+        }
+        
+        input:focus{
+          outline: none;
+        }
+        
+        button{
+          width: 10%;
+        }
+        
+        button:hover{
+          color: var(--destaque-contraste);
+        }
+      }
+    }
+  }
+  
+  .boxSocial{
+    height: 200px;
+    width: 100%;
+    
+    .conteinerSocial{
+      gap: 20px;
+      
+      height: 100%;
+      width: 80%;
+      
+      .boxIcons{
+        display: flex;
+        
+        gap: 20px;
+        
+        .iconSocial{
+          height: 50px;
+          aspect-ratio: 1/1;
+        }
+      }
+    }
+  }
+  
+  footer{
+    bottom: 0;
+    position: sticky;
+    width: 100%;
+    
+    .boxFooterHidden{
+      display: flex;
+      height: 80px;
+      width: 100%;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+      background-color: var(--branco);
+      
+      .conteinerFooterHidden{
+        height: 100%;
+        width: 50%;
+        flex-direction: column;
+        font-size: 12pt;
+        opacity: 0.7;
+        cursor: pointer;
+        
+        img{
+          height: 40%;
+          width: auto;
+          margin-top: 5px;
+        }
+        
+        span:hover{
+          color: var(--destaque-contraste);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px){
+  
+  header{
+    width: 100%;
+    
+    .conteinerHeader{
+      justify-content: space-between;
+      
+      .boxLogoHeader{
+        img{
+          height: 65%;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  
+  .boxCarousel{
+    height: auto;
+    width: 100%;
+    
+    .boxCarouselTitle{
+      color: var(--destaque);
+      display: flex;
+      height: 120px;
+      width: 100%;
+      justify-content: center;
+      align-items: flex-end;
+    }
+    
+    .boxCarouselIframe{
+      height: 520px;
+      width: 100%;
+      
+      iframe{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border: none;
+      }
+    }
+  }
+  
+  .boxCarousel{
+    #boxTitleSold{
+      height: 100px;
+    }
+    
+    #boxCarouselSold{
+      height: 430px;
+    }
+    
+    #boxTitleOffers{
+      height: 100px;
+    }
+    
+    #boxCarouselOffers{
+      height: 520px;
+    }
+  }
+}
