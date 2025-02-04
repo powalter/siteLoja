@@ -18,7 +18,7 @@
 --dark-logo: #1C1C1C;
 }
 
-body, header, nav, footer, button{
+:is(body, header, nav, footer, button){
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,42 +26,21 @@ body, header, nav, footer, button{
 
 body{
   position: relative;
-  /*width: 360px;
-  margin-left: 100px;*/
   flex-direction: column;
   align-items: flex-start;
   padding-top: 97px; /* Para compensar a altura do header fixo */
 }
 
-header img {
-  height: 50px;
-  width: auto;
-}
-
-.conteinerHeader, .boxMenuHidden, .conteinerBoxMenuHidden, .boxLogoHeader, .boxSearch, .conteinerSearch,
-.boxPainel, .conteinerPainel, .boxCart, .conteinerCart{
+:is(.conteinerHeader, .boxMenuHidden, .conteinerBoxMenuHidden, .boxLogoHeader, .boxSearch, .conteinerSearch,
+    .boxPainel, .conteinerPainel, .boxCart, .conteinerCart,
+    .boxFooterHidden, .conteinerFooterHidden,
+    .boxNav, .conteinerNav, .contNav, .navHidden, .conteinerNavHidden,
+    .bannerNew, .conteinerBannerNew, .boxEmail) {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.boxFooterHidden, .conteinerFooterHidden{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.boxNav, .conteinerNav, .contNav, .navHidden, .conteinerNavHidden{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bannerNew, .conteinerBannerNew, .boxEmail{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 header{
   position: fixed;
@@ -113,10 +92,10 @@ header{
           font-size: 12pt;
           width: 90%;
           padding-left: 20px;
-        }
-        
-        input:focus{
-          outline: none;
+          
+          &:focus{
+            outline: none;
+          }
         }
         
         button{
@@ -140,10 +119,10 @@ header{
         
         strong{
           cursor: pointer;
-        }
-        
-        strong:hover{
-          color: var(--destaque-contraste);
+          
+          &:hover{
+            color: var(--destaque-contraste);
+          }
         }
         
         img{
@@ -226,10 +205,10 @@ nav{
         
         span{
           cursor: pointer;
-        }
-        
-        span:hover{
-          color: var(--destaque-contraste);
+          
+          &:hover{
+            color: var(--destaque-contraste);
+          }
         }
       }
     }
@@ -407,18 +386,17 @@ nav{
       input{
         width: 90%;
         padding-left: 20px;
+        
+        &:focus{
+          outline: none;
+        }
       }
-      
-      input:focus{
-        outline: none;
-      }
-      
       button{
         width: 10%;
-      }
-      
-      button:hover{
-        color: var(--destaque-contraste);
+        
+        &:hover{
+          color: var(--destaque-contraste);
+        }
       }
     }
   }
@@ -547,7 +525,7 @@ footer {
 
 @media screen and (max-width: 760px){
   /* DISPLAY FLEX CENTER */
-  .menuHidden, .conteinerLoginHidden, .conteinerSubMenuHidden, .celSubMenuHidden, .conteinerMenuHidden, .catMenuHidden, .subMenuHidden, .titleSubMenuHidden{
+  .menuHidden, .conteinerLoginHidden, .conteinerSubMenuHidden, .celSubMenuHidden, .conteinerMenuHidden, .catMenuHidden, .subMenuHidden, .titleSubMenuHidden, .logoMenuHidden{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -613,20 +591,17 @@ footer {
   
   .btnMenuHidden{
     z-index: 1005;
-    
-    position: absolute;
+    position: fixed;
     top: 0;
-    
     width: 40px;
     height: 93px;
-    border: 1px solid red;
   }
   
   .menuHidden{
     z-index: 1000;
     position: absolute;
     top: 97px;
-    /*left: -100%;*/
+    left: -100%;
     width: 100%;
     height: auto;
     background-color: var(--branco);
@@ -636,14 +611,16 @@ footer {
     
     
     .conteinerLoginHidden{
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
       height: 70px;
       width: 100%;
       font-size: 15pt;
       padding: 10px 0;
       
       .boxLoginHidden{
-        
+        a{
+          color: var(--destaque);
+          text-decoration: none;
+        }
       }
       
       img{
@@ -653,16 +630,33 @@ footer {
     }
     
     .conteinerSubMenuHidden{
+      opacity: 0.8;
+      
       flex-direction: column;
-      border: 1px solid red;
       width: 100%;
-      gap: 15px;
+      gap: 10px;
+      padding: 20px 0;
+      
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);;
+      border-top: 1px solid rgba(0, 0, 0, 0.2);;
       
       .celSubMenuHidden{
-        border: 1px solid blue;
+        justify-content: flex-start;
+        width: 90%;
+        height: 50px;
+        
+        span{
+          font-size: 14pt;
+          cursor: pointer;
+          
+          &:hover{
+            color: var(--destaque-contraste);
+          }
+        }
+        
         
         img{
-          height: 50px;
+          height: 70%;
           width: auto;
           margin-right: 10px;
         }
@@ -698,6 +692,30 @@ footer {
             color: var(--destaque-contraste);
           }
         }
+        
+        &:hover .subMenuHidden{
+          max-height: 500px; /* Ajuste conforme a altura do conteúdo */
+          /*overflow: visible;*/
+          margin-top: 10px; /* Ajuste a distância entre o submenu e o item acima */
+        }
+        
+        &:hover .subMenuHidden:hover {
+          max-height: 500px; /* Garante que o submenu fique expandido enquanto hover */
+          /*overflow: visible;*/
+          margin-top: 10px;
+        }
+        
+      }
+    }
+    
+    .logoMenuHidden{
+      height: 150px;
+      width: 100%;
+      padding: 30px 0;
+      
+      img{
+        height: 100%;
+        width: auto;
       }
     }
     
@@ -713,27 +731,12 @@ footer {
       span{
         padding: 15px;
         cursor: pointer;
+        
+        &:hover{
+          color: var(--destaque-contraste);
+        }
       }
-      
-      span:hover{
-        color: var(--destaque-contraste);
-      }
     }
-    
-    .catMenuHidden:hover .subMenuHidden {
-      max-height: 500px; /* Ajuste conforme a altura do conteúdo */
-      /*overflow: visible;*/
-      margin-top: 10px; /* Ajuste a distância entre o submenu e o item acima */
-    }
-    
-    
-    /* Garantir que o hover permaneça ativo enquanto o usuário interage com o submenu */
-    .catMenuHidden:hover .subMenuHidden:hover {
-      max-height: 500px; /* Garante que o submenu fique expandido enquanto hover */
-      /*overflow: visible;*/
-      margin-top: 10px;
-    }
-
   }
   
   .btnMenuHidden:hover + .menuHidden, .menuHidden:hover {
