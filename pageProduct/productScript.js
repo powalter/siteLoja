@@ -81,7 +81,7 @@ function getCoordinates(e) {
     }
 }
 
-// Função para mostrar a lupa após o duplo clique
+// Função para mostrar a lupa após o duplo clique ou toque
 function mostrarLupa(offsetX, offsetY) {
     if (!lupaVisivel) {
         lupa.style.display = 'block';  // Mostra a lupa
@@ -119,7 +119,7 @@ function esconderLupa() {
     lupaVisivel = false;
 }
 
-// Adicionando o evento de "dblclick" para ativar a lupa
+// Adicionando o evento de "dblclick" para ativar a lupa no computador
 imagemContainer.addEventListener('dblclick', (e) => {
     const { offsetX, offsetY } = getCoordinates(e);
     mostrarLupa(offsetX, offsetY);
@@ -133,16 +133,28 @@ imagemContainer.addEventListener('mousemove', (e) => {
     }
 });
 
-// Adicionando o evento de "touchstart" para dispositivos móveis
+// ----------------------------
+// Para dispositivos móveis
+// ----------------------------
+
+let lastTouch = 0;
+
+// Adicionando o evento de "touchstart" para ativar a lupa com um toque duplo
 imagemContainer.addEventListener('touchstart', (e) => {
+    const currentTime = new Date().getTime();
     const { offsetX, offsetY } = getCoordinates(e);
-    mostrarLupa(offsetX, offsetY);
+
+    // Verifica se foi um toque duplo (distância entre toques inferior a 300ms)
+    if (currentTime - lastTouch < 300) {
+        mostrarLupa(offsetX, offsetY);
+    }
+    lastTouch = currentTime;
 });
 
 // Adicionando o evento de "touchmove" para dispositivos móveis
 imagemContainer.addEventListener('touchmove', (e) => {
     if (lupaVisivel) {
-        e.preventDefault();  // Previne o comportamento padrão de rolagem da tela se estiver interagindo com a lupa
+        e.preventDefault();  // Previne a rolagem da tela somente quando a lupa estiver visível
         const { offsetX, offsetY } = getCoordinates(e);
         updateLupaPosition(offsetX, offsetY);
     }
@@ -150,13 +162,6 @@ imagemContainer.addEventListener('touchmove', (e) => {
 
 // Adicionando o evento de "touchend" para dispositivos móveis (para parar o arrasto)
 imagemContainer.addEventListener('touchend', () => {
-    if (lupaVisivel) {
-        esconderLupa(); // Esconde a lupa se visível
-    }
-});
-
-// Adicionando o evento de "mouseup" para desktop (para parar o arrasto)
-imagemContainer.addEventListener('mouseup', () => {
     if (lupaVisivel) {
         esconderLupa(); // Esconde a lupa se visível
     }
