@@ -550,7 +550,7 @@ nav{
           button{
             font-size: 11pt;
             color: var(--whatsapp);
-            font-weight: 100;
+            font-weight: bold;
             
             img{
               height: 75%;
