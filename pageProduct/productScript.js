@@ -81,7 +81,7 @@ function getCoordinates(e) {
     }
 }
 
-// Função para mostrar a lupa após segurar
+// Função para mostrar a lupa após o duplo clique
 function mostrarLupa(offsetX, offsetY) {
     if (!lupaVisivel) {
         lupa.style.display = 'block';  // Mostra a lupa
@@ -119,62 +119,30 @@ function esconderLupa() {
     lupaVisivel = false;
 }
 
-// Previne o comportamento padrão de rolagem apenas quando necessário
-function bloquearRolagem(e) {
-    if (isDragging) {
-        e.preventDefault(); // Previne rolagem quando está arrastando a lupa
-    }
-}
-
-// Adicionando o evento de "mousedown" para desktop
-imagemContainer.addEventListener('mousedown', (e) => {
+// Adicionando o evento de "dblclick" para ativar a lupa
+imagemContainer.addEventListener('dblclick', (e) => {
     const { offsetX, offsetY } = getCoordinates(e);
-    pressTimer = setTimeout(() => {
-        mostrarLupa(offsetX, offsetY);
-    }, 500); // Espera 500ms antes de mostrar a lupa
-
-    // Inicia o arrasto
-    isDragging = true;
-    startX = offsetX;
-    startY = offsetY;
-    updateLupaPosition(startX, startY);
+    mostrarLupa(offsetX, offsetY);
 });
 
 // Adicionando o evento de "mousemove" para desktop
 imagemContainer.addEventListener('mousemove', (e) => {
-    if (isDragging) {
+    if (lupaVisivel) {
         const { offsetX, offsetY } = getCoordinates(e);
         updateLupaPosition(offsetX, offsetY);
-    }
-});
-
-// Adicionando o evento de "mouseup" para desktop (para parar o arrasto)
-imagemContainer.addEventListener('mouseup', () => {
-    isDragging = false;
-    clearTimeout(pressTimer); // Limpa o timer caso o mouse seja liberado antes de 500ms
-    if (lupaVisivel) {
-        esconderLupa(); // Esconde a lupa se visível
     }
 });
 
 // Adicionando o evento de "touchstart" para dispositivos móveis
 imagemContainer.addEventListener('touchstart', (e) => {
     const { offsetX, offsetY } = getCoordinates(e);
-    pressTimer = setTimeout(() => {
-        mostrarLupa(offsetX, offsetY);
-    }, 500); // Espera 500ms antes de mostrar a lupa
-
-    // Inicia o arrasto
-    isDragging = true;
-    startX = offsetX;
-    startY = offsetY;
-    updateLupaPosition(startX, startY);
+    mostrarLupa(offsetX, offsetY);
 });
 
 // Adicionando o evento de "touchmove" para dispositivos móveis
 imagemContainer.addEventListener('touchmove', (e) => {
-    e.preventDefault();  // Previne o comportamento padrão de rolagem da tela se estiver arrastando
-    if (isDragging) {
+    if (lupaVisivel) {
+        e.preventDefault();  // Previne o comportamento padrão de rolagem da tela se estiver interagindo com a lupa
         const { offsetX, offsetY } = getCoordinates(e);
         updateLupaPosition(offsetX, offsetY);
     }
@@ -182,16 +150,18 @@ imagemContainer.addEventListener('touchmove', (e) => {
 
 // Adicionando o evento de "touchend" para dispositivos móveis (para parar o arrasto)
 imagemContainer.addEventListener('touchend', () => {
-    isDragging = false;
-    clearTimeout(pressTimer); // Limpa o timer caso o toque seja removido antes de 500ms
     if (lupaVisivel) {
         esconderLupa(); // Esconde a lupa se visível
     }
 });
 
-// Bloqueando a rolagem da página apenas quando o arrasto estiver em andamento
-window.addEventListener('touchmove', bloquearRolagem, { passive: false });
-window.addEventListener('mousemove', bloquearRolagem, { passive: false });
+// Adicionando o evento de "mouseup" para desktop (para parar o arrasto)
+imagemContainer.addEventListener('mouseup', () => {
+    if (lupaVisivel) {
+        esconderLupa(); // Esconde a lupa se visível
+    }
+});
+
 
 // ==========================
 // Troca de imagens + destaque nas miniaturas
