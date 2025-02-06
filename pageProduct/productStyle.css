@@ -23,7 +23,7 @@ body *:focus{
 --whatsapp: #25D366;
 }
 
-:is(body, header, nav, footer, button){
+:is(body, header, nav, footer, button, a){
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,8 +66,11 @@ header{
       display: none;
     }
     
-    a{
-      .boxLogoHeader{
+    .boxLogoHeader{
+      height: 90%;
+      width: auto;
+      
+      a{
         height: 90%;
         width: auto;
         
@@ -77,7 +80,6 @@ header{
         }
       }
     }
-    
     
     .boxSearch{
       height: 90%;
@@ -1317,9 +1319,11 @@ footer {
       justify-content: space-between;
       
       .boxLogoHeader{
-        img{
-          height: 65%;
-          cursor: pointer;
+        
+        a{
+          img{
+            height: 65%;
+          }
         }
       }
     }
