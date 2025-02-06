@@ -119,6 +119,13 @@ function esconderLupa() {
     lupaVisivel = false;
 }
 
+// Previne o comportamento padrão de rolagem apenas quando necessário
+function bloquearRolagem(e) {
+    if (isDragging) {
+        e.preventDefault(); // Previne rolagem quando está arrastando a lupa
+    }
+}
+
 // Adicionando o evento de "mousedown" para desktop
 imagemContainer.addEventListener('mousedown', (e) => {
     const { offsetX, offsetY } = getCoordinates(e);
@@ -166,7 +173,7 @@ imagemContainer.addEventListener('touchstart', (e) => {
 
 // Adicionando o evento de "touchmove" para dispositivos móveis
 imagemContainer.addEventListener('touchmove', (e) => {
-    e.preventDefault();  // Previne o comportamento padrão de rolagem da tela
+    e.preventDefault();  // Previne o comportamento padrão de rolagem da tela se estiver arrastando
     if (isDragging) {
         const { offsetX, offsetY } = getCoordinates(e);
         updateLupaPosition(offsetX, offsetY);
@@ -181,6 +188,10 @@ imagemContainer.addEventListener('touchend', () => {
         esconderLupa(); // Esconde a lupa se visível
     }
 });
+
+// Bloqueando a rolagem da página apenas quando o arrasto estiver em andamento
+window.addEventListener('touchmove', bloquearRolagem, { passive: false });
+window.addEventListener('mousemove', bloquearRolagem, { passive: false });
 
 // ==========================
 // Troca de imagens + destaque nas miniaturas
