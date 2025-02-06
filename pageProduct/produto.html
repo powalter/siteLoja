@@ -1,520 +1,604 @@
-<head>
-  <title>Hello, World!</title>
-  <meta charset="UTF-8">
-</head>
-<style type="text/css" media="all">
-  
-  *{
-    font-family: Arial;
-    margin: 0;
-    padding: 0;
-    transition: all ease;
-  }
-  
-  body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  :root{
-  --destaque-contraste: #ff7a00 ;
-  --destaque: #6a3156;
-  --destaque-escuro: #241023 ;
-  
-  --branco: #FFFFFF;
-  --cinza: #E9EAEB;
-  
-  --dark: #15161B;
-  --dark-soft: #282F37;
-  --dark-logo: #1C1C1C;
-  
-  --whatsapp: #25D366;
-  }
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0' name='viewport' />
+    <title>WM Stock</title>
+    <link rel="stylesheet" href="productStyle.css" />
+  </head>
+  <body>
+    <header>
+      <div class="conteinerHeader">
+        
+        <div class="boxMenuHidden">
+          <div class="conteinerBoxMenuHidden">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42zaj9kae/menu.png" alt="" />
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42zaj9kae/search.png" alt="" />
+          </div>
+        </div>
+        
+        <div class="boxLogoHeader">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/435ygezzm/WM.png" alt="" />
+        </div>
+        
+        <div class="boxSearch">
+          <div class="conteinerSearch">
+            <input type="search" placeholder="Digite o que você procura"/>
+            <button type="submit">
+              <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/search_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+            </button>
+          </div>
+        </div>
+        
+        <div class="boxPainel">
+          
+          <div class="conteinerPainel">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/forum_125dp_FFF_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+            <span>Central de <br/><strong>Atendimento</strong></span>
+          </div>
+          
+          <div class="conteinerPainel">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/account_w.png" alt="" />
+            <span>Bem-Vindo(a)<br/><strong><a href="#">Entrar</a></strong> ou <strong><a href="#">Cadastrar</a></strong></span>
+          </div>
+          
+        </div>
+        
+        <div class="boxCart">
+            <div class="conteinerCart">
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42zaj9kae/cart.png" alt="" />
+              <span>2</span>
+            </div>
+        </div>
+        
+      </div>
+    </header>
 
-  button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+    <div class="btnMenuHidden"></div>
     
-  /*DISPLAY FLEX CENTER */
-  .boxProduto, .stampDiscount, .conteinerInfo, .contTtitle, .contPrice, .conteinerBtn, .contBtnSup, .btnQtd, .contBtnInf{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .boxProduto{
-    position: relative;
-    border-radius: 5px;
-    height: auto;
-    width: 250px;
-    padding: 10px;
-    margin: 5px;
-    transition: all 0.5s ease;
-    background-color: var(--branco);
-    
-    .btnFav {
-      opacity: 0;
-      position: absolute;
-      top: 7px;
-      right: 7px;
-      height: 30px;
-      aspect-ratio: 1/1;
-      border: none;
-      border-radius: 100%;
-      background-color: var(--destaque);
-      z-index: 3; /* O selo fica sempre acima das imagens */
-      transition: opacity 0.5s ease;
+    <div class="menuHidden">
       
-      img{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); /* Centraliza a imagem */
-        z-index: 4;
-        height: 70%;
-        width: auto;
-        transition: opacity 0.5s ease;
-      }
+      <div class="conteinerLoginHidden">
+        <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/profile.png" alt="" />
+        <div class="boxLoginHidden">
+          <span><strong>Olá, visitante</strong></span><br />
+          <span><a href="#">Entrar</a> ou <a href="#">Cadastrar</a></span>
+        </div>
+      </div>
       
-      #fav_1{
-        display: flex;
-        opacity: 1;
-        transition: opacity 0.5s ease;
-      }
       
-      #fav_2{
-        opacity: 0;
-        transition: opacity 0.5s ease;
-      }
-    }
-    
-    .btnFav:hover #fav_1{
-      display: none;
-      opacity: 0;
-    }
-    
-    .btnFav:hover #fav_2{
-      display: flex;
-      opacity: 1;
-    }
-    
-    .conteinerImg {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 1/1;
+      <div class="conteinerSubMenuHidden">
+        
+        <div class="celSubMenuHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/speech-bubble.png" alt="" />
+          <span>Central de Antendimento</span>
+        </div>
+        
+        <div class="celSubMenuHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/acompanhamento-de-pedidos.png" alt="" />
+          <span>Meus Pedidos</span>
+        </div>
+        
+        <div class="celSubMenuHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/favorito.png" alt="" />
+          <span>Favoritos</span>
+        </div>
+        
+        <div class="celSubMenuHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/tracking.png" alt="" />
+          <span>Rastrear Pedido</span>
+        </div>
+        
+      </div>
       
-      img {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 1; /* Inicialmente, a primeira imagem é visível */
-        transition: opacity 0.5s ease-in-out; /* Transição suave para opacidade */
-        z-index: 1; /* Primeira imagem começa por cima */
-      }
-    
-      /* A segunda imagem começa invisível */
-      img:last-of-type {
-        opacity: 0;
-        z-index: 0; /* Coloca a segunda imagem atrás */
-      }
-    
-      /* Quando o contêiner for hover, troque as opacidades das imagens */
-      &:hover {
-        img:first-of-type {
-          opacity: 0; /* A primeira imagem desaparece */
-          z-index: 0;
-        }
-    
-        img:last-of-type {
-          opacity: 1; /* A segunda imagem aparece */
-          z-index: 2; /* A segunda imagem vai para cima */
-        }
-      }
-    
-      .stampDiscount {
-        position: absolute;
-        top: 0;
-        left: 0;
-        aspect-ratio: 1/1;
-        border: none;
-        border-radius: 100%;
-        padding: 5px;
-        font-size: 1rem;
-        font-weight: bold;
-        color: var(--branco);
-        background-color: var(--destaque);
-        z-index: 3; /* O selo fica sempre acima das imagens */
-      }
-    }
-    
-    .conteinerInfo{
-      justify-content: space-around;
-      width: 100%;
-      height: 110px;
       
-      .contTtitle{
-        width: 100%;
-        height: 40%;
-        font-size: 12pt;
-        text-align: center;
-      }
-      
-      .contPrice{
-        text-align: center;
-        width: 100%;
-        height: 50%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: baseline;
-        gap: 8px;
+      <div class="conteinerMenuHidden">
         
-        .priceReal{
-          font-size: 10pt;
-          text-decoration: line-through;
-        }
-        
-        .priceFull{
-          font-size: 16pt;
-          font-weight: bold;
-          color: var(--destaque-contraste);
-        }
-        
-        span{
-          font-size: 10pt;
-          
-          strong{
-            color: var(--destaque);
-          }
-        }
-      }
-    }
-    
-    .conteinerBtn{
-      margin-top: 15px;
-      margin-bottom: 3px;
-      width: 100%;
-      height: 80px;
-      justify-content: space-between;
-      .contBtnSup{
-        width: 100%;
-        height: 60%;
-        flex-direction: row;
-        justify-content: space-between;
-        
-        div{
-          height: 100%;
-          border-radius: 3px;
-        }
-        
-        .btnQtd{
-          width: 30%;
-          flex-direction: row;
-          border: 1px solid rgba(0, 0, 0, 0.3);
-          
-          button{
-            padding: 0 10px;
-            background-color: inherit;
-            font-size: 15pt;
-            border: none;
-            height: 100%;
-            width: 10%;
-            color: rgba(0, 0, 0, 0.8);
-            cursor: pointer;
-            transition: all 0.3s ease;
-          }
-          
-          button:hover{
-            color: var(--destaque-contraste);
-          }
-          
-          input{
-            font-size: 10pt;
-            border: none;
-            height: 80%;
-            width: 80%;
-            text-align: center;
-            box-sizing: border-box;
-            color: rgba(0, 0, 0, 0.8);
-          }
-          
-          input:focus{
-            outline: none;
-          }
-          
-          input[type="number"]::-webkit-outer-spin-button,
-          input[type="number"]::-webkit-inner-spin-button {
-              -webkit-appearance: none;
-              margin: 0;
-          }
-        }
-        
-        .btnAdd{
-          width: 65%;
-          
-          button{
-            border: 3px solid var(--destaque);
-            background-color: var(--destaque);
-            color: var(--branco);
-            height: 100%;
-            width: 100%;
-            font-size: 12pt;
-            font-weight: bold;
-            border-radius: 3px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-          }
-          
-          button:hover{
-            background-color: var(--branco);
-            color: var(--destaque);
-            border: 3px solid var(--destaque);
-          }
-        }
-      }
-      
-      .contBtnInf{
-        border: 3px solid var(--whatsapp);
-        width: 97%;
-        height: 35%;
-        border-radius: 5px;
-        
-        button{
-          font-size: 8.5pt;
-          color: var(--whatsapp);
-          height: 100%;
-          width: 100%;
-          border: none;
-          background-color: inherit;
-          cursor: pointer;
-          font-weight: bold;
-          transition: all 0.3s ease;
-          
-          img{
-            height: 60%;
-            width: auto;
-            margin-left: 5px;
-          }
-        }
-        
-        button:hover{
-          border: var(--branco);
-          background-color: var(--whatsapp);
-          color: var(--branco);
-        }
-        
-        button:hover img{
-          content: url('https://assets.onecompiler.app/42wu6ajnx/436r6bnrh/whatsapp_w.png');
-        }
-      }
-    }
-  }
-  
-  .boxProduto:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .boxProduto:hover .btnFav {
-    display: flex;
-    opacity: 1;
-  }
-  
-  
-  
-  @media screen and (max-width: 370px){
-    .boxProduto{
-      width: 260px;
-      padding: 3px;
-      margin: 4px;
-      overflow: hidden;
-      gap: 8px;
-    }
-  
-    .conteinerInfo{
-      gap: 10px;
-      
-      .contTtitle{
-        font-size: 10pt;  // A fonte foi reduzida em comparação com o primeiro código (que era 12pt)
-      }
-      
-      .contPrice{
-        .priceReal{
-          font-size: 8pt;  // Fonte menor para o preço riscado (primeiro código era 10pt)
-        }
-        
-        .priceFull{
-          font-size: 15pt;  // Tamanho da fonte reduzido em relação ao primeiro código (que era 20pt)
-        }
-      }
-    }
-  
-    .conteinerBtn{
-      height: 80px;
-      width: 95%;
-      justify-content: space-between;
-      gap: 5px;
-      
-      .contBtnSup{
-        height: 45px;
-        
-        .btnQtd{;
-          width: 40%;  // A largura foi ajustada em relação ao primeiro código (que era 30%)
-        }
-        
-        .btnAdd{
-          width: 55%;  // A largura foi ajustada em relação ao primeiro código (que era 65%)
-        }
-      }
-      
-      .contBtnInf{
-        border: 3px solid var(--whatsapp);
-        width: 98%;  // A largura foi ajustada em relação ao primeiro código (que era 100%)
-        margin-bottom: 5px;
-      }
-    }
-  }
-  
-  /* Animação de fade-in */
-  .fade-in {
-      opacity: 0;
-      animation: fadeIn 1s forwards;
-  }
-  
-  /* Animação de fade-out */
-  .fade-out {
-      opacity: 1;
-      animation: fadeOut 1s forwards;
-  }
-  
-  /* Definindo o tempo e comportamento da animação */
-  @keyframes fadeIn {
-      to {
-          opacity: 1;
-      }
-  }
-  
-  @keyframes fadeOut {
-      to {
-          opacity: 0;
-      }
-  }
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>HARDWARE</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>FONTE</span>
+            <span>GABINETE</span>
+            <span>HD INTERNO | SSD</span>
+            <span>MEMORIA RAM</span>
+            <span>PLACA DE VIDEO</span>
+            <span>PLACA MÃE</span>
+            <span>PROCESSADOR</span>
+            <span>REFRIGERAÇÃO</span>
+          </div>
+        </div>
 
-  
-</style>
-<div class="boxProduto">
-  
-  <div class="btnFav">
-    <img id="fav_1" src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/fav_empty.png" alt="" />
-    <img id="fav_2" src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/fav.png" alt="" />
-  </div>
-  
-  <div class="conteinerImg">
-    <img src="https://assets.onecompiler.app/42wu6ajnx/42zgh4mjz/computador2.png" alt="" />
-    <img src="https://assets.onecompiler.app/42wu6ajnx/42zgh4mjz/pc4.png" alt="" />
-    <!--<div class="stampDiscount">
-      <span>10%</span>
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>PERIFERICOS</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>ARMAZENAMENTO</span>
+            <span>CADEIRAS E MESAS</span>
+            <span>FONES DE OUVIDO</span>
+            <span>IMPRESSORA</span>
+            <span>MOUSE | MOUSEPAD</span>
+            <span>PROJETORES</span>
+            <span>TECLADOS</span>
+            <span>WEBCAM</span>
+          </div>
+        </div>
+        
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>COMPUTADORES</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>ALL IN ONE</span>
+            <span>DESKTOPS</span>
+            <span>SERVIDORES</span>
+          </div>
+        </div>
+        
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>NOTEBOOKS</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>FONTE</span>
+          </div>
+        </div>
+        
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>MONITORES</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>FONTE</span>
+          </div>
+        </div>
+        
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>CADEIRAS</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>FONTE</span>
+          </div>
+        </div>
+        
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>ELETRONICOS</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>FONTE</span>
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="logoMenuHidden">
+        <img src="https://assets.onecompiler.app/42wu6ajnx/437mjzy32/WM.png" alt="" />
+      </div>
+    </div>
+    
+    <nav>
+      
+      <div class="boxNav">
+        
+        <div class="conteinerNav">
+          
+          <div class="contNav">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/menu_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+            <span><strong>Categorias</strong></span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          
+          
+          <div class="navHidden">
+            <div class="conteinerNavHidden">
+              <span>KIT UPGRADE</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/placa-mae.png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>HARDWARE</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/ram.png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>PERIFERICOS</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/rato.png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>COMPUTADORES</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/computador-portatil%20(1).png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>NOTEBOOKS</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/computador-portatil.png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>MONITORES</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/monitor.png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>CADEIRAS</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/cadeira-gamer.png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>ELETRONICOS</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/eletronico.png" alt="" />
+            </div>
+          </div>
+        </div>
+        
+        <div class="conteinerNav">
+          <div class="contNav">
+            <span>HARDWARE</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="navHidden">
+            
+            <div class="conteinerNavHidden">
+              <span>DRIVE ÓPTICO</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>FONTE DE ALIMENTAÇÃO</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>GABINETE</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>HD INTERNO | SSD</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>MEMORIA RAM</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>PLACA DE VIDEO</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>PLACA MÃE</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>PROCESSADORES</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>REFRIGERÇÃO</span>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="conteinerNav">
+          <div class="contNav">
+            <span>PERIFERICOS</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="navHidden">
+            
+            <div class="conteinerNavHidden">
+              <span>ARMAZENAMENTO</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>CADEIRAS E MESAS</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>FONES DE OUVIDO</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>IMPRESSORA</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>MOUSE | MOUSEPAD</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>PROJETORES E TELAS DE PROJEÇÃO</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>TECLADOS E KITS</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>WEBCAM</span>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="conteinerNav">
+          <div class="contNav">
+            <span>COMPUTADORES</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="navHidden">
+            
+            <div class="conteinerNavHidden">
+              <span>ALL IN ONE</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>DESKTOPS</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>NAS | WORKSTATION | SERVIDORES</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>SOFTWARES</span>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+    </nav>
+    
+    <div class="boxProduct">
+      <div class="boxProduct_conteiner">
+        
+        <div class="boxProduct_gallery">
+          <div class="boxProduct_gallery_miniature">
+            <div class="boxProduct_gallery_miniatureConteiner">
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42zgh4mjz/computador2.png" alt="" />
+            </div>
+            <div class="boxProduct_gallery_miniatureConteiner">
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42zgh4mjz/pc4.png" alt="" />
+            </div>
+            <div class="boxProduct_gallery_miniatureConteiner">
+              <img src="https://assets.onecompiler.app/42wu6ajnx/43846gyxw/fonte.jpeg" alt="" />
+            </div>
+            <div class="boxProduct_gallery_miniatureConteiner">
+              <img src="https://assets.onecompiler.app/42wu6ajnx/43846gyxw/placa.jpeg" alt="" />
+            </div>
+          </div>
+          <div class="boxProduct_gallery_main">
+            
+            <div class="boxProduct_gallery_mainLupa">
+              <div class="lupa"></div>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42zgh4mjz/computador2.png" alt="" class="imgLupa" />
+            </div>
+      
+            <div class="boxProduct_gallery_share">
+              <div class="boxProduct_gallery_shareIcons">
+                <span>Compartilhe:</span>
+                <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/5305153_fb_facebook_facebook%20logo_icon.png" alt="" />
+                <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/5305166_call_chat_mobile_whatsapp_whatsapp%20logo_icon.png" alt="" />
+                <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/5305170_bird_social%20media_social%20network_tweet_twitter_icon.png" alt="" />
+                <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/5335781_camera_instagram_social%20media_instagram%20logo_icon%20(1).png" alt="" />
+              </div>
+              <div class="boxProduct_gallery_shareFav">
+                <img src="https://assets.onecompiler.app/42wu6ajnx/43846gyxw/fav_b.png" alt="" />
+                <span>Adicionar aos favoritos</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="boxProduct_description">
+          <div class="boxProduct_descriptionTitle">
+            <h2>BRAZIL-PC</h2>
+            <h1>COMPUTADOR GAMER BRAZIL PC INTEL CORE I5 11400 11ª GR /16GB/M.2 512GB/GIGABYTE H510/VGA 3060M /FONTE 500W #</h1>
+            <span>(Cód 99999)</span>
+          </div>
+          <div class="boxProduct_descriptionPrice">
+            <h1>R$ 5.499,90</h1>
+            <p>até <strong> 10x </strong> de <strong> R$ 549,99 </strong> sem juros</p>
+          </div>
+          
+          <div class="boxProduct_btns">
+            <div class="boxProduct_btnsSup">
+              <div class="boxProduct_btnsQtd">
+                <button type="button" id="decrease">-</button>
+                <input type="number" id="quantity" value="1" min="1" />
+                <button type="button" id="increase">+</button>
+              </div>
+              <div class="boxProduct_btnsBuy">
+                <button type="submit">Comprar</button>
+              </div>
+            </div>
+            <div class="boxProduct_btnsInf">
+              <button type="submit">
+                <span>Comprar pelo whatsapp</span>
+                <img src="https://assets.onecompiler.app/42wu6ajnx/436r6bnrh/whatsapp_g.png" alt="" />
+              </button>
+            </div>
+          </div>
+          
+          <div class="boxProduct_cep">
+            <span>Calcule o frete</span>
+            <div class="boxProduct_boxCep">
+              <input type="text" placeholder="CEP"/>
+              <button type="submit"><strong>Calcular</strong></button>
+            </div>
+          </div>
+          
+          
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    <div class="boxDescription">
+      <h1>Descrição</h1>
+      <div class="boxDescription_content">
+        <p><strong>Projetado para garantir o melhor desempenho em seus Jogos!</strong></p>
+
+        <p>Os Computadores Brazil Pc, equipados com processadores Intel Core i5, têm desempenho surpreendente. Execute múltiplas tarefas ao mesmo tempo com fluidez.</p>
+        
+        <p>Compatível com os mais diversos jogos atuais, execute em alto desempenho sem lags ou travamentos, com armazenamento M.2, ligue e abra seus programas em segundos. Transfira seus dados facilmente entre dispositivos através da porta USB. Acompanha manual de instrução.</p>
+        
+        <p><strong>Especificações do produto abaixo:</strong></p>
+        
+        <p><strong>- Processador:</strong></p>
+        <p>Intel Core i5-11400 11ª geração</p>
+        
+        <p><strong>- Memória:</strong></p>
+        <p>Capacidade 16GB DDR4</p>
+        
+        <p><strong>- Armazenamento:</strong></p>
+        <p>Tipo: M.2, Capacidade: 512GB</p>
+        
+        <p><strong>- Placa de Vídeo:</strong></p>
+        <p>GEFORCE RTX3060M Golden Memory</p>
+        
+        <p><strong>- Fonte:</strong></p>
+        <p>500W Bivolt automática 80 Plus Bronze</p>
+        
+        <p><strong>- Tensão:</strong></p>
+        <p>110V/230V</p>
+        
+        <p><strong>- Gabinete:</strong></p>
+        <p>Tipo: Torre ATX com lateral em vidro temperado</p>
+      </div>
+
+    </div>
+    
+    <!--<div class="boxCarousel">
+      
+      <div id="boxTitleSold" class="boxCarouselTitle">
+        <h1>Mais vendidos</h1>
+      </div>
+      <div id="boxCarouselSold" class="boxCarouselIframe">
+        <iframe src="carrosseis/carrossel.html" scrolling="no" ></iframe>
+      </div>
+      
+      <div id="boxTitleOffers" class="boxCarouselTitle">
+        <h1>Promoções</h1>
+      </div>
+      <div id="boxCarouselOffers" class="boxCarouselIframe">
+        <iframe src="carrosseis/promocao.html" scrolling="no" ></iframe>
+      </div>
+      
     </div>-->
-  </div>
-  
-  <div class="conteinerInfo">
     
-    <div class="contTtitle">
-      <span>COMPUTADOR GAMER I5 10° RTX 3060 8GB</span>
-    </div>
-    
-    <div class="contPrice">
-      <!--<span class="priceReal">R$ 5.499,89</span>-->
-      <span class="priceFull">R$ 3.500,00</span><br />
-      <span class="priceParc">até <strong>10x</strong> de <strong>R$ 350,00</strong></br>sem juros</span>
-    </div>
-    
-  </div>
-  
-  <div class="conteinerBtn">
-    
-    <div class="contBtnSup">
-      <div class="btnQtd">
-        <button type="button" onclick="alterarQuantidade('decrement', 1)">-</button>
-        <input type="number" id="qtd-1" value="1" readonly />
-        <button type="button" onclick="alterarQuantidade('increment', 1)">+</button>
+    <div class="boxCarousel">
+      
+      <div id="boxTitleSold" class="boxCarouselTitle">
+        <h1>Mais vendidos</h1>
       </div>
-      <div class="btnAdd">
-        <button type="button" onclick="adicionarProduto(1)">Adicionar</button>
+      <div id="boxCarouselSold" class="boxCarouselIframe">
+        <iframe src="carrossel.html" scrolling="no" ></iframe>
       </div>
+      
     </div>
     
-    <div class="contBtnInf">
-      <button type="submit">
-        <span>Comprar pelo Whatsapp</span>
-        <img src="https://assets.onecompiler.app/42wu6ajnx/436r6bnrh/whatsapp_g.png" alt="" />
-      </button>
+    <div class="bannerNew">
+      
+      <div class="conteinerBannerNew">
+        
+        <span>
+          <strong>Receba nossas ofertas por e-mail</strong><br />
+          Cadastre seu e-mail e receba novidades e promoções exclusivas em primeira mão !!      
+        </span>
+        
+        <div class="boxEmail">
+          <input type="email" placeholder="Digite seu email"/>
+          <button type="submit">&#10095</button>
+        </div>
+        
+      </div>
+      
     </div>
     
-  </div>
+    <div class="boxSocial">
+      
+      <div class="conteinerSocial">
+        
+        <span>Siga a gente nas redes sociais </span>
+        
+        <div class="boxIcons">
+          
+          <div id="iconWhats" class="iconSocial">
+            <!--<img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/whatsapp.png" alt="" />-->
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/icons8-whatsapp-500.png" alt="Ícone Social" />
+          </div>
+          
+          <div id="iconFace" class="iconSocial">
+            <!--<img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/facebook.png" alt="" />-->
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/icons8-facebook-500.png" alt="Ícone Social" />
+          </div>
+          
+          <div id="iconInsta" class="iconSocial">
+            <!--<img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/instagram.png" alt="" />-->
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/icons8-instagram-500.png" alt="Ícone Social" />
+          </div>
+          
+          <div id="iconLink" class="iconSocial">
+            <!--<img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/linkedin.png" alt="" />-->
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/icons8-linkedin-500.png" alt="Ícone Social" />
+          </div>
+          
+          <div id="iconGit" class="iconSocial">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/icons8-github-500.png" />
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
     
-</div>
+    <div class="boxCopyright">
+      
+      <span>Copyright © 2024 WM Stock | Desenvolvido por @WalterDev</span>
+      
+    </div>
+  
+    <footer>
+      
+      
+      
+      <div class="boxFooterHidden">
+        
+        <div class="conteinerFooterHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/help_clinic_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+          <span>Inicio</span>
+        </div>
+        
+        <div class="conteinerFooterHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/forum_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+          <span>Contato</span>
+        </div>
+        
+        <div class="conteinerFooterHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/widgets_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+          <span>Menu</span>
+        </div>
+        
+        <div class="conteinerFooterHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/acompanhamento-de-pedidos.png" alt="" />
+          <span>Pedidos</span>
+        </div>
+        
+        <div class="conteinerFooterHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/heart_check_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+          <span>Favoritos</span>
+        </div>
+      </div>
+      
+    </footer>
 
-<script type="text/javascript" charset="utf-8">
-  // Função para alterar a quantidade
-  function alterarQuantidade(acao, idProduto) {
-      const inputQtd = document.getElementById(`qtd-${idProduto}`); // Corrigido para usar template literal
-      let qtd = parseInt(inputQtd.value);
-  
-      if (acao === 'increment') {
-          qtd += 1;
-      } else if (acao === 'decrement' && qtd > 1) {
-          qtd -= 1;
-      }
-  
-      inputQtd.value = qtd;
-  }
-  
-  // Função para adicionar o produto ao carrinho
-  function adicionarProduto(idProduto) {
-      const inputQtd = document.getElementById(`qtd-${idProduto}`); // Corrigido para usar template literal
-      const qtd = parseInt(inputQtd.value);
-  
-      // Obtendo o nome do produto diretamente do HTML
-      const nomeProduto = document.querySelector('.contTtitle span').textContent;
-  
-      // Mensagem de feedback visual
-      const feedback = document.createElement('div');
-      feedback.textContent = `Você adicionou ${qtd} iten(s) ao carrinho!`;
-      feedback.style.position = 'absolute';
-      feedback.style.top = '10px';
-      feedback.style.left = '50%';
-      feedback.style.transform = 'translateX(-50%)';
-      feedback.style.backgroundColor = 'var(--destaque)';
-      feedback.style.color = 'white';
-      feedback.style.padding = '10px';
-      feedback.style.borderRadius = '5px';
-      feedback.style.fontSize = '12px';
-      feedback.style.zIndex = '1000';
-      feedback.style.width = '150px';
-      feedback.style.opacity = '0.8';
-      document.body.appendChild(feedback);
-  
-      // Adiciona a classe fade-in para o efeito de aparecimento
-      feedback.classList.add('fade-in');
-  
-      // Adiciona o feedback ao corpo
-      document.body.appendChild(feedback);
-  
-      // Remover a classe fade-in e adicionar fade-out após 3 segundos
-      setTimeout(() => {
-          feedback.classList.remove('fade-in');
-          feedback.classList.add('fade-out');
-  
-          // Remover o feedback após a animação de fade-out
-          setTimeout(() => {
-              feedback.remove();
-          }, 1000); // Tempo de fade-out (1 segundo)
-      }, 3000); // Tempo de permanência da mensagem (3 segundos)
-  }
-
-</script>
+    <script src="productScript.js"></script>
+  </body>
+</html>
