@@ -57,20 +57,13 @@ const imagem = document.querySelector('.imgLupa');
 const lupa = document.querySelector('.lupa');
 const imagemContainer = document.querySelector('.boxProduct_gallery_mainLupa');
 
-// Variáveis para armazenar a posição de início ao clicar e o controle do tempo
-let isDragging = false;
-let startX = 0;
-let startY = 0;
-let pressTimer; // Timer para detectar o "segurar"
-let lupaVisivel = false; // Controla a visibilidade da lupa
-
 // Função para obter as coordenadas do mouse ou do toque
 function getCoordinates(e) {
     if (e.type.startsWith('touch')) {
-        const rect = imagemContainer.getBoundingClientRect(); // Pega as coordenadas do container
+        // Para dispositivos móveis, pega as coordenadas do primeiro toque
         return {
-            offsetX: e.touches[0].clientX - rect.left,  // Calcula a posição em relação ao container
-            offsetY: e.touches[0].clientY - rect.top
+            offsetX: e.touches[0].pageX - imagemContainer.offsetLeft,
+            offsetY: e.touches[0].pageY - imagemContainer.offsetTop
         };
     } else {
         // Para dispositivos com mouse
@@ -81,17 +74,9 @@ function getCoordinates(e) {
     }
 }
 
-// Função para mostrar a lupa após o duplo clique ou toque
-function mostrarLupa(offsetX, offsetY) {
-    if (!lupaVisivel) {
-        lupa.style.display = 'block';  // Mostra a lupa
-        lupaVisivel = true;
-    }
-    updateLupaPosition(offsetX, offsetY);
-}
-
-// Função para atualizar a posição da lupa
-function updateLupaPosition(offsetX, offsetY) {
+// Adicionando o evento de "mousemove" para desktop
+imagemContainer.addEventListener('mousemove', (e) => {
+    const { offsetX, offsetY } = getCoordinates(e);
     const larguraImagem = imagem.offsetWidth;
     const alturaImagem = imagem.offsetHeight;
 
@@ -111,60 +96,30 @@ function updateLupaPosition(offsetX, offsetY) {
     
     // Movimentando o fundo da lupa para exibir o zoom da parte correta da imagem
     lupa.style.backgroundPosition = `-${(offsetX * proporcaoImagem) - lupa.offsetWidth / 2}px -${(offsetY * proporcaoImagem) - lupa.offsetHeight / 2}px`;
-}
-
-// Função para esconder a lupa quando o usuário parar de interagir
-function esconderLupa() {
-    lupa.style.display = 'none';
-    lupaVisivel = false;
-}
-
-// Adicionando o evento de "dblclick" para ativar a lupa no computador
-imagemContainer.addEventListener('dblclick', (e) => {
-    const { offsetX, offsetY } = getCoordinates(e);
-    mostrarLupa(offsetX, offsetY);
-});
-
-// Adicionando o evento de "mousemove" para desktop
-imagemContainer.addEventListener('mousemove', (e) => {
-    if (lupaVisivel) {
-        const { offsetX, offsetY } = getCoordinates(e);
-        updateLupaPosition(offsetX, offsetY);
-    }
-});
-
-// ----------------------------
-// Para dispositivos móveis
-// ----------------------------
-
-let lastTouch = 0;
-
-// Adicionando o evento de "touchstart" para ativar a lupa com um toque duplo
-imagemContainer.addEventListener('touchstart', (e) => {
-    const currentTime = new Date().getTime();
-    const { offsetX, offsetY } = getCoordinates(e);
-
-    // Verifica se foi um toque duplo (distância entre toques inferior a 300ms)
-    if (currentTime - lastTouch < 300) {
-        mostrarLupa(offsetX, offsetY);
-    }
-    lastTouch = currentTime;
 });
 
 // Adicionando o evento de "touchmove" para dispositivos móveis
 imagemContainer.addEventListener('touchmove', (e) => {
-    if (lupaVisivel) {
-        e.preventDefault();  // Previne a rolagem da tela somente quando a lupa estiver visível
-        const { offsetX, offsetY } = getCoordinates(e);
-        updateLupaPosition(offsetX, offsetY);
-    }
-});
+    const { offsetX, offsetY } = getCoordinates(e);
+    const larguraImagem = imagem.offsetWidth;
+    const alturaImagem = imagem.offsetHeight;
 
-// Adicionando o evento de "touchend" para dispositivos móveis (para parar o arrasto)
-imagemContainer.addEventListener('touchend', () => {
-    if (lupaVisivel) {
-        esconderLupa(); // Esconde a lupa se visível
-    }
+    // Ajustar posição da lupa
+    const posX = offsetX - lupa.offsetWidth / 2;
+    const posY = offsetY - lupa.offsetHeight / 2;
+
+    lupa.style.left = `${posX}px`;
+    lupa.style.top = `${posY}px`;
+
+    // Configurar a parte da imagem para ser exibida dentro da lupa
+    const proporcaoImagem = 2; // A proporção do zoom (quanto mais alto, mais zoom)
+    
+    // Aumentando a área visível da imagem dentro da lupa
+    lupa.style.backgroundImage = `url('${imagem.src}')`;
+    lupa.style.backgroundSize = `${larguraImagem * proporcaoImagem}px ${alturaImagem * proporcaoImagem}px`;
+    
+    // Movimentando o fundo da lupa para exibir o zoom da parte correta da imagem
+    lupa.style.backgroundPosition = `-${(offsetX * proporcaoImagem) - lupa.offsetWidth / 2}px -${(offsetY * proporcaoImagem) - lupa.offsetHeight / 2}px`;
 });
 
 
@@ -239,10 +194,3 @@ favorito.addEventListener('click', function() {
     this.style.opacity = 1;
   }, 300); // Espera o tempo da transição (300ms) antes de mudar a imagem
 });
-
-
-
-
-
-
-
