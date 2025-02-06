@@ -61,9 +61,10 @@ const imagemContainer = document.querySelector('.boxProduct_gallery_mainLupa');
 function getCoordinates(e) {
     if (e.type.startsWith('touch')) {
         // Para dispositivos móveis, pega as coordenadas do primeiro toque
+        const rect = imagemContainer.getBoundingClientRect(); // Pega as coordenadas do container
         return {
-            offsetX: e.touches[0].pageX - imagemContainer.offsetLeft,
-            offsetY: e.touches[0].pageY - imagemContainer.offsetTop
+            offsetX: e.touches[0].clientX - rect.left,  // Calcula a posição em relação ao container
+            offsetY: e.touches[0].clientY - rect.top
         };
     } else {
         // Para dispositivos com mouse
@@ -74,9 +75,8 @@ function getCoordinates(e) {
     }
 }
 
-// Adicionando o evento de "mousemove" para desktop
-imagemContainer.addEventListener('mousemove', (e) => {
-    const { offsetX, offsetY } = getCoordinates(e);
+// Função para atualizar a posição da lupa
+function updateLupaPosition(offsetX, offsetY) {
     const larguraImagem = imagem.offsetWidth;
     const alturaImagem = imagem.offsetHeight;
 
@@ -96,32 +96,20 @@ imagemContainer.addEventListener('mousemove', (e) => {
     
     // Movimentando o fundo da lupa para exibir o zoom da parte correta da imagem
     lupa.style.backgroundPosition = `-${(offsetX * proporcaoImagem) - lupa.offsetWidth / 2}px -${(offsetY * proporcaoImagem) - lupa.offsetHeight / 2}px`;
+}
+
+// Adicionando o evento de "mousemove" para desktop
+imagemContainer.addEventListener('mousemove', (e) => {
+    const { offsetX, offsetY } = getCoordinates(e);
+    updateLupaPosition(offsetX, offsetY);
 });
 
 // Adicionando o evento de "touchmove" para dispositivos móveis
 imagemContainer.addEventListener('touchmove', (e) => {
+    e.preventDefault();  // Previne o comportamento padrão de rolagem da tela
     const { offsetX, offsetY } = getCoordinates(e);
-    const larguraImagem = imagem.offsetWidth;
-    const alturaImagem = imagem.offsetHeight;
-
-    // Ajustar posição da lupa
-    const posX = offsetX - lupa.offsetWidth / 2;
-    const posY = offsetY - lupa.offsetHeight / 2;
-
-    lupa.style.left = `${posX}px`;
-    lupa.style.top = `${posY}px`;
-
-    // Configurar a parte da imagem para ser exibida dentro da lupa
-    const proporcaoImagem = 2; // A proporção do zoom (quanto mais alto, mais zoom)
-    
-    // Aumentando a área visível da imagem dentro da lupa
-    lupa.style.backgroundImage = `url('${imagem.src}')`;
-    lupa.style.backgroundSize = `${larguraImagem * proporcaoImagem}px ${alturaImagem * proporcaoImagem}px`;
-    
-    // Movimentando o fundo da lupa para exibir o zoom da parte correta da imagem
-    lupa.style.backgroundPosition = `-${(offsetX * proporcaoImagem) - lupa.offsetWidth / 2}px -${(offsetY * proporcaoImagem) - lupa.offsetHeight / 2}px`;
+    updateLupaPosition(offsetX, offsetY);
 });
-
 
 // ==========================
 // Troca de imagens + destaque nas miniaturas
