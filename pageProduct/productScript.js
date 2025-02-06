@@ -57,8 +57,50 @@ const imagem = document.querySelector('.imgLupa');
 const lupa = document.querySelector('.lupa');
 const imagemContainer = document.querySelector('.boxProduct_gallery_mainLupa');
 
+// Função para obter as coordenadas do mouse ou do toque
+function getCoordinates(e) {
+    if (e.type.startsWith('touch')) {
+        // Para dispositivos móveis, pega as coordenadas do primeiro toque
+        return {
+            offsetX: e.touches[0].pageX - imagemContainer.offsetLeft,
+            offsetY: e.touches[0].pageY - imagemContainer.offsetTop
+        };
+    } else {
+        // Para dispositivos com mouse
+        return {
+            offsetX: e.offsetX,
+            offsetY: e.offsetY
+        };
+    }
+}
+
+// Adicionando o evento de "mousemove" para desktop
 imagemContainer.addEventListener('mousemove', (e) => {
-    const { offsetX, offsetY } = e;
+    const { offsetX, offsetY } = getCoordinates(e);
+    const larguraImagem = imagem.offsetWidth;
+    const alturaImagem = imagem.offsetHeight;
+
+    // Ajustar posição da lupa
+    const posX = offsetX - lupa.offsetWidth / 2;
+    const posY = offsetY - lupa.offsetHeight / 2;
+
+    lupa.style.left = `${posX}px`;
+    lupa.style.top = `${posY}px`;
+
+    // Configurar a parte da imagem para ser exibida dentro da lupa
+    const proporcaoImagem = 2; // A proporção do zoom (quanto mais alto, mais zoom)
+    
+    // Aumentando a área visível da imagem dentro da lupa
+    lupa.style.backgroundImage = `url('${imagem.src}')`;
+    lupa.style.backgroundSize = `${larguraImagem * proporcaoImagem}px ${alturaImagem * proporcaoImagem}px`;
+    
+    // Movimentando o fundo da lupa para exibir o zoom da parte correta da imagem
+    lupa.style.backgroundPosition = `-${(offsetX * proporcaoImagem) - lupa.offsetWidth / 2}px -${(offsetY * proporcaoImagem) - lupa.offsetHeight / 2}px`;
+});
+
+// Adicionando o evento de "touchmove" para dispositivos móveis
+imagemContainer.addEventListener('touchmove', (e) => {
+    const { offsetX, offsetY } = getCoordinates(e);
     const larguraImagem = imagem.offsetWidth;
     const alturaImagem = imagem.offsetHeight;
 
