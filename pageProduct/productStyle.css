@@ -66,15 +66,18 @@ header{
       display: none;
     }
     
-    .boxLogoHeader{
-      height: 90%;
-      width: auto;
-      
-      img{
-        height: 100%;
+    a{
+      .boxLogoHeader{
+        height: 90%;
         width: auto;
+        
+        img{
+          height: 100%;
+          width: auto;
+        }
       }
     }
+    
     
     .boxSearch{
       height: 90%;
