@@ -30,10 +30,6 @@ body *:focus{
 }
 
 body{
-  border: 1px solid red;
-  width: 360px;
-  
-  
   position: relative;
   flex-direction: column;
   align-items: flex-start;
