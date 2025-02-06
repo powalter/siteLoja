@@ -122,6 +122,7 @@ imagemContainer.addEventListener('touchmove', (e) => {
     lupa.style.backgroundPosition = `-${(offsetX * proporcaoImagem) - lupa.offsetWidth / 2}px -${(offsetY * proporcaoImagem) - lupa.offsetHeight / 2}px`;
 });
 
+
 // ==========================
 // Troca de imagens + destaque nas miniaturas
 // ==========================
