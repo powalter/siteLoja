@@ -542,9 +542,17 @@ footer {
       }
       
       .boxLogoHeader{
-        img{
-          height: 80%;
-          cursor: pointer;
+        a{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+          height: 100%;
+          width: auto;
+          img{
+            height: 80%;
+            cursor: pointer;
+          }
         }
       }
       
