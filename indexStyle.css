@@ -65,9 +65,17 @@ header{
       height: 90%;
       width: auto;
       
-      img{
+      a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
         height: 100%;
         width: auto;
+        img{
+          height: 100%;
+          cursor: pointer;
+        }
       }
     }
     
