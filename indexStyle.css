@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   font-family: Arial;
-  transition: all 0.3s ease;
 }
 
 :root{
@@ -333,6 +332,8 @@ nav{
   
   height: auto;
   width: 100%;
+
+  border: 1px solid blue;
   
   .boxCarouselTitle{
     color: var(--destaque);
@@ -345,9 +346,11 @@ nav{
   }
   
   .boxCarouselIframe{
-    height: 520px;
+    height: 550px;
     width: 95%;
     
+    border: 1px solid green;
+	
     iframe{
       height: 100%;
       width: 100%;
