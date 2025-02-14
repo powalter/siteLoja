@@ -1,20 +1,9 @@
+@import url("colorPalette.css");
+
 *{
   margin: 0;
   padding: 0;
   font-family: Arial;
-}
-
-:root{
---destaque-contraste: #ff7a00 ;
---destaque: #6a3156;
---destaque-escuro: #241023 ;
-
---branco: #FFFFFF;
---cinza: #E9EAEB;
-
---dark: #15161B;
---dark-soft: #282F37;
---dark-logo: #1C1C1C;
 }
 
 :is(body, header, nav, footer, button){
@@ -62,19 +51,21 @@ header{
     
     .boxLogoHeader{
       height: 90%;
-      width: auto;
+      width: auto; 
+      border 1px solid #fff;
       
-      a{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        height: 100%;
-        width: auto;
-        img{
+      a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
           height: 100%;
-          cursor: pointer;
-        }
+          width: 150px;
+          
+          background-image: url('https://assets.onecompiler.app/42wu6ajnx/4392yzfbn/1.png');
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
       }
     }
     
@@ -332,7 +323,7 @@ nav{
   
   height: auto;
   width: 100%;
-	
+
   .boxCarouselTitle{
     color: var(--destaque);
     display: flex;
@@ -936,7 +927,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 375px){
   
   header{
     width: 100%;
@@ -946,7 +937,8 @@ footer {
       
       .boxLogoHeader{
         img{
-          height: 65%;
+          height: 50%;
+	  width: auto;
           cursor: pointer;
         }
       }
@@ -967,9 +959,9 @@ footer {
     }
     
     .boxCarouselIframe{
-      height: 520px;
+      height: auto;
       width: 100%;
-      
+
       iframe{
         height: 100%;
         width: 100%;
