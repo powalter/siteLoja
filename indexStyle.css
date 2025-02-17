@@ -117,6 +117,7 @@ header{
         
         strong{
           cursor: pointer;
+          transition: all 0.3s ease;
           
           &:hover{
             color: var(--destaque-contraste);
@@ -133,7 +134,30 @@ header{
           text-decoration: none;
           color: inherit;
         }
-
+      }
+      
+      #conteinerPainel_account{
+        position: relative;
+        transition: all 0.3s ease;
+        
+        .conteinerPainel_hidden{
+          transition: all 0.4s ease;
+          position: absolute;
+          background-color: var(--branco-neve);
+          opacity: 0;
+          
+          height: 100px;
+          width: 100px;
+          
+          border: 1px solid red;
+          
+          top: 0;
+        }
+        
+        &:hover .conteinerPainel_hidden{
+          top: 50px;
+          opacity: 1;
+        }
       }
     }
     
@@ -259,7 +283,15 @@ nav{
 
 .boxBanner{
   .slide{
-    img{
+    
+    .bannerImg_desk{
+      height: auto;
+      width: 100%;
+    }
+    
+    .bannerImg_mobile{
+      display: none;
+      
       height: auto;
       width: 100%;
     }
@@ -540,17 +572,12 @@ footer {
       }
       
       .boxLogoHeader{
-        a{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          
-          height: 100%;
-          width: auto;
-          img{
-            height: 80%;
-            cursor: pointer;
-          }
+        height: 80%;
+        width: auto; 
+        
+        a {
+            height: 100%;
+            width: 150px;
         }
       }
       
@@ -936,14 +963,37 @@ footer {
       justify-content: space-between;
       
       .boxLogoHeader{
-        img{
-          height: 50%;
-	  width: auto;
-          cursor: pointer;
+        height: 50%;
+        width: auto; 
+        
+        a {
+          height: 100%;
+          width: 150px;
         }
       }
     }
   }
+  
+  .boxBanner{
+    .slide{
+      
+      .bannerImg_desk{
+        display: none;
+        
+        height: auto;
+        width: 100%;
+      }
+      
+      .bannerImg_mobile{
+        display: flex;
+        
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+  
+  
   
   .boxCarousel{
     height: auto;
