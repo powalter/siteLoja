@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0' name='viewport' />
+    <title>WM Stock - Informatica</title>
+    <link rel="stylesheet" href="../../indexStyle.css" />
+  </head>
+  <style type="text/css" media="all">
+  
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      flex-direction: column;
+      
+      gap: 5px;
+    }
+  
+    .boxFilterCatalog, .boxFilterCatalog *{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .boxFilterCatalog{
+      border: 1px solid red;
+      height: 50px;
+      width: 90%;
+      
+      justify-content: space-between;
+      
+      button{
+        border: none;
+        height: 80%;
+        width: 150px;
+        
+        margin: 0 20px;
+      }
+    }
+  
+    /* Estilos para o container usando Grid */
+    .boxCatalog{
+      width: 90%;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      border: 1px solid blue;
+      
+      margin: 0 auto;
+      
+      .container {
+        width: 100%;
+        
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 4 colunas com larguras iguais */
+        gap: 5px; /* Espaçamento entre os itens */
+        
+        border: 1px solid red;
+        
+        /* Estilos para os itens (divs com iframe) */
+        .contIframe {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 700px; /* Altura fixa para os iframes */
+          box-sizing: border-box;
+          
+          iframe {
+            width: 100%; /* Faz o iframe ocupar toda a largura do contêiner */
+            height: 100%; /* Faz o iframe ocupar toda a altura do contêiner */
+            border: none; /* Remove a borda do iframe */
+            border-radius: 8px; /* Bordas arredondadas */
+          }
+        }
+      }
+    }
+    
+    @media (max-width: 1024px){
+      .boxCatalog{
+        
+        .container {
+          
+          /* Estilos para os itens (divs com iframe) */
+          .contIframe {
+            height: 570px; /* Altura fixa para os iframes */
+          }
+        }
+      }
+    }
+    
+    @media (max-width: 375px){
+      .boxCatalog{
+        width: 90%;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        border: 1px solid blue;
+        
+        margin: 0 auto;
+        
+        .container {
+          width: 100%;
+          
+          display: grid;
+          grid-template-columns: repeat(1, 1fr); /* 4 colunas com larguras iguais */
+          gap: 5px; /* Espaçamento entre os itens */
+          
+          border: 1px solid red;
+          
+          /* Estilos para os itens (divs com iframe) */
+          .contIframe {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 600px; /* Altura fixa para os iframes */
+            box-sizing: border-box;
+            
+            iframe {
+              width: 100%; /* Faz o iframe ocupar toda a largura do contêiner */
+              height: 100%; /* Faz o iframe ocupar toda a altura do contêiner */
+              border: none; /* Remove a borda do iframe */
+              border-radius: 8px; /* Bordas arredondadas */
+            }
+          }
+        }
+      }
+    }
+    
+  </style>
+  <body>
+    <header>
+      <div class="conteinerHeader">
+        
+        <div class="boxMenuHidden">
+          <div class="conteinerBoxMenuHidden">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/439rvex2b/menu_w.png" alt="" />
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42zaj9kae/search.png" alt="" />
+          </div>
+        </div>
+        
+        <div class="boxLogoHeader">
+          <a href="../../index.html"></a>
+        </div>
+        
+        <div class="boxSearch">
+          <div class="conteinerSearch">
+            <input type="search" placeholder="Digite o que você procura"/>
+            <button type="submit">
+              <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/search_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+            </button>
+          </div>
+        </div>
+        
+        <div class="boxPainel">
+          
+          <div class="conteinerPainel">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/forum_125dp_FFF_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+            <span>Central de <br/><strong>Atendimento</strong></span>
+          </div>
+          
+          <!--                                                     \/ CODIGO SENDO TRABALHADO \/                                                     -->
+          
+          <div id="conteinerPainel_account" class="conteinerPainel">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/account_w.png" alt="" />
+            <span>Bem-Vindo(a)<br/><strong><a href="#">Entrar</a></strong> ou <strong><a href="#">Cadastrar</a></strong></span>
+            
+            <div class="conteinerPainel_hidden">
+              
+              <div class="conteinerPainel_hiddenConteiner">
+                
+                <div id="conteinerPainel_hiddenContent_title"  class="conteinerPainel_hiddenContent">
+                  <img src="https://assets.onecompiler.app/42wu6ajnx/439f2m5n8/account_fill.png" alt="" />
+                  <span>Olá, <strong>visitante</strong></span>
+                </div>
+                
+                <div class="conteinerPainel_hiddenContent">
+                  <img src="https://assets.onecompiler.app/42wu6ajnx/439f2m5n8/account_circle_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+                  <span>Minha Conta</span>
+                </div>
+                
+                <div class="conteinerPainel_hiddenContent">
+                  <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/acompanhamento-de-pedidos.png" alt="" />
+                  <span>Meus Pedidos</span>
+                </div>
+                
+                <div class="conteinerPainel_hiddenContent">
+                  <img src="https://assets.onecompiler.app/42wu6ajnx/43846gyxw/fav_b.png" alt="" />
+                  <span>Favoritos</span>
+                </div>
+                
+                <div class="conteinerPainel_hiddenContent">
+                  <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/tracking.png" alt="" />
+                  <span>Rastrear Pedido</span>
+                </div>
+                
+              </div>
+              
+            </div>
+            
+          </div>
+          
+          <!--                                                     /\ CODIGO SENDO TRABALHADO /\                                                     -->
+          
+        </div>
+        
+        <div class="boxCart">
+            <div class="conteinerCart">
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42zaj9kae/cart.png" alt="" />
+              <span>2</span>
+            </div>
+        </div>
+        
+      </div>
+    </header>
+    
+    <div class="btnMenuHidden"></div>
+    
+    <div class="menuHidden">
+      
+      <div class="conteinerLoginHidden">
+        <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/profile.png" alt="" />
+        <div class="boxLoginHidden">
+          <span><strong>Olá, visitante</strong></span><br />
+          <span><a href="#">Entrar</a> ou <a href="#">Cadastrar</a></span>
+        </div>
+      </div>
+      
+      
+      <div class="conteinerSubMenuHidden">
+        
+        <div class="celSubMenuHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/speech-bubble.png" alt="" />
+          <span>Central de Antendimento</span>
+        </div>
+        
+        <div class="celSubMenuHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/acompanhamento-de-pedidos.png" alt="" />
+          <span>Meus Pedidos</span>
+        </div>
+        
+        <div class="celSubMenuHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/favorito.png" alt="" />
+          <span>Favoritos</span>
+        </div>
+        
+        <div class="celSubMenuHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/tracking.png" alt="" />
+          <span>Rastrear Pedido</span>
+        </div>
+        
+      </div>
+      
+      
+      <div class="conteinerMenuHidden">
+        
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>HARDWARE</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>FONTE</span>
+            <span>GABINETE</span>
+            <span>HD INTERNO | SSD</span>
+            <span>MEMORIA RAM</span>
+            <span>PLACA DE VIDEO</span>
+            <span>PLACA MÃE</span>
+            <span>PROCESSADOR</span>
+            <span>REFRIGERAÇÃO</span>
+          </div>
+        </div>
+
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>PERIFERICOS</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>ARMAZENAMENTO</span>
+            <span>CADEIRAS E MESAS</span>
+            <span>FONES DE OUVIDO</span>
+            <span>IMPRESSORA</span>
+            <span>MOUSE | MOUSEPAD</span>
+            <span>PROJETORES</span>
+            <span>TECLADOS</span>
+            <span>WEBCAM</span>
+          </div>
+        </div>
+        
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>COMPUTADORES</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>ALL IN ONE</span>
+            <span>DESKTOPS</span>
+            <span>SERVIDORES</span>
+          </div>
+        </div>
+        
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>NOTEBOOKS</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>FONTE</span>
+          </div>
+        </div>
+        
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>MONITORES</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>FONTE</span>
+          </div>
+        </div>
+        
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>CADEIRAS</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>FONTE</span>
+          </div>
+        </div>
+        
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>ELETRONICOS</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>FONTE</span>
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="logoMenuHidden">
+        <img src="https://assets.onecompiler.app/42wu6ajnx/437mjzy32/WM.png" alt="" />
+      </div>
+    </div>
+    
+    <nav>
+      
+      <div class="boxNav">
+        
+        <div class="conteinerNav">
+          
+          <div class="contNav">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/menu_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+            <span><strong>Categorias</strong></span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          
+          
+          <div class="navHidden">
+            <div class="conteinerNavHidden">
+              <span>KIT UPGRADE</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/placa-mae.png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>HARDWARE</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/ram.png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>PERIFERICOS</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/rato.png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>COMPUTADORES</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/computador-portatil%20(1).png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>NOTEBOOKS</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/computador-portatil.png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>MONITORES</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/monitor.png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>CADEIRAS</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/cadeira-gamer.png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>ELETRONICOS</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/eletronico.png" alt="" />
+            </div>
+          </div>
+        </div>
+        
+        <div class="conteinerNav">
+          <div class="contNav">
+            <span>HARDWARE</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="navHidden">
+            
+            <div class="conteinerNavHidden">
+              <span>DRIVE ÓPTICO</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>FONTE DE ALIMENTAÇÃO</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>GABINETE</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>HD INTERNO | SSD</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>MEMORIA RAM</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>PLACA DE VIDEO</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>PLACA MÃE</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>PROCESSADORES</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>REFRIGERÇÃO</span>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="conteinerNav">
+          <div class="contNav">
+            <span>PERIFERICOS</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="navHidden">
+            
+            <div class="conteinerNavHidden">
+              <span>ARMAZENAMENTO</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>CADEIRAS E MESAS</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>FONES DE OUVIDO</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>IMPRESSORA</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>MOUSE | MOUSEPAD</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>PROJETORES E TELAS DE PROJEÇÃO</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>TECLADOS E KITS</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>WEBCAM</span>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="conteinerNav">
+          <div class="contNav">
+            <span>COMPUTADORES</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="navHidden">
+            
+            <div class="conteinerNavHidden">
+              <span>ALL IN ONE</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>DESKTOPS</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>NAS | WORKSTATION | SERVIDORES</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>SOFTWARES</span>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+    </nav>
+    
+    <!--                              CABEÇALHO                              --> 
+    <!--                              CABEÇALHO                              --> 
+    
+    <div class="boxFilterCatalog">
+      <button type="submit">Gabinetes</button>
+      <button type="submit">Ordernar por:</button>
+    </div>
+
+    <div class="boxCatalog">
+      
+      <div class="container">
+        <div class="contIframe">
+          <iframe src="../slideProduct/carouselProduct/products/mouse.html?id=1" scrolling="no"></iframe>
+        </div>
+        <div class="contIframe">
+          <iframe src="../slideProduct/carouselProduct/products/mouse.html?id=2" scrolling="no"></iframe>
+        </div>
+        <div class="contIframe">
+          <iframe src="../slideProduct/carouselProduct/products/mouse.html?id=3" scrolling="no"></iframe>
+        </div>
+        <div class="contIframe">
+          <iframe src="../slideProduct/carouselProduct/products/mouse.html?id=4" scrolling="no"></iframe>
+        </div>
+        <div class="contIframe">
+          <iframe src="../slideProduct/carouselProduct/products/mouse.html?id=5" scrolling="no"></iframe>
+        </div>
+        <div class="contIframe">
+          <iframe src="../slideProduct/carouselProduct/products/mouse.html?id=6" scrolling="no"></iframe>
+        </div>
+        <div class="contIframe">
+          <iframe src="../slideProduct/carouselProduct/products/mouse.html?id=7" scrolling="no"></iframe>
+        </div>
+        <div class="contIframe">
+          <iframe src="../slideProduct/carouselProduct/products/mouse.html?id=8" scrolling="no"></iframe>
+        </div>
+        <div class="contIframe">
+          <iframe src="../slideProduct/carouselProduct/products/mouse.html?id=9" scrolling="no"></iframe>
+        </div>
+        <div class="contIframe">
+          <iframe src="../slideProduct/carouselProduct/products/mouse.html?id=10" scrolling="no"></iframe>
+        </div>
+        <div class="contIframe">
+          <iframe src="../slideProduct/carouselProduct/products/mouse.html?id=11" scrolling="no"></iframe>
+        </div>
+        <div class="contIframe">
+          <iframe src="../slideProduct/carouselProduct/products/mouse.html?id=12" scrolling="no"></iframe>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!--                              RODAPE                              --> 
+    <!--                              RODAPE                              --> 
+    
+    <div class="bannerNew">
+      
+      <div class="conteinerBannerNew">
+        
+        <span>
+          <strong>Receba nossas ofertas por e-mail</strong><br />
+          Cadastre seu e-mail e receba novidades e promoções exclusivas em primeira mão !!      
+        </span>
+        
+        <div class="boxEmail">
+          <input type="email" placeholder="Digite seu email"/>
+          <button type="submit">&#10095</button>
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    <div class="boxSocial">
+      
+      <div class="conteinerSocial">
+        
+        <span>Siga a gente nas redes sociais </span>
+        
+        <div class="boxIcons">
+          
+          <div id="iconWhats" class="iconSocial">
+            <!--<img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/whatsapp.png" alt="" />-->
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/icons8-whatsapp-500.png" alt="Ícone Social" />
+          </div>
+          
+          <div id="iconFace" class="iconSocial">
+            <!--<img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/facebook.png" alt="" />-->
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/icons8-facebook-500.png" alt="Ícone Social" />
+          </div>
+          
+          <div id="iconInsta" class="iconSocial">
+            <!--<img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/instagram.png" alt="" />-->
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/icons8-instagram-500.png" alt="Ícone Social" />
+          </div>
+          
+          <div id="iconLink" class="iconSocial">
+            <!--<img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/linkedin.png" alt="" />-->
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/icons8-linkedin-500.png" alt="Ícone Social" />
+          </div>
+          
+          <div id="iconGit" class="iconSocial">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/icons8-github-500.png" />
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    <div class="boxCopyright">
+      
+      <span>Copyright © 2024 WM Stock | Desenvolvido por @WalterDev</span>
+      
+    </div>
+  
+    <footer>
+      
+      <div class="boxFooterHidden">
+        
+        <div class="conteinerFooterHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/help_clinic_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+          <span>Inicio</span>
+        </div>
+        
+        <div class="conteinerFooterHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/forum_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+          <span>Contato</span>
+        </div>
+        
+        <div class="conteinerFooterHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/widgets_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+          <span>Menu</span>
+        </div>
+        
+        <div class="conteinerFooterHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/acompanhamento-de-pedidos.png" alt="" />
+          <span>Pedidos</span>
+        </div>
+        
+        <div class="conteinerFooterHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/heart_check_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+          <span>Favoritos</span>
+        </div>
+      </div>
+      
+    </footer>
+
+    <script src="indexScript.js"></script>
+  </body>
+</html>
