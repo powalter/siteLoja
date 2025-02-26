@@ -1,0 +1,40 @@
+/*:root{
+--destaque-contraste: #ff7a00 ;
+--destaque: #6a3156;
+--destaque-escuro: #241023 ;
+
+--branco: #FFFFFF;
+--cinza: #E9EAEB;
+
+--dark: #15161B;
+--dark-soft: #282F37;
+--dark-logo: #1C1C1C;
+}*/
+
+/* NOVAS CORES*/
+
+:root{
+--destaque-contraste: #ec342b;
+
+--destaque: #ec342b; /* VERMELHO FORTE */
+--destaque-escuro: #7d111f ; /* VERMELHO ESCURO */
+
+--branco: #FFFFFF;
+--branco-neve: #f1ecf1; /* BRANCO GEADA */
+
+--cinza: #E9EAEB;
+
+--dark: #15161B;
+--dark-soft: #333333; /* CINZA MEDIO */
+
+--dark-logo: #171624; /* FUNDO DA LOGO ESCURO */
+--light-logo: #f1ecf1; /* FUNDO DA LOGO CLARO */
+
+--whatsapp: #25D366;
+}
+
+::selection {
+  background-color: var(--dark-logo);
+  color: var(--branco-neve);
+  padding: 10px;
+}

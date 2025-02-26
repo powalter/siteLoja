@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0' name='viewport' />
+    <title>WM Stock - Informatica</title>
+    <link rel="stylesheet" href="indexStyle.css" />
+  </head>
+  <style type="text/css" media="all">
+    @import url("colorPalette.css");
+
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: Arial;
+    }
+    
+    :is(body, header, nav, footer, button){
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    body{
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    :is(.conteinerHeader, .boxMenuHidden, .conteinerBoxMenuHidden, .boxLogoHeader, .boxSearch, .conteinerSearch,
+        .boxPainel, .conteinerPainel, .boxCart, .conteinerCart,
+        .boxFooterHidden, .conteinerFooterHidden,
+        .boxNav, .conteinerNav, .contNav, .navHidden, .conteinerNavHidden,
+        .bannerNew, .conteinerBannerNew, .boxEmail) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .bannerNew{
+      height: 140px;
+      width: 100%;
+      background-color: var(--dark-logo);
+      
+      .conteinerBannerNew{
+        height: 100%;
+        width: 80%;
+        flex-direction: column;
+        gap: 15px;
+        
+        span{
+          text-align: center;
+          font-size: 13px;
+          color: var(--destaque-contraste);
+          
+          strong{
+            font-size: 18px;
+          }
+        }
+        
+        .boxEmail{
+          height: 40px;
+          width: 40%;
+          overflow: hidden;
+          background-color: var(--branco);
+          border-radius: 50px;
+          
+          input, button{
+            height: 100%;
+            background-color: inherit;
+            border: none;
+          }
+          
+          input{
+            width: 90%;
+            padding-left: 20px;
+            
+            &:focus{
+              outline: none;
+            }
+          }
+          button{
+            width: 10%;
+            
+            &:hover{
+              color: var(--destaque-contraste);
+            }
+          }
+        }
+      }
+    }
+    
+    .boxSocial{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      height: 200px;
+      width: 100%;
+      
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      
+      .conteinerSocial{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        
+        height: 100%;
+        width: 80%;
+        
+        span{
+          font-family: Arial;
+          font-size: 15pt;
+        }
+        
+        .boxIcons{
+          display: flex;
+          
+          gap: 25px;
+          
+          .iconSocial{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            height: 60px;
+            aspect-ratio: 1/1;
+            
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 100%;
+            
+            box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.3);
+            
+            transition: all 0.2s ease;
+            
+            img{
+              height: 65%;
+              width: auto;
+              opacity: 0.8;
+            }
+          }
+          
+          /* WHATSAPP */
+          #iconWhats:hover {
+            border: 1px solid rgba(37, 211, 102, 0.1);
+            box-shadow: 
+              4px 4px 8px rgba(37, 211, 102, 0.5),         /* Verde (WhatsApp) */
+              8px 8px 16px rgba(37, 211, 102, 0.5);         /* Verde (WhatsApp) */
+          }
+          
+          /* FACEBOOK */
+           #iconFace:hover{
+            border: 1px solid rgba(24, 119, 242, 0.1);
+            box-shadow: 
+              4px 4px 8px rgba(59, 89, 152, 0.5),          /* Azul Claro (Facebook) */
+              8px 8px 16px rgba(59, 89, 152, 0.5);          /* Azul Claro (Facebook) */
+          }
+          
+          /* INSTAGRAM */
+          #iconInsta:hover{
+            border: 1px solid rgba(193, 53, 132, 0.1);
+            box-shadow: 
+              4px 4px 8px rgba(193, 53, 132, 0.5),        /* Roxo (Instagram) */
+              8px 8px 16px rgba(255, 45, 85, 0.5),         /* Laranja (Instagram) */
+              12px 12px 24px rgba(255, 218, 0, 0.5);       /* Amarelo (Instagram) */
+          }
+          
+          /* LINKEDIN */
+          #iconLink:hover{
+            border: 1px solid rgba(0, 119, 181, 0.1);
+            box-shadow: 
+              4px 4px 8px rgba(0, 119, 181, 0.5),          /* Azul (LinkedIn) */
+              8px 8px 16px rgba(0, 119, 181, 0.5);          /* Azul (LinkedIn) */
+          }
+          
+          /* GITGUB */
+           #iconGit:hover{
+            border: 1px solid rgba(35, 134, 54, 0.1);
+            box-shadow: 
+              4px 4px 8px rgba(24, 23, 23, 0.5),          /* Preto (GitHub) */
+              8px 8px 16px rgba(35, 134, 54, 0.5);         /* Verde (GitHub) */
+          }
+        }
+      }
+    }
+    
+    .boxCopyright{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      text-align: center;
+      
+      height: 60px;
+      width: 100%;
+    }
+    
+    footer {
+      .boxFooterHidden {
+        display: none; /* Inicialmente oculto */
+      }
+    }
+    
+    @media screen and (max-width: 760px){
+      /* DISPLAY FLEX CENTER */
+      .menuHidden, .conteinerLoginHidden, .conteinerSubMenuHidden, .celSubMenuHidden, .conteinerMenuHidden, .catMenuHidden, .subMenuHidden, .titleSubMenuHidden, .logoMenuHidden{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .bannerNew{
+        width: 100%;
+        
+        .conteinerBannerNew{
+          height: 100%;
+          width: 90%;
+          flex-direction: column;
+          gap: 15px;
+          
+          span{
+            text-align: center;
+            font-size: 13px;
+            color: var(--destaque-contraste);
+            
+            strong{
+              font-size: 18px;
+            }
+          }
+          
+          .boxEmail{
+            height: 40px;
+            width: 100%;
+            overflow: hidden;
+            background-color: var(--branco);
+            border-radius: 50px;
+            
+            input, button{
+              height: 100%;
+              background-color: inherit;
+              border: none;
+            }
+            
+            input{
+              width: 90%;
+              padding-left: 20px;
+            }
+            
+            input:focus{
+              outline: none;
+            }
+            
+            button{
+              width: 10%;
+            }
+            
+            button:hover{
+              color: var(--destaque-contraste);
+            }
+          }
+        }
+      }
+      
+      .boxSocial{
+        height: 200px;
+        width: 100%;
+        
+        .conteinerSocial{
+          gap: 20px;
+          
+          height: 100%;
+          width: 80%;
+          
+          .boxIcons{
+            display: flex;
+            
+            gap: 20px;
+            
+            .iconSocial{
+              height: 50px;
+              aspect-ratio: 1/1;
+            }
+          }
+        }
+      }
+      
+      footer{
+        bottom: 0;
+        position: sticky;
+        width: 100%;
+        
+        .boxFooterHidden{
+          position: fixed;
+          display: flex;
+          height: 80px;
+          width: 100%;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+          background-color: var(--branco);
+          
+          .conteinerFooterHidden{
+            height: 100%;
+            width: 50%;
+            flex-direction: column;
+            font-size: 12pt;
+            opacity: 0.7;
+            cursor: pointer;
+            
+            img{
+              height: 40%;
+              width: auto;
+              margin-top: 5px;
+            }
+            
+            span:hover{
+              color: var(--destaque-contraste);
+            }
+          }
+        }
+      }
+    }
+  </style>
+  <body>
+    
+    <div class="bannerNew">
+      
+      <div class="conteinerBannerNew">
+        
+        <span>
+          <strong>Receba nossas ofertas por e-mail</strong><br />
+          Cadastre seu e-mail e receba novidades e promoções exclusivas em primeira mão !!      
+        </span>
+        
+        <div class="boxEmail">
+          <input type="email" placeholder="Digite seu email"/>
+          <button type="submit">&#10095</button>
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    <div class="boxSocial">
+      
+      <div class="conteinerSocial">
+        
+        <span>Siga a gente nas redes sociais </span>
+        
+        <div class="boxIcons">
+          
+          <div id="iconWhats" class="iconSocial">
+            <!--<img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/whatsapp.png" alt="" />-->
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/icons8-whatsapp-500.png" alt="Ícone Social" />
+          </div>
+          
+          <div id="iconFace" class="iconSocial">
+            <!--<img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/facebook.png" alt="" />-->
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/icons8-facebook-500.png" alt="Ícone Social" />
+          </div>
+          
+          <div id="iconInsta" class="iconSocial">
+            <!--<img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/instagram.png" alt="" />-->
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/icons8-instagram-500.png" alt="Ícone Social" />
+          </div>
+          
+          <div id="iconLink" class="iconSocial">
+            <!--<img src="https://assets.onecompiler.app/42wu6ajnx/42xtaayub/linkedin.png" alt="" />-->
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/icons8-linkedin-500.png" alt="Ícone Social" />
+          </div>
+          
+          <div id="iconGit" class="iconSocial">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/icons8-github-500.png" />
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    <div class="boxCopyright">
+      
+      <span>Copyright © 2024 WM Stock | Desenvolvido por @WalterDev</span>
+      
+    </div>
+  
+    <footer>
+      
+      <div class="boxFooterHidden">
+        
+        <div class="conteinerFooterHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/help_clinic_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+          <span>Inicio</span>
+        </div>
+        
+        <div class="conteinerFooterHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/forum_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+          <span>Contato</span>
+        </div>
+        
+        <div class="conteinerFooterHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/widgets_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+          <span>Menu</span>
+        </div>
+        
+        <div class="conteinerFooterHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/acompanhamento-de-pedidos.png" alt="" />
+          <span>Pedidos</span>
+        </div>
+        
+        <div class="conteinerFooterHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/heart_check_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+          <span>Favoritos</span>
+        </div>
+      </div>
+      
+    </footer>
+  </body>
+</html>

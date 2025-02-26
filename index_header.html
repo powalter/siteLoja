@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0' name='viewport' />
+    <title>WM Stock - Informatica</title>
+  </head>
+  <style type="text/css" media="all">
+    @import url("colorPalette.css");
+
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: Arial;
+    }
+    
+    :is(body, header, nav, footer, button){
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    body{
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-top: 97px; /* Para compensar a altura do header fixo */
+
+      overflow: visible;
+    }
+    
+    :is(.conteinerHeader, .boxMenuHidden, .conteinerBoxMenuHidden, .boxLogoHeader, .boxSearch, .conteinerSearch,
+        .boxPainel, .conteinerPainel, .boxCart, .conteinerCart,
+        .boxFooterHidden, .conteinerFooterHidden,
+        .boxNav, .conteinerNav, .contNav, .navHidden, .conteinerNavHidden,
+        .bannerNew, .conteinerBannerNew, .boxEmail) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    
+    header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 97px;
+      width: 100%;
+      background-color: var(--dark-logo);
+      z-index: 1000;
+      
+      .conteinerHeader{
+        height: 100%;
+        width: 100%;
+        gap: 20px;
+        
+        .boxMenuHidden{
+          display: none;
+        }
+        
+        .boxLogoHeader{
+          height: 90%;
+          width: auto; 
+          border 1px solid #fff;
+          
+          transition: opacity 0.3s ease;
+          
+          a {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              
+              height: 100%;
+              width: 150px;
+              
+              background-image: url('https://assets.onecompiler.app/42wu6ajnx/4392yzfbn/1.png');
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: contain;
+          }
+          
+          &:hover{
+            opacity: 0.8;
+          }
+        }
+        
+        .boxSearch{
+          height: 90%;
+          width: 550px;
+          
+          .conteinerSearch{
+            height: 44px;
+            width: 100%;
+            border-radius: 50px;
+            overflow: hidden;
+            background-color: var(--branco);
+            
+            input, button{
+              height: 100%;
+              border: none;
+              background-color: inherit;
+            }
+            
+            input{
+              font-size: 12pt;
+              width: 90%;
+              padding-left: 20px;
+              
+              &:focus{
+                outline: none;
+              }
+            }
+            
+            button{
+              width: 10%;
+              
+              img{
+                height: 50%;
+                width: auto;
+              }
+            }
+          }
+        }
+        
+        .boxPainel{
+          height: 90%;
+          color: var(--branco);
+          gap: 20px;
+          
+          .conteinerPainel{
+            height: 44px;
+            
+            strong{
+              cursor: pointer;
+              transition: all 0.3s ease;
+              
+              &:hover{
+                color: var(--destaque-contraste);
+              }
+            }
+            
+            img{
+              height: 80%;
+              width: auto;
+              padding-right: 5px;
+            }
+            
+            a{
+              text-decoration: none;
+              color: inherit;
+            }
+          }
+          
+          /*                                                    \/ CODIGO SENDO TRABALHADO \/                                                    */
+          
+          #conteinerPainel_account{
+            cursor: default;
+            
+            position: relative;
+            transition: all 0.3s ease;;
+            
+            .conteinerPainel_hidden, .conteinerPainel_hidden *{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            
+            .conteinerPainel_hidden{
+              z-index: 1;
+              
+              transition: all 0.4s ease;
+              position: absolute;
+              background-color: var(--branco);
+              
+              height: auto;
+              width: calc(100% + 70px);
+              padding-bottom: 5px;
+              border-radius: 5px;
+              
+              top: 0;
+              left: 0;
+              
+              flex-direction: column;
+              
+              border: 1px solid rgba(255, 255, 255, 0.2);
+              box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+              
+              visibility: hidden;
+              opacity: 0;
+              transition: visibility 0s 0.5s, opacity 0.5s ease, top 0.5s ease; /* Transição mais suave */
+              
+              .conteinerPainel_hiddenConteiner{
+                flex-direction: column;
+                width: 100%;
+                height: 80%;
+                
+                .conteinerPainel_hiddenContent{
+                  height: 33px;
+                  width: 100%;
+                  padding: 5px 0;
+                  justify-content: flex-start;
+                
+                  align-items: flex-end;
+                  
+                  img{
+                    height: 90%;
+                    aspect-ratio: 1/1;
+                    padding: 0 10px;
+                    margin-left: 10px;
+                  }
+                  
+                  span{
+                    font-size: 14pt;
+                    color: var(--dark-logo);
+                    margin-left: 10px;
+                    
+                    &:hover{
+                      color: var(--destaque-contraste);
+                      cursor: pointer;
+                    }
+                  }
+                
+                }
+                
+                #conteinerPainel_hiddenContent_title{
+                  text-align: center;
+                  justify-content: center;
+                  height: 60px;
+                  
+                  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+                  
+                  align-items: center;
+                  
+                  padding: 10px 0;
+                  
+                  span{
+                    font-size: 18pt;
+                    margin-right: 10px;
+                  }
+                  
+                  img{
+                    height: calc(100% + 10px);
+                    margin-left: 0px;
+                    padding: 0;
+                  }
+                }
+              }
+            }
+            
+            &:hover .conteinerPainel_hidden{
+              top: 50px;
+              visibility: visible;
+              opacity: 1;
+              transition-delay: 0s;
+            }
+          }
+          
+          /*                                                    /\ CODIGO SENDO TRABALHADO /\                                                    */
+        }
+        
+        .boxCart{
+          height: 90%;
+          
+          .conteinerCart{
+            height: 44px;
+            width: auto;
+            
+            img{
+              height: 80%;
+            }
+            
+            span{
+              background-color: var(--destaque-contraste);
+              padding: 2px 10px;
+              border-radius: 10px;
+              color: var(--branco);
+              font-weight: bold;
+            }
+          }
+        }
+        
+      }
+      
+    }
+    
+    .btnMenuHidden, .menuHidden{
+      display: none;
+    }
+    
+    nav img{
+      height: 50px;
+      width: auto;
+    }
+    
+    nav{
+      background-color: var(--branco);
+      
+      border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+      height: 55px;
+      width: 100%;
+      
+      img{
+        height: 20px;
+        width: auto;
+      }
+      
+      .boxNav {
+        height: 100%;
+        width: 60%;
+        flex-direction: row;
+        
+        .conteinerNav{
+          position: relative;
+          height: 100%;
+          width: 100%;
+          
+          .contNav{
+            height: 100%;
+            width: 50%;
+            gap: 5px;
+            
+            img{
+              height: 25px;
+              width: auto;
+            }
+            
+            span{
+              cursor: pointer;
+              
+              &:hover{
+                color: var(--destaque-contraste);
+              }
+            }
+          }
+        }
+      }
+      
+      .navHidden{
+        z-index: 9999;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 55px;
+        width: 250px;
+        padding: 20px 10px;
+        flex-direction: column;
+        gap: 15px;
+        background-color: var(--branco);
+        
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s 0.5s, opacity 0.5s ease; /* Transição mais suave */
+        
+        .conteinerNavHidden{
+          width: 90%;
+          height: 30px;
+          flex-direction: row;
+          justify-content: space-between;
+          cursor: pointer;
+        }
+        
+        img{
+          height: 85%;
+        }
+        
+        span:hover{
+          color: var(--destaque-contraste);
+        }
+      }
+      
+      .conteinerNav:hover .navHidden{
+        visibility: visible;
+        opacity: 1;
+        box-shadow: 0 -8px 15px -8px rgba(0, 0, 0, 0.2);
+        transition-delay: 0s;
+      }
+      
+      .conteinerNav:hover ~ .boxBanner{
+        filter: brightness(0.2);
+      }
+    
+    }
+    
+    .boxDiv{
+      position: relative;
+      height: 66px;
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      filter: blur(0.8);
+      
+      .classDivisoria{
+        height: 100%;
+        display: flex;
+        transition: transform 0.5s ease;
+        margin: 0 50px;
+        align-items: center;
+        
+        
+        .contentDiv{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          box-sizing: border-box;
+          margin: 0 auto;
+          
+          img{
+            height: 45px;
+            width: auto;
+            padding-right: 13px;
+          }
+          
+          strong{
+            color: var(--destaque);
+          }
+        }
+          
+        .divVertical{
+          margin: 0 30px;
+          height: 60%;
+          width: 0;
+          border: 1px solid rgba(0, 0, 0, 0.2);
+        }  
+        
+      }
+        
+    }
+    
+    .boxBanner{
+      height: 600px;
+      width: auto;
+      
+  
+      .slide{
+        
+        .bannerImg_desk{
+          height: auto;
+          width: 100%;
+        }
+        
+        .bannerImg_mobile{
+          display: none;
+          
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+    
+    .conteinerNav:hover ~ .boxBanner{
+      filter: brightness(0.2);
+    }
+    
+    .conteinerNav:hover ~ .boxDiv * {
+      filter: brightness(0.2);
+    }
+    
+    @media screen and (max-width: 1024px){
+      header{
+        
+        .conteinerHeader{
+          
+          .boxMenuHidden{
+          }
+          
+          .boxLogoHeader{
+            height: 70%; /* HOUVE ALTERAÇÃO */
+          }
+          
+          .boxSearch{
+            width: 300px; /* HOUVE ALTERAÇÃO */
+          }
+        }
+      }
+    }
+    
+    @media screen and (max-width: 760px){
+      /* DISPLAY FLEX CENTER */
+      .menuHidden, .conteinerLoginHidden, .conteinerSubMenuHidden, .celSubMenuHidden, .conteinerMenuHidden, .catMenuHidden, .subMenuHidden, .titleSubMenuHidden, .logoMenuHidden{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      header{
+        width: 100%;
+        
+        .conteinerHeader{
+          justify-content: space-between;
+          
+          .boxSearch, .boxPainel{
+            display: none;
+          }
+          
+          .boxLogoHeader{
+            height: 80%;
+            width: auto; 
+            
+            a {
+                height: 100%;
+                width: 150px;
+            }
+          }
+          
+          .boxMenuHidden{
+            height: 90%;
+            display: flex;
+            
+            .conteinerBoxMenuHidden{
+              height: 100%;
+              
+              img{
+                height: 50%;
+                cursor: pointer;
+              }
+            }
+            
+            .conteinerBoxMenuHidden:hover{
+              opacity: 0.7;
+            }
+          }
+          
+          .boxCart{
+            
+            .conteinerCart{
+              height: 100%;
+              margin-right: 10px;
+              
+              img{
+                height: 50%;
+                cursor: pointer;
+              }
+            }
+            
+            .conteinerCart:hover{
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+      
+      .btnMenuHidden, .menuHidden{
+        display: flex;
+      }
+      
+      .btnMenuHidden{
+        z-index: 1005;
+        position: fixed;
+        top: 0;
+        width: 40px;
+        height: 93px;
+      }
+      
+      .menuHidden{
+        z-index: 1000;
+        position: absolute;
+        top: 97px;
+        left: -100%;
+        width: 100%;
+        height: auto;
+        background-color: var(--branco);
+        transition: left 0.5s ease;
+        box-shadow: 0 8px 15px -8px rgba(0, 0, 0, 0.8);
+        flex-direction: column;
+        
+        
+        .conteinerLoginHidden{
+          height: 70px;
+          width: 100%;
+          font-size: 15pt;
+          padding: 10px 0;
+          
+          .boxLoginHidden{
+            a{
+              color: var(--destaque);
+              text-decoration: none;
+            }
+          }
+          
+          img{
+            height: 70%;
+            margin-right: 5px;
+          }
+        }
+        
+        .conteinerSubMenuHidden{
+          opacity: 0.8;
+          
+          flex-direction: column;
+          width: 100%;
+          gap: 10px;
+          padding: 20px 0;
+          
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);;
+          border-top: 1px solid rgba(0, 0, 0, 0.2);;
+          
+          .celSubMenuHidden{
+            justify-content: flex-start;
+            width: 90%;
+            height: 50px;
+            
+            span{
+              font-size: 14pt;
+              cursor: pointer;
+              
+              &:hover{
+                color: var(--destaque-contraste);
+              }
+            }
+            
+            
+            img{
+              height: 70%;
+              width: auto;
+              margin-right: 10px;
+            }
+          }
+        }
+        
+        .conteinerMenuHidden {
+          width: 100%;
+          padding: 20px 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          
+          .catMenuHidden {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            transition: margin-bottom 1s ease;
+            
+            .titleSubMenuHidden {
+              height: 40px;
+              width: 90%;
+              display: flex;
+              justify-content: space-between;
+              cursor: pointer;
+              
+              img {
+                height: 85%;
+              }
+              
+              span:hover {
+                color: var(--destaque-contraste);
+              }
+            }
+            
+            &:hover .subMenuHidden{
+              max-height: 500px; /* Ajuste conforme a altura do conteúdo */
+              /*overflow: visible;*/
+              margin-top: 10px; /* Ajuste a distância entre o submenu e o item acima */
+            }
+            
+            &:hover .subMenuHidden:hover {
+              max-height: 500px; /* Garante que o submenu fique expandido enquanto hover */
+              /*overflow: visible;*/
+              margin-top: 10px;
+            }
+            
+          }
+        }
+        
+        .logoMenuHidden{
+          height: 150px;
+          width: 100%;
+          padding: 30px 0;
+          
+          img{
+            height: 100%;
+            width: auto;
+          }
+        }
+        
+        .subMenuHidden {
+          width: 90%;
+          max-height: 0; /* Inicialmente escondido */
+          overflow: hidden;
+          flex-direction: column;
+          align-items: flex-start;
+          transition: max-height 0.5s ease, margin-top 0.5s ease;
+          background-color: rgba(249, 249 ,249);
+          
+          span{
+            padding: 15px;
+            cursor: pointer;
+            
+            &:hover{
+              color: var(--destaque-contraste);
+            }
+          }
+        }
+      }
+      
+      .btnMenuHidden:hover + .menuHidden, .menuHidden:hover {
+        left: 0;
+      }
+      
+      nav{
+        display: none;
+      }
+      
+      .boxDiv{
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        
+        .classDivisoria{
+          display: flex;
+          transition: transform 0.5s ease;
+          margin: 0;
+          
+          .contentDiv{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            min-width: 100%;
+            box-sizing: border-box;
+            
+            img{
+              height: 45px;
+              width: auto;
+              padding-right: 13px;
+            }
+          }
+          
+          .divVertical{
+            display: none;
+          }
+        }
+        
+        img{
+          height: 50px;
+          width: auto;
+        }
+      }
+    }
+    
+    .boxBanner{
+  
+      .slide{
+        
+        .bannerImg_desk{
+          height: auto;
+          width: 100%;
+        }
+        
+        .bannerImg_mobile{
+          display: none;
+          
+          height: auto;
+          width: 100%;
+        }
+      }
+    }
+    
+    .conteinerNav:hover ~ .boxBanner{
+      filter: brightness(0.2);
+    }
+    
+    .conteinerNav:hover ~ .boxDiv * {
+      filter: brightness(0.2);
+    }
+    
+    @media screen and (max-width: 375px){
+      
+      header{
+        width: 100%;
+        
+        .conteinerHeader{
+          justify-content: space-between;
+          
+          .boxLogoHeader{
+            height: 50%;
+            width: auto; 
+            
+            a {
+              height: 100%;
+              width: 150px;
+            }
+          }
+        }
+      }
+      
+      .boxBanner{
+        .slide{
+          
+          .bannerImg_desk{
+            display: none;
+            
+            height: auto;
+            width: 100%;
+          }
+          
+          .bannerImg_mobile{
+            display: flex;
+            
+            height: auto;
+            width: 100%;
+          }
+        }
+      }
+    }
+  </style>
+  <body>
+    <header>
+      <div class="conteinerHeader">
+        
+        <div class="boxMenuHidden">
+          <div class="conteinerBoxMenuHidden">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/439rvex2b/menu_w.png" alt="" />
+            <img src="https://assets.onecompiler.app/42wu6ajnx/42zaj9kae/search.png" alt="" />
+          </div>
+        </div>
+        
+        <div class="boxLogoHeader">
+          <a href="index_main.html" target="_parent"></a>
+        </div>
+        
+        <div class="boxSearch">
+          <div class="conteinerSearch">
+            <input type="search" placeholder="Digite o que você procura"/>
+            <button type="submit">
+              <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/search_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+            </button>
+          </div>
+        </div>
+        
+        <div class="boxPainel">
+          
+          <div class="conteinerPainel">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/forum_125dp_FFF_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+            <span>Central de <br/><strong>Atendimento</strong></span>
+          </div>
+          
+          <!--                                                     \/ CODIGO SENDO TRABALHADO \/                                                     -->
+          
+          <div id="conteinerPainel_account" class="conteinerPainel">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/account_w.png" alt="" />
+            <span>Bem-Vindo(a)<br/><strong><a href="#">Entrar</a></strong> ou <strong><a href="#">Cadastrar</a></strong></span>
+            
+            <div class="conteinerPainel_hidden">
+              
+              <div class="conteinerPainel_hiddenConteiner">
+                
+                <div id="conteinerPainel_hiddenContent_title"  class="conteinerPainel_hiddenContent">
+                  <img src="https://assets.onecompiler.app/42wu6ajnx/439f2m5n8/account_fill.png" alt="" />
+                  <span>Olá, <strong>visitante</strong></span>
+                </div>
+                
+                <div class="conteinerPainel_hiddenContent">
+                  <img src="https://assets.onecompiler.app/42wu6ajnx/439f2m5n8/account_circle_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+                  <span>Minha Conta</span>
+                </div>
+                
+                <div class="conteinerPainel_hiddenContent">
+                  <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/acompanhamento-de-pedidos.png" alt="" />
+                  <span>Meus Pedidos</span>
+                </div>
+                
+                <div class="conteinerPainel_hiddenContent">
+                  <img src="https://assets.onecompiler.app/42wu6ajnx/43846gyxw/fav_b.png" alt="" />
+                  <span>Favoritos</span>
+                </div>
+                
+                <div class="conteinerPainel_hiddenContent">
+                  <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/tracking.png" alt="" />
+                  <span>Rastrear Pedido</span>
+                </div>
+                
+              </div>
+              
+            </div>
+            
+          </div>
+          
+          <!--                                                     /\ CODIGO SENDO TRABALHADO /\                                                     -->
+          
+        </div>
+        
+        <div class="boxCart">
+            <div class="conteinerCart">
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42zaj9kae/cart.png" alt="" />
+              <span>2</span>
+            </div>
+        </div>
+        
+      </div>
+    </header>
+    
+    <div class="btnMenuHidden"></div>
+    
+    <div class="menuHidden">
+      
+      <div class="conteinerLoginHidden">
+        <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/profile.png" alt="" />
+        <div class="boxLoginHidden">
+          <span><strong>Olá, visitante</strong></span><br />
+          <span><a href="#">Entrar</a> ou <a href="#">Cadastrar</a></span>
+        </div>
+      </div>
+      
+      <div class="conteinerMenuHidden">
+        
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>HARDWARE</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>FONTE</span>
+            <span><a href="products/catalogProduct/.html" target="_parent">GABINETE -</a></span>
+            <span>HD INTERNO | SSD</span>
+            <span>MEMORIA RAM</span>
+            <span>PLACA DE VIDEO</span>
+            <span>PLACA MÃE</span>
+            <span>PROCESSADOR</span>
+            <span>REFRIGERAÇÃO</span>
+          </div>
+        </div>
+
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>PERIFERICOS</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>ARMAZENAMENTO</span>
+            <span>CADEIRAS E MESAS</span>
+            <span>FONES DE OUVIDO</span>
+            <span>IMPRESSORA</span>
+            <span>MOUSE | MOUSEPAD</span>
+            <span>PROJETORES</span>
+            <span>TECLADOS</span>
+            <span>WEBCAM</span>
+          </div>
+        </div>
+        
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>COMPUTADORES</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>ALL IN ONE</span>
+            <span>DESKTOPS</span>
+            <span>SERVIDORES</span>
+          </div>
+        </div>
+        
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>NOTEBOOKS</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>FONTE</span>
+          </div>
+        </div>
+        
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>MONITORES</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>FONTE</span>
+          </div>
+        </div>
+        
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>CADEIRAS</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>FONTE</span>
+          </div>
+        </div>
+        
+        <div class="catMenuHidden">
+          <div class="titleSubMenuHidden">
+            <span>ELETRONICOS</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="subMenuHidden">
+            <span>FONTE</span>
+          </div>
+        </div>
+
+      </div>
+      
+    </div>
+    
+    <nav>
+      
+      <div class="boxNav">
+        
+        <div class="conteinerNav">
+          
+          <div class="contNav">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/menu_125dp_000000_FILL0_wght100_GRAD200_opsz48.png" alt="" />
+            <span><strong>Categorias</strong></span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          
+          
+          <div class="navHidden">
+            <div class="conteinerNavHidden">
+              <span>KIT UPGRADE</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/placa-mae.png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>HARDWARE</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/ram.png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>PERIFERICOS</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/rato.png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>COMPUTADORES</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/computador-portatil%20(1).png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>NOTEBOOKS</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/computador-portatil.png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>MONITORES</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/monitor.png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>CADEIRAS</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/cadeira-gamer.png" alt="" />
+            </div>
+            <div class="conteinerNavHidden">
+              <span>ELETRONICOS</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/42xh6sb47/eletronico.png" alt="" />
+            </div>
+          </div>
+        </div>
+        
+        <div class="conteinerNav">
+          <div class="contNav">
+            <span>HARDWARE</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="navHidden">
+            
+            <div class="conteinerNavHidden">
+              <span><a href="products/catalogProduct/catalog_font_product.html" target="_parent">FONTE DE ALIMENTAÇÃO</a></span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span><a href="products/catalogProduct/catalog_case_product.html" target="_parent">GABINETE</a></span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>HD INTERNO | SSD</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>MEMORIA RAM</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>PLACA DE VIDEO</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>PLACA MÃE</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>PROCESSADORES</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span><a href="products/catalogProduct/catalog_cooler_product.html" target="_parent">REFRIGERÇÃO</a></span>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="conteinerNav">
+          <div class="contNav">
+            <span>PERIFERICOS</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="navHidden">
+            
+            <div class="conteinerNavHidden">
+              <span>ARMAZENAMENTO</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>CADEIRAS E MESAS</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>FONES DE OUVIDO</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>IMPRESSORA</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span><a href="products/catalogProduct/catalog_mouse_product.html" target="_parent">MOUSE</a></span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>PROJETORES E TELAS DE PROJEÇÃO</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>TECLADOS E KITS</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>WEBCAM</span>
+            </div>
+            
+          </div>
+        </div>
+        
+        <div class="conteinerNav">
+          <div class="contNav">
+            <span>COMPUTADORES</span>
+            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+          </div>
+          <div class="navHidden">
+            
+            <div class="conteinerNavHidden">
+              <span>ALL IN ONE</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span><a href="products/catalogProduct/catalog_desktop_product.html" target="_parent">DESKTOPS</a></span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>NAS | WORKSTATION | SERVIDORES</span>
+            </div>
+            
+            <div class="conteinerNavHidden">
+              <span>SOFTWARES</span>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+    </nav>
+    
+    <div class="boxBanner">
+      
+      <div class="slide">
+        <img class="bannerImg_desk" src="https://assets.onecompiler.app/42wu6ajnx/439cdxe6r/F.png" alt="" />
+        <img class="bannerImg_mobile" src="https://assets.onecompiler.app/42wu6ajnx/4392yzfbn/bannerMobile.png" alt="" />
+      </div>
+      
+    </div>
+    
+  </body>
+</html>
