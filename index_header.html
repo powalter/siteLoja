@@ -7,6 +7,28 @@
   </head>
   <style type="text/css" media="all">
     @import url("colorPalette.css");
+    
+    /* NOVAS CORES*/
+
+    :root{
+    --destaque-contraste: #ec342b;
+    
+    --destaque: #ec342b; /* VERMELHO FORTE */
+    --destaque-escuro: #7d111f ; /* VERMELHO ESCURO */
+    
+    --branco: #FFFFFF;
+    --branco-neve: #f1ecf1; /* BRANCO GEADA */
+    
+    --cinza: #E9EAEB;
+    
+    --dark: #15161B;
+    --dark-soft: #333333; /* CINZA MEDIO */
+    
+    --dark-logo: #171624; /* FUNDO DA LOGO ESCURO */
+    --light-logo: #f1ecf1; /* FUNDO DA LOGO CLARO */
+    
+    --whatsapp: #25D366;
+    }
 
     *{
       margin: 0;
@@ -24,9 +46,6 @@
       position: relative;
       flex-direction: column;
       align-items: flex-start;
-      padding-top: 97px; /* Para compensar a altura do header fixo */
-
-      overflow: visible;
     }
     
     :is(.conteinerHeader, .boxMenuHidden, .conteinerBoxMenuHidden, .boxLogoHeader, .boxSearch, .conteinerSearch,
@@ -39,12 +58,130 @@
       align-items: center;
     }
     
+    .areaBtnMenuSearch{
+      position: absolute;
+      z-index: 1001;
+      
+      top: 0;
+      left: 47px;
+      
+      height: 97px;
+      width: 43px;
+      
+      border: 1px solid red;
+    }
     
-    header{
-      position: fixed;
+    
+    .menuSearch, .menuSearch *{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .menuSearch{
+      
+      position: absolute;
+      top: 97px;
+      left: calc(-100% - 10px);
+      
+      transition: left 0.5s ease;
+      
+      width: 100%;
+      height: 100px;
+      
+      flex-direction: column;
+      background-color: var(--branco);
+      
+      box-shadow: 0 8px 30px -5px rgba(0, 0, 0, 0.9);
+      
+      
+      
+      .boxSearch{
+        height: 90%;
+        width: 100%;
+        
+        .conteinerSearch{
+          height: 44px;
+          width: 100%;
+          border-radius: 50px;
+          overflow: hidden;
+          background-color: rgba(250, 250, 250, 1);
+          box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+          
+          margin: 0 10px;
+          
+          input, button{
+            height: 100%;
+            border: none;
+            background-color: inherit;
+          }
+          
+          input{
+            font-size: 12pt;
+            width: 90%;
+            padding-left: 20px;
+            
+            &:focus{
+              outline: none;
+            }
+          }
+          
+          button{
+            width: 10%;
+            border: none;
+            
+            cursor: pointer;
+            
+            img{
+              height: 50%;
+              width: auto;
+              
+              transition: opacity 0.3s ease;
+              
+              &:hover{
+                opacity: 0.7;
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    .menuSearch.active_2 {
+      left: 0px;
+    }
+    
+    .areaBtnMenuHidden{
+      position: absolute;
+      z-index: 1001;
+      
       top: 0;
       left: 0;
-      right: 0;
+      
+      height: 97px;
+      width: 43px;
+    }
+    
+    iframe{
+      position: absolute;
+      top: 97px;
+      left: calc(-100% - 10px);
+      
+      transition: left 0.5s ease;
+      
+      width: 100%;
+      height: 600px;
+      
+      border: none;
+      
+      box-shadow: 0 8px 30px -5px rgba(0, 0, 0, 0.9);
+    }
+    
+    iframe.active_1 {
+      left: 0px;
+    }
+    
+    header{
       height: 97px;
       width: 100%;
       background-color: var(--dark-logo);
@@ -809,6 +946,24 @@
     }
   </style>
   <body>
+    
+    <div class="areaBtnMenuHidden"></div>
+    
+    <iframe src="menuHidden.html" scrolling="no"></iframe>
+    
+    <div class="areaBtnMenuSearch"></div>
+    
+    <div class="menuSearch">
+      <div class="boxSearch">
+        <div class="conteinerSearch">
+          <input type="search" placeholder="Digite o que você procura"/>
+          <button type="submit">
+            <img src="https://assets.onecompiler.app/42wu6ajnx/43ab7r5c6/icon_search.png" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+    
     <header>
       <div class="conteinerHeader">
         
@@ -894,109 +1049,6 @@
       </div>
     </header>
     
-    <div class="btnMenuHidden"></div>
-    
-    <div class="menuHidden">
-      
-      <div class="conteinerLoginHidden">
-        <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/profile.png" alt="" />
-        <div class="boxLoginHidden">
-          <span><strong>Olá, visitante</strong></span><br />
-          <span><a href="#">Entrar</a> ou <a href="#">Cadastrar</a></span>
-        </div>
-      </div>
-      
-      <div class="conteinerMenuHidden">
-        
-        <div class="catMenuHidden">
-          <div class="titleSubMenuHidden">
-            <span>HARDWARE</span>
-            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
-          </div>
-          <div class="subMenuHidden">
-            <span>FONTE</span>
-            <span><a href="products/catalogProduct/.html" target="_parent">GABINETE -</a></span>
-            <span>HD INTERNO | SSD</span>
-            <span>MEMORIA RAM</span>
-            <span>PLACA DE VIDEO</span>
-            <span>PLACA MÃE</span>
-            <span>PROCESSADOR</span>
-            <span>REFRIGERAÇÃO</span>
-          </div>
-        </div>
-
-        <div class="catMenuHidden">
-          <div class="titleSubMenuHidden">
-            <span>PERIFERICOS</span>
-            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
-          </div>
-          <div class="subMenuHidden">
-            <span>ARMAZENAMENTO</span>
-            <span>CADEIRAS E MESAS</span>
-            <span>FONES DE OUVIDO</span>
-            <span>IMPRESSORA</span>
-            <span>MOUSE | MOUSEPAD</span>
-            <span>PROJETORES</span>
-            <span>TECLADOS</span>
-            <span>WEBCAM</span>
-          </div>
-        </div>
-        
-        <div class="catMenuHidden">
-          <div class="titleSubMenuHidden">
-            <span>COMPUTADORES</span>
-            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
-          </div>
-          <div class="subMenuHidden">
-            <span>ALL IN ONE</span>
-            <span>DESKTOPS</span>
-            <span>SERVIDORES</span>
-          </div>
-        </div>
-        
-        <div class="catMenuHidden">
-          <div class="titleSubMenuHidden">
-            <span>NOTEBOOKS</span>
-            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
-          </div>
-          <div class="subMenuHidden">
-            <span>FONTE</span>
-          </div>
-        </div>
-        
-        <div class="catMenuHidden">
-          <div class="titleSubMenuHidden">
-            <span>MONITORES</span>
-            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
-          </div>
-          <div class="subMenuHidden">
-            <span>FONTE</span>
-          </div>
-        </div>
-        
-        <div class="catMenuHidden">
-          <div class="titleSubMenuHidden">
-            <span>CADEIRAS</span>
-            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
-          </div>
-          <div class="subMenuHidden">
-            <span>FONTE</span>
-          </div>
-        </div>
-        
-        <div class="catMenuHidden">
-          <div class="titleSubMenuHidden">
-            <span>ELETRONICOS</span>
-            <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
-          </div>
-          <div class="subMenuHidden">
-            <span>FONTE</span>
-          </div>
-        </div>
-
-      </div>
-      
-    </div>
     
     <nav>
       
@@ -1168,6 +1220,72 @@
       </div>
       
     </div>
+    
+    <script type="text/javascript" charset="utf-8">
+      // Função para adicionar eventos de clique e toque
+      function addEventListeners(element, type, callback) {
+          element.addEventListener(type, callback);
+      }
+
+      // Código para o primeiro iframe
+      const areaBtnMenuHidden = document.querySelector('.areaBtnMenuHidden');
+      addEventListeners(areaBtnMenuHidden, 'click', function() {
+          const iframe = document.querySelector('iframe');
+          iframe.classList.toggle('active_1');
+      });
+      addEventListeners(areaBtnMenuHidden, 'touchstart', function() {
+          const iframe = document.querySelector('iframe');
+          iframe.classList.toggle('active_1');
+      });
+
+      document.addEventListener('click', function(event) {
+          const iframe = document.querySelector('iframe');
+          const test = document.querySelector('.areaBtnMenuHidden');
+          // Verifica se o clique ou toque foi fora do iframe e da div .areaBtnMenuHidden
+          if (!iframe.contains(event.target) && !test.contains(event.target)) {
+              iframe.classList.remove('active_1');
+          }
+      });
+
+      document.addEventListener('touchstart', function(event) {
+          const iframe = document.querySelector('iframe');
+          const test = document.querySelector('.areaBtnMenuHidden');
+          // Verifica se o toque foi fora do iframe e da div .areaBtnMenuHidden
+          if (!iframe.contains(event.target) && !test.contains(event.target)) {
+              iframe.classList.remove('active_1');
+          }
+      });
+
+      // Código para a segunda div (não é um iframe, mas uma div)
+      const areaBtnMenuSearch = document.querySelector('.areaBtnMenuSearch');
+      addEventListeners(areaBtnMenuSearch, 'click', function() {
+          const div = document.querySelector('.menuSearch');  // Aqui selecionamos a nova div
+          div.classList.toggle('active_2');
+      });
+      addEventListeners(areaBtnMenuSearch, 'touchstart', function() {
+          const div = document.querySelector('.menuSearch');
+          div.classList.toggle('active_2');
+      });
+
+      document.addEventListener('click', function(event) {
+          const div = document.querySelector('.menuSearch');  // A mesma div
+          const test = document.querySelector('.areaBtnMenuSearch');
+          // Verifica se o clique ou toque foi fora da div .menuSearch e da div .areaBtnMenuSearch
+          if (!div.contains(event.target) && !test.contains(event.target)) {
+              div.classList.remove('active_2');
+          }
+      });
+
+      document.addEventListener('touchstart', function(event) {
+          const div = document.querySelector('.menuSearch');  // A mesma div
+          const test = document.querySelector('.areaBtnMenuSearch');
+          // Verifica se o toque foi fora da div .menuSearch e da div .areaBtnMenuSearch
+          if (!div.contains(event.target) && !test.contains(event.target)) {
+              div.classList.remove('active_2');
+          }
+      });
+    </script>
+
     
   </body>
 </html>
