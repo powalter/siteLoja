@@ -23,7 +23,9 @@ body{
 #header{
   
   width: 100%;
-  height: 600px;
+  height: 50px;
+  
+  border: 1px solid red;
   
   iframe{
     width: 100%;
@@ -156,15 +158,16 @@ body{
 }
 
 @media screen and (max-width: 1024px){
+  
   body{
-    padding-top: 460px;
+    padding-top: 500px;
   }
   
   #header{
     position: absolute;
     top: 0;
     width: 100%;
-    height: 600px;
+    height: 550px;
     z-index: 1000;
     
     iframe{
@@ -252,12 +255,11 @@ body{
 @media screen and (max-width: 375px){
   
   #header{
+    height: 650px;
     width: 100%;
-    height: 97px;
     
     iframe{
       width: 100%;
-      height: 100%;
       border: none;
     }
     
