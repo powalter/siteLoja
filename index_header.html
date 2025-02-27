@@ -67,10 +67,7 @@
       
       height: 97px;
       width: 43px;
-      
-      border: 1px solid red;
     }
-    
     
     .menuSearch, .menuSearch *{
       display: flex;
@@ -92,8 +89,7 @@
       flex-direction: column;
       background-color: var(--branco);
       
-      box-shadow: 0 8px 30px -5px rgba(0, 0, 0, 0.9);
-      
+      box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.9);
       
       
       .boxSearch{
@@ -147,10 +143,6 @@
       }
     }
     
-    .menuSearch.active_2 {
-      left: 0px;
-    }
-    
     .areaBtnMenuHidden{
       position: absolute;
       z-index: 1001;
@@ -170,16 +162,47 @@
       transition: left 0.5s ease;
       
       width: 100%;
-      height: 600px;
+      height: 100%;
       
       border: none;
       
-      box-shadow: 0 8px 30px -5px rgba(0, 0, 0, 0.9);
+      box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.5);
     }
     
-    iframe.active_1 {
-      left: 0px;
+    
+    
+    /* Quando o botão de pesquisa estiver ativo, o menu e iframe serão exibidos */
+    .areaBtnMenuSearch.active + .menuSearch {
+      left: 0px; /* Exibe o menu na posição esperada */
+      transition: left 0.3s ease; /* Anima a transição do menu */
     }
+    
+    .areaBtnMenuHidden.active + iframe {
+      left: 0px; /* Exibe o iframe na posição esperada */
+      transition: left 0.3s ease; /* Anima a transição do iframe */
+    }
+    
+    /* Estilo para esconder o menu e iframe quando não ativos */
+    .menuSearch {
+      left: -100%; /* Inicialmente escondido à esquerda */
+      transition: left 0.3s ease;
+    }
+    
+    iframe {
+      left: -100%; /* Inicialmente escondido à esquerda */
+      transition: left 0.3s ease;
+    }
+    
+    /* Ajuste para telas de 425px ou menos */
+    @media (max-width: 425px) {
+      .areaBtnMenuSearch.active + .menuSearch,
+      .areaBtnMenuHidden.active + iframe {
+        left: 0; /* Alinha à esquerda */
+      }
+    }
+
+
+
     
     header{
       height: 97px;
@@ -1222,70 +1245,130 @@
     </div>
     
     <script type="text/javascript" charset="utf-8">
-      // Função para adicionar eventos de clique e toque
-      function addEventListeners(element, type, callback) {
-          element.addEventListener(type, callback);
+      // Selecionando os elementos
+      const btnMenuSearch = document.querySelector('.areaBtnMenuSearch');
+      const menuSearch = document.querySelector('.menuSearch');
+      const btnMenuHidden = document.querySelector('.areaBtnMenuHidden');
+      const iframe = document.querySelector('iframe');
+      
+      // Função para verificar se o dispositivo é móvel (tela menor que 425px)
+      function isMobile() {
+        return window.innerWidth <= 425;
+      }
+      
+      // Função para alternar a classe active
+      function toggleMenu(button, menu, iframeElement) {
+        // Verifica se o menu já está ativo
+        if (button.classList.contains('active')) {
+          // Se já estiver ativo, remove a classe active (deixa o menu fechado)
+          button.classList.remove('active');
+          menu.classList.remove('active');
+          iframeElement.classList.remove('active');
+        } else {
+          // Se não estiver ativo, adiciona a classe active (abre o menu)
+          button.classList.add('active');
+          menu.classList.add('active');
+          iframeElement.classList.add('active');
+        }
+      }
+      
+      // Adiciona o evento de clique ou toque para alternar o estado do menu
+      function addMenuEvents() {
+        if (isMobile()) {
+          // Para telas pequenas (425px ou menos), usar touchstart
+          btnMenuSearch.addEventListener('touchstart', function(event) {
+            event.stopPropagation(); // Impede o clique em outros lugares
+            toggleMenu(btnMenuSearch, menuSearch, iframe);
+          });
+      
+          btnMenuHidden.addEventListener('touchstart', function(event) {
+            event.stopPropagation(); // Impede o clique em outros lugares
+            toggleMenu(btnMenuHidden, iframe, iframe);
+          });
+      
+        } else {
+          // Para telas grandes, usar click
+          btnMenuSearch.addEventListener('click', function(event) {
+            event.stopPropagation(); // Impede o clique em outros lugares
+            toggleMenu(btnMenuSearch, menuSearch, iframe);
+          });
+      
+          btnMenuHidden.addEventListener('click', function(event) {
+            event.stopPropagation(); // Impede o clique em outros lugares
+            toggleMenu(btnMenuHidden, iframe, iframe);
+          });
+        }
+      }
+      
+      // Adiciona o evento de clique fora da área para fechar o menu
+      function addCloseOutsideClickEvent() {
+        document.addEventListener('click', function(event) {
+          // Verifica se o clique foi fora da área do menu
+          if (
+            !btnMenuSearch.contains(event.target) &&
+            !menuSearch.contains(event.target) &&
+            !btnMenuHidden.contains(event.target)
+          ) {
+            // Fecha qualquer menu aberto (remover active de todos)
+            btnMenuSearch.classList.remove('active');
+            menuSearch.classList.remove('active');
+            btnMenuHidden.classList.remove('active');
+            iframe.classList.remove('active');
+          }
+        });
+      
+        // Adiciona o evento de toque fora da área para fechar o menu
+        document.addEventListener('touchstart', function(event) {
+          if (
+            !btnMenuSearch.contains(event.target) &&
+            !menuSearch.contains(event.target) &&
+            !btnMenuHidden.contains(event.target)
+          ) {
+            // Fecha qualquer menu aberto (remover active de todos)
+            btnMenuSearch.classList.remove('active');
+            menuSearch.classList.remove('active');
+            btnMenuHidden.classList.remove('active');
+            iframe.classList.remove('active');
+          }
+        });
+      }
+      
+      // Inicializa os eventos
+      addMenuEvents();
+      addCloseOutsideClickEvent();
+      
+      // Recarrega os eventos quando o tamanho da tela mudar
+      window.addEventListener('resize', function() {
+        // Remover eventos antigos e adicionar novamente com a nova largura da tela
+        removeMenuEvents();
+        addMenuEvents();
+      });
+      
+      // Função para remover os eventos antigos (para o caso de redimensionamento)
+      function removeMenuEvents() {
+        btnMenuSearch.removeEventListener('click', function(event) {
+          event.stopPropagation();
+          toggleMenu(btnMenuSearch, menuSearch, iframe);
+        });
+      
+        btnMenuHidden.removeEventListener('click', function(event) {
+          event.stopPropagation();
+          toggleMenu(btnMenuHidden, iframe, iframe);
+        });
+      
+        btnMenuSearch.removeEventListener('touchstart', function(event) {
+          event.stopPropagation();
+          toggleMenu(btnMenuSearch, menuSearch, iframe);
+        });
+      
+        btnMenuHidden.removeEventListener('touchstart', function(event) {
+          event.stopPropagation();
+          toggleMenu(btnMenuHidden, iframe, iframe);
+        });
       }
 
-      // Código para o primeiro iframe
-      const areaBtnMenuHidden = document.querySelector('.areaBtnMenuHidden');
-      addEventListeners(areaBtnMenuHidden, 'click', function() {
-          const iframe = document.querySelector('iframe');
-          iframe.classList.toggle('active_1');
-      });
-      addEventListeners(areaBtnMenuHidden, 'touchstart', function() {
-          const iframe = document.querySelector('iframe');
-          iframe.classList.toggle('active_1');
-      });
 
-      document.addEventListener('click', function(event) {
-          const iframe = document.querySelector('iframe');
-          const test = document.querySelector('.areaBtnMenuHidden');
-          // Verifica se o clique ou toque foi fora do iframe e da div .areaBtnMenuHidden
-          if (!iframe.contains(event.target) && !test.contains(event.target)) {
-              iframe.classList.remove('active_1');
-          }
-      });
-
-      document.addEventListener('touchstart', function(event) {
-          const iframe = document.querySelector('iframe');
-          const test = document.querySelector('.areaBtnMenuHidden');
-          // Verifica se o toque foi fora do iframe e da div .areaBtnMenuHidden
-          if (!iframe.contains(event.target) && !test.contains(event.target)) {
-              iframe.classList.remove('active_1');
-          }
-      });
-
-      // Código para a segunda div (não é um iframe, mas uma div)
-      const areaBtnMenuSearch = document.querySelector('.areaBtnMenuSearch');
-      addEventListeners(areaBtnMenuSearch, 'click', function() {
-          const div = document.querySelector('.menuSearch');  // Aqui selecionamos a nova div
-          div.classList.toggle('active_2');
-      });
-      addEventListeners(areaBtnMenuSearch, 'touchstart', function() {
-          const div = document.querySelector('.menuSearch');
-          div.classList.toggle('active_2');
-      });
-
-      document.addEventListener('click', function(event) {
-          const div = document.querySelector('.menuSearch');  // A mesma div
-          const test = document.querySelector('.areaBtnMenuSearch');
-          // Verifica se o clique ou toque foi fora da div .menuSearch e da div .areaBtnMenuSearch
-          if (!div.contains(event.target) && !test.contains(event.target)) {
-              div.classList.remove('active_2');
-          }
-      });
-
-      document.addEventListener('touchstart', function(event) {
-          const div = document.querySelector('.menuSearch');  // A mesma div
-          const test = document.querySelector('.areaBtnMenuSearch');
-          // Verifica se o toque foi fora da div .menuSearch e da div .areaBtnMenuSearch
-          if (!div.contains(event.target) && !test.contains(event.target)) {
-              div.classList.remove('active_2');
-          }
-      });
     </script>
-
     
   </body>
 </html>
