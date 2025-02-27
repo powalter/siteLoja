@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <meta charset="UTF-8">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0' name='viewport' />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style type="text/css" media="all">
+    
+    /* NOVAS CORES*/
+
+    :root{
+    --destaque-contraste: #ec342b;
+    
+    --destaque: #ec342b; /* VERMELHO FORTE */
+    --destaque-escuro: #7d111f ; /* VERMELHO ESCURO */
+    
+    --branco: #FFFFFF;
+    --branco-neve: #f1ecf1; /* BRANCO GEADA */
+    
+    --cinza: #E9EAEB;
+    
+    --dark: #15161B;
+    --dark-soft: #333333; /* CINZA MEDIO */
+    
+    --dark-logo: #171624; /* FUNDO DA LOGO ESCURO */
+    --light-logo: #f1ecf1; /* FUNDO DA LOGO CLARO */
+    
+    --whatsapp: #25D366;
+    }
+    
+    ::selection {
+      background-color: var(--dark-logo);
+      color: var(--branco-neve);
+      padding: 10px;
+    }
+    
+    body{
+      padding: 0;
+      margin: 0;
+      
+      background-color: #fff;
+      
+      position: relative;
+      font-family: Arial;
+    }
+    
+    .menuHidden, .menuHidden *{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .menuHidden{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: auto;
+      width: 100%;
+      background-color: var(--branco);
+      flex-direction: column;
+      
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      
+      
+      .conteinerLoginHidden{
+        height: 100px;
+        width: 100%;
+        font-size: 13pt;
+        padding: 10px 0;
+        
+        .boxLoginHidden{
+          flex-direction: column;
+          
+          span{
+            gap: 5px;
+          }
+          
+          a{
+            color: var(--destaque);
+            text-decoration: none;
+          }
+        }
+        
+        img{
+          height: 70%;
+          width: auto;
+          margin-right: 5px;
+        }
+      }
+      
+      .conteinerSubMenuHidden{
+        opacity: 0.8;
+        
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        padding: 20px 0;
+        
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);;
+        
+        .celSubMenuHidden{
+          justify-content: flex-start;
+          width: 90%;
+          height: 50px;
+          
+          span{
+            font-size: 14pt;
+            cursor: pointer;
+            
+            &:hover{
+              color: var(--destaque-contraste);
+            }
+          }
+          
+          
+          img{
+            height: 70%;
+            width: auto;
+            margin-right: 10px;
+          }
+        }
+      }
+      
+      .conteinerMenuHidden {
+        width: 100%;
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+        .catMenuHidden {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          transition: margin-bottom 1s ease;
+          
+          .titleSubMenuHidden {
+            height: 40px;
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            
+            img {
+              height: 85%;
+            }
+            
+            span:hover {
+              color: var(--destaque-contraste);
+            }
+          }
+          
+          &:hover .subMenuHidden{
+            max-height: 500px; /* Ajuste conforme a altura do conteúdo */
+            /*overflow: visible;*/
+            margin-top: 10px; /* Ajuste a distância entre o submenu e o item acima */
+          }
+          
+          &:hover .subMenuHidden:hover {
+            max-height: 500px; /* Garante que o submenu fique expandido enquanto hover */
+            /*overflow: visible;*/
+            margin-top: 10px;
+          }
+          
+        }
+      }
+      
+      .subMenuHidden {
+        width: 90%;
+        max-height: 0; /* Inicialmente escondido */
+        overflow: hidden;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: max-height 0.5s ease, margin-top 0.5s ease;
+        background-color: rgba(249, 249 ,249);
+        
+        span{
+          padding: 15px;
+          cursor: pointer;
+          
+          &:hover{
+            color: var(--destaque-contraste);
+          }
+        }
+      }
+    }
+  </style>
+  <body>
+      <div class="menuHidden">
+      
+        <div class="conteinerLoginHidden">
+          <img src="https://assets.onecompiler.app/42wu6ajnx/42ygn5q8y/profile.png" alt="" />
+          <div class="boxLoginHidden">
+            <span><strong>Olá, visitante</strong></span><br />
+            <span><a href="#">Entrar</a>ou<a href="#"> Cadastrar</a></span>
+          </div>
+        </div>
+        
+        <div class="conteinerMenuHidden">
+          
+          <div class="catMenuHidden">
+            <div class="titleSubMenuHidden">
+              <span>HARDWARE</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+            </div>
+            <div class="subMenuHidden">
+              <span>FONTE</span>
+              <span><a href="products/catalogProduct/.html" target="_parent">GABINETE -</a></span>
+              <span>HD INTERNO | SSD</span>
+              <span>MEMORIA RAM</span>
+              <span>PLACA DE VIDEO</span>
+              <span>PLACA MÃE</span>
+              <span>PROCESSADOR</span>
+              <span>REFRIGERAÇÃO</span>
+            </div>
+          </div>
+  
+          <div class="catMenuHidden">
+            <div class="titleSubMenuHidden">
+              <span>PERIFERICOS</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+            </div>
+            <div class="subMenuHidden">
+              <span>ARMAZENAMENTO</span>
+              <span>CADEIRAS E MESAS</span>
+              <span>FONES DE OUVIDO</span>
+              <span>IMPRESSORA</span>
+              <span>MOUSE | MOUSEPAD</span>
+              <span>PROJETORES</span>
+              <span>TECLADOS</span>
+              <span>WEBCAM</span>
+            </div>
+          </div>
+          
+          <div class="catMenuHidden">
+            <div class="titleSubMenuHidden">
+              <span>COMPUTADORES</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+            </div>
+            <div class="subMenuHidden">
+              <span>ALL IN ONE</span>
+              <span>DESKTOPS</span>
+              <span>SERVIDORES</span>
+            </div>
+          </div>
+          
+          <div class="catMenuHidden">
+            <div class="titleSubMenuHidden">
+              <span>NOTEBOOKS</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+            </div>
+            <div class="subMenuHidden">
+              <span>FONTE</span>
+            </div>
+          </div>
+          
+          <div class="catMenuHidden">
+            <div class="titleSubMenuHidden">
+              <span>MONITORES</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+            </div>
+            <div class="subMenuHidden">
+              <span>FONTE</span>
+            </div>
+          </div>
+          
+          <div class="catMenuHidden">
+            <div class="titleSubMenuHidden">
+              <span>CADEIRAS</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+            </div>
+            <div class="subMenuHidden">
+              <span>FONTE</span>
+            </div>
+          </div>
+          
+          <div class="catMenuHidden">
+            <div class="titleSubMenuHidden">
+              <span>ELETRONICOS</span>
+              <img src="https://assets.onecompiler.app/42wu6ajnx/4366f7qxh/arrow_d.png" alt="" />
+            </div>
+            <div class="subMenuHidden">
+              <span>FONTE</span>
+            </div>
+          </div>
+  
+        </div>
+        
+      </div>
+      <script src="script.js"></script>
+  </body>
+</html>
