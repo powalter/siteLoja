@@ -10,13 +10,13 @@ const products = [
     category: 'GABINETE',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=1',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_1_img_1.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_1_img_2.jpeg',
+    image_1: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_1_img_1.jpeg',
+    image_2: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_1_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_1_img_1.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_1_img_2.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_1_img_3.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_1_img_4.jpeg'
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_1_img_1.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_1_img_2.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_1_img_3.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_1_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -31,13 +31,13 @@ const products = [
     category: 'GABINETE',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=2',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_2_img_1.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_2_img_2.jpeg',
+    image_1: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_2_img_1.jpeg',
+    image_2: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_2_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_2_img_1.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_2_img_2.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_2_img_3.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_2_img_4.jpeg'
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_2_img_1.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_2_img_2.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_2_img_3.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_2_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -52,13 +52,13 @@ const products = [
     category: 'GABINETE',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=3',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_3_img_1.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_3_img_2.jpeg',
+    image_1: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_3_img_1.jpeg',
+    image_2: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_3_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_3_img_1.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_3_img_2.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_3_img_3.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_3_img_4.jpeg'
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_3_img_1.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_3_img_2.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_3_img_3.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_3_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -73,13 +73,13 @@ const products = [
     category: 'GABINETE',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=4',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_4_img_1.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_4_img_2.jpeg',
+    image_1: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_4_img_1.jpeg',
+    image_2: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_4_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_4_img_1.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_4_img_2.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_4_img_3.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_4_img_4.jpeg'
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_4_img_1.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_4_img_2.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_4_img_3.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_4_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -94,13 +94,13 @@ const products = [
     category: 'GABINETE',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=5',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_5_img_1.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_5_img_2.jpeg',
+    image_1: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_5_img_1.jpeg',
+    image_2: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_5_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_5_img_1.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_5_img_2.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_5_img_3.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_5_img_4.jpeg'
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_5_img_1.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_5_img_2.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_5_img_3.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_5_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -115,13 +115,13 @@ const products = [
     category: 'GABINETE',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=6',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_6_img_1.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_6_img_2.jpeg',
+    image_1: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_6_img_1.jpeg',
+    image_2: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_6_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_6_img_1.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_6_img_2.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_6_img_3.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_6_img_4.jpeg'
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_6_img_1.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_6_img_2.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_6_img_3.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_6_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -136,13 +136,13 @@ const products = [
     category: 'GABINETE',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=7',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_7_img_1.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_7_img_2.jpeg',
+    image_1: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_7_img_1.jpeg',
+    image_2: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_7_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_7_img_1.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_7_img_2.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_7_img_3.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_7_img_4.jpeg'
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_7_img_1.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_7_img_2.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_7_img_3.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_7_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -157,13 +157,13 @@ const products = [
     category: 'GABINETE',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=8',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_8_img_1.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_8_img_2.jpeg',
+    image_1: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_8_img_1.jpeg',
+    image_2: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_8_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_8_img_1.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_8_img_2.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_8_img_3.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439c49cn7/gab_8_img_4.jpeg'
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_8_img_1.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_8_img_2.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_8_img_3.jpeg',
+      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_8_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -189,3 +189,4 @@ function formatPrice(price) {
 function getProductById(id) {
   return products.find(product => product.id === id);
 }
+
