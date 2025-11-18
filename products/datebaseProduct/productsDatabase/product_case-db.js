@@ -13,10 +13,10 @@ const products = [
     image_1: '../../../../imagens/produtos/gabinetes/gabinete_1_1.jpeg',
     image_2: '../../../../imagens/produtos/gabinetes/gabinete_1_2.jpeg',
     images: [
-      '../../../../imagens/produtos/gabinetes/gabinete_1_1.jpeg'',
-      '../../../../imagens/produtos/gabinetes/gabinete_1_2.jpeg'',
-      '../../../../imagens/produtos/gabinetes/gabinete_1_3.jpeg'',
-      '../../../../imagens/produtos/gabinetes/gabinete_1_4.jpeg''
+      '../../../../imagens/produtos/gabinetes/gabinete_1_1.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_1_2.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_1_3.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_1_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -189,6 +189,7 @@ function formatPrice(price) {
 function getProductById(id) {
   return products.find(product => product.id === id);
 }
+
 
 
 
