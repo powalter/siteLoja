@@ -31,13 +31,13 @@ const products = [
     category: 'GABINETE',
     description: 'Hyte',
     link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=2',
-    image_1: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_2_img_1.jpeg',
-    image_2: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_2_img_2.jpeg',
+    image_1: '../../../../imagens/produtos/gabinetes/gabinete_2_1.jpeg',
+    image_2: '../../../../imagens/produtos/gabinetes/gabinete_2_2.jpeg',
     images: [
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_2_img_1.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_2_img_2.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_2_img_3.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_2_img_4.jpeg'
+      '../../../../imagens/produtos/gabinetes/gabinete_2_1.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_2_2.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_2_3.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_2_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -189,6 +189,7 @@ function formatPrice(price) {
 function getProductById(id) {
   return products.find(product => product.id === id);
 }
+
 
 
 
