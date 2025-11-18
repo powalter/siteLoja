@@ -10,7 +10,7 @@ const products = [
     category: 'GABINETE',
     description: 'Thermaltake',
     link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=1',
-    image_1: '../../../imagens/produtos/gabinetes/gabinete_1_1.jpeg',
+    image_1: '../../../../imagens/produtos/gabinetes/gabinete_1_1.jpeg',
     image_2: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_1_img_2.jpeg',
     images: [
       '../../../imagens/produtos/gabinetes/gabinete_1_1.jpeg',
@@ -189,6 +189,7 @@ function formatPrice(price) {
 function getProductById(id) {
   return products.find(product => product.id === id);
 }
+
 
 
 
