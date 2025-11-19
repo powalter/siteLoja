@@ -12,8 +12,8 @@ function generateProductHTML(product) {
               <img src="${product.image_1}" id="img_1" class="imgLupa" />
               <img src="${product.image_2}" id="img_2" class="imgLupa" />
               <div class="boxBtnFav" onclick="toggleCheckbox()" >
-                <img src="../../../imagens/icons/fav_b.png" id="imgFav_1" alt="Unchecked" class="checkboxFav" />
-                <img src="../../../imagens/icons/fav_b_full.png" id="imgFav_2" alt="Checked" class="checkboxFav" />
+                <img src="../../../../imagens/icons/fav_b.png" id="imgFav_1" alt="Unchecked" class="checkboxFav" />
+                <img src="../../../../imagens/icons/fav_b_full.png" id="imgFav_2" alt="Checked" class="checkboxFav" />
               </div>
               <div class="boxStampOffer" >
                 <span>${product.discount}%</span>
@@ -61,7 +61,7 @@ function generateProductHTML(product) {
             <div class="boxProduct_btnsInf">
               <button type="button">
                 <span>Comprar pelo whatsapp</span>
-                <img src="../../../imagens/icons/whatsapp_w.png" alt="WhatsApp" />
+                <img src="../../../../imagens/icons/whatsapp_w.png" alt="WhatsApp" />
               </button>
             </div>
           </div>
@@ -198,9 +198,9 @@ function loadProduct() {
 
         setTimeout(() => {
           if (this.src.includes('fav_b.png')) {
-            this.src = '../../../imagens/icons/fav_b_full.png';
+            this.src = '../../../../imagens/icons/fav_b_full.png';
           } else {
-            this.src = '../../../imagens/icons/fav_b.png';
+            this.src = '../../../../imagens/icons/fav_b.png';
           }
 
           this.style.opacity = 1;
@@ -234,3 +234,4 @@ function toggleCheckbox() {
     img2.style.opacity = '1';
   }
 }
+
