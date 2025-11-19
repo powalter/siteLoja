@@ -385,7 +385,7 @@
             }
             
             &:hover img{
-              content: url('https://assets.onecompiler.app/42wu6ajnx/436r6bnrh/whatsapp_w.png');
+              content: url('../../../imagens/icons/whatsapp_w.png');
             }
           }
         }
@@ -847,7 +847,7 @@
               }
               
               &:hover img{
-                content: url('https://assets.onecompiler.app/42wu6ajnx/436r6bnrh/whatsapp_w.png');
+                content: url('../../../imagens/icons/whatsapp_w.png');
               }
             }
           }
@@ -1164,7 +1164,7 @@
               }
               
               &:hover img{
-                content: url('https://assets.onecompiler.app/42wu6ajnx/436r6bnrh/whatsapp_w.png');
+                content: url('../../../imagens/icons/whatsapp_w.png');
               }
             }
           }
