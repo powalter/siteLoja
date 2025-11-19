@@ -8,13 +8,13 @@ function generateProductHTML(product) {
           
           <!-- Miniaturas -->
           <div class="boxProduct_gallery_miniature">
-            <button><img src="../../../imagens/icons/arrow_up.png" alt="ArrowUp" /></button>
+            <button><img src="../../../../imagens/icons/arrow_up.png" alt="ArrowUp" /></button>
             ${product.images.map(image => `
               <div class="boxProduct_gallery_miniatureConteiner">
                 <img src="${image}" alt="Miniatura de ${product.name}" />
               </div>
             `).join('')}
-            <button><img src="../../../imagens/icons/arrow_down.png" alt="ArrowDown" /></button>
+            <button><img src="../../../../imagens/icons/arrow_down.png" alt="ArrowDown" /></button>
           </div>
           
           <!-- Imagem Principal -->
@@ -28,13 +28,13 @@ function generateProductHTML(product) {
             <div class="boxProduct_gallery_share">
               <div class="boxProduct_gallery_shareIcons">
                 <span>Compartilhe:</span>
-                <img src="../../../imagens/icons/5305153_fb_facebook_facebook%20logo_icon.png" alt="Facebook" />
-                <img src="../../../imagens/icons/5305166_call_chat_mobile_whatsapp_whatsapp%20logo_icon.png" alt="WhatsApp" />
-                <img src="../../../imagens/icons/5305170_bird_social%20media_social%20network_tweet_twitter_icon.png" alt="Twitter" />
-                <img src="../../../imagens/icons/5335781_camera_instagram_social%20media_instagram%20logo_icon%20(1).png" alt="Instagram" />
+                <img src="../../../../imagens/icons/5305153_fb_facebook_facebook%20logo_icon.png" alt="Facebook" />
+                <img src="../../../../imagens/icons/5305166_call_chat_mobile_whatsapp_whatsapp%20logo_icon.png" alt="WhatsApp" />
+                <img src="../../../../imagens/icons/5305170_bird_social%20media_social%20network_tweet_twitter_icon.png" alt="Twitter" />
+                <img src="../../../../imagens/icons/5335781_camera_instagram_social%20media_instagram%20logo_icon%20(1).png" alt="Instagram" />
               </div>
               <div class="boxProduct_gallery_shareFav">
-                <img src="../../../imagens/icons/fav_b.png" alt="Favoritar" />
+                <img src="../../../../imagens/icons/fav_b.png" alt="Favoritar" />
                 <span>Adicionar aos favoritos</span>
               </div>
             </div>
@@ -80,7 +80,7 @@ function generateProductHTML(product) {
             <div class="boxProduct_btnsInf">
               <button type="button">
                 <span>Comprar pelo whatsapp</span>
-                <img src="../../../imagens/icons/whatsapp_g.png" alt="WhatsApp" />
+                <img src="../../../../imagens/icons/whatsapp_g.png" alt="WhatsApp" />
               </button>
             </div>
           </div>
@@ -233,9 +233,9 @@ function loadProduct() {
 
         setTimeout(() => {
           if (this.src.includes('fav_b.png')) {
-            this.src = '../../../imagens/icons/fav_b_full.png';
+            this.src = '../../../../imagens/icons/fav_b_full.png';
           } else {
-            this.src = '../../../imagens/icons/fav_b.png';
+            this.src = '../../../../imagens/icons/fav_b.png';
           }
 
           this.style.opacity = 1;
@@ -251,3 +251,4 @@ function loadProduct() {
 
 // Chama a função de carregar o produto ao carregar a página
 window.onload = loadProduct;
+
