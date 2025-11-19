@@ -43,127 +43,127 @@ const products = [
   },
   {
     id: 3,
-    name: 'Gabinete Gamer Hyte 60, Mid-Tower, Lateral de Vidro, Preto e Vermelho, CS-HYTE-Y60-BR',
+    name: 'Gabinete Corsair Obsidian 1000d, Full Tower, RGB, Lateral Em Vidro Temperado',
     code: '99999',
-    price: 2359.00,
+    price: 4527.59,
     discount: 10,
     installments: 8,
     discountOffer: 15,
     category: 'GABINETE',
-    description: 'PC-GAMER',
+    description: 'Corsair',
     link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=3',
-    image_1: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_3_img_1.jpeg',
-    image_2: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_3_img_2.jpeg',
+    image_1: '../../../../imagens/produtos/gabinetes/gabinete_3_1.jpeg',
+    image_2: '../../../../imagens/produtos/gabinetes/gabinete_3_2.jpeg',
     images: [
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_3_img_1.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_3_img_2.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_3_img_3.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_3_img_4.jpeg'
+      '../../../../imagens/produtos/gabinetes/gabinete_3_1.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_3_2.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_3_3.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_3_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
   {
     id: 4,
-    name: 'Gabinete Gamer Thermaltake CTE C750 Air, Preto, Full Tower, Vidro Temperado, E-ATX, Sem Fonte, Com 3 Fans, CA-1X6-00F1WN-00',
+    name: 'Gabinete Gamer Asus Gr701 Rog Hyperion White Lateral Vidro Temperado',
     code: '99999',
-    price: 1976.35,
+    price: 3994.99,
     discount: 10,
     installments: 8,
     discountOffer: 15,
     category: 'GABINETE',
-    description: 'PC-GAMER',
+    description: 'Asus',
     link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=4',
-    image_1: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_4_img_1.jpeg',
-    image_2: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_4_img_2.jpeg',
+    image_1: '../../../../imagens/produtos/gabinetes/gabinete_4_1.jpeg',
+    image_2: '../../../../imagens/produtos/gabinetes/gabinete_4_2.jpeg',
     images: [
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_4_img_1.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_4_img_2.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_4_img_3.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_4_img_4.jpeg'
+      '../../../../imagens/produtos/gabinetes/gabinete_4_1.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_4_2.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_4_3.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_4_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
   {
     id: 5,
-    name: 'Gabinete Gamer Cooler Master, Cosmos C700M RGB, Full Tower, Vidro Temperado, Black, Sem Fonte, Com 4 Fans, MCC-C700M-MG5N-S00',
+    name: 'Gabinete Gamer Cooler Master, Cosmos C700M RGB',
     code: '99999',
-    price: 3329.00,
+    price: 3599.99,
     discount: 10,
     installments: 8,
     discountOffer: 15,
     category: 'GABINETE',
-    description: 'PC-GAMER',
+    description: 'Cooler Master',
     link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=5',
-    image_1: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_5_img_1.jpeg',
-    image_2: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_5_img_2.jpeg',
+    image_1: '../../../../imagens/produtos/gabinetes/gabinete_5_1.jpeg',
+    image_2: '../../../../imagens/produtos/gabinetes/gabinete_5_2.jpeg',
     images: [
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_5_img_1.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_5_img_2.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_5_img_3.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_5_img_4.jpeg'
+      '../../../../imagens/produtos/gabinetes/gabinete_5_1.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_5_2.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_5_3.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_5_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
   {
     id: 6,
-    name: 'Gabinete Gamer Thermaltake Core P6 TG, Turquoise, Mid Tower, Vidro Temperado, ATX, Sem Fonte, Sem Fan, CA-1V2-00MBWN-00',
+    name: 'Gabinete Gamer Msi Meg Maestro 700l Pz Mid Tower Usb 3.2 Vidro Temperado S/ Cooler - Preto',
     code: '99999',
-    price: 2235.18,
+    price: 3902.79,
     discount: 10,
     installments: 8,
     discountOffer: 15,
     category: 'GABINETE',
-    description: 'PC-GAMER',
+    description: 'MSI',
     link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=6',
-    image_1: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_6_img_1.jpeg',
-    image_2: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_6_img_2.jpeg',
+    image_1: '../../../../imagens/produtos/gabinetes/gabinete_6_1.jpeg',
+    image_2: '../../../../imagens/produtos/gabinetes/gabinete_6_2.jpeg',
     images: [
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_6_img_1.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_6_img_2.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_6_img_3.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_6_img_4.jpeg'
+      '../../../../imagens/produtos/gabinetes/gabinete_6_1.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_6_2.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_6_3.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_6_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
   {
     id: 7,
-    name: 'Gabinete Gamer Thermaltake The Tower 600, Mid Tower, Vidro Temperado, ATX, Sem Fonte, Com 2 Fans, Preto, CA-1Z1-00M1WN-00',
+    name: 'Gabinete Thermaltake Core P6 Tg',
     code: '99999',
-    price: 2058.80,
+    price: 2284.20,
     discount: 10,
     installments: 8,
     discountOffer: 15,
     category: 'GABINETE',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=7',
-    image_1: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_7_img_1.jpeg',
-    image_2: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_7_img_2.jpeg',
+    image_1: '../../../../imagens/produtos/gabinetes/gabinete_7_1.jpeg',
+    image_2: '../../../../imagens/produtos/gabinetes/gabinete_7_2.jpeg',
     images: [
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_7_img_1.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_7_img_2.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_7_img_3.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_7_img_4.jpeg'
+      '../../../../imagens/produtos/gabinetes/gabinete_7_1.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_7_2.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_7_3.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_7_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
   {
     id: 8,
-    name: 'Gabinete Gamer Fractal Design North Chalk White, Mid Tower, Mesh, ATX, Sem Fonte, Com 2 Fans, FD-C-NOR1C-03',
+    name: 'Gabinete Gamer Fractal Design North Chalk White, Mid Tower, ATX, Lateral em Vidro Escuro, Branco',
     code: '99999',
-    price: 5889.00,
+    price: 1766.99,
     discount: 10,
     installments: 8,
     discountOffer: 15,
     category: 'GABINETE',
-    description: 'PC-GAMER',
+    description: 'Fractal',
     link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=8',
-    image_1: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_8_img_1.jpeg',
-    image_2: 'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_8_img_2.jpeg',
+    image_1: '../../../../imagens/produtos/gabinetes/gabinete_8_1.jpeg',
+    image_2: '../../../../imagens/produtos/gabinetes/gabinete_8_2.jpeg',
     images: [
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_8_img_1.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_8_img_2.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_8_img_3.jpeg',
-      'https://uploads.onecompiler.io/42wu6ajnx/43ae7bmp5/gab_8_img_4.jpeg'
+      '../../../../imagens/produtos/gabinetes/gabinete_8_1.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_8_2.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_8_3.jpeg',
+      '../../../../imagens/produtos/gabinetes/gabinete_8_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -189,6 +189,7 @@ function formatPrice(price) {
 function getProductById(id) {
   return products.find(product => product.id === id);
 }
+
 
 
 
