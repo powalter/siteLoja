@@ -379,7 +379,7 @@ body{
             }
             
             &:hover img{
-              content: url('https://assets.onecompiler.app/42wu6ajnx/436r6bnrh/whatsapp_g.png');
+              content: url('../../../../imagens/icons/whatsapp_g.png');
             }
           }
         }
@@ -415,4 +415,5 @@ body{
 
 .boxProduct:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
 }
