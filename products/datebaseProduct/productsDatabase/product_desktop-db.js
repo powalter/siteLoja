@@ -10,13 +10,13 @@ const products = [
     category: 'desktop',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_desktop.html?id=1',
-    image_1: '../../../../imagens/produtos/desktop/pc_1_1.jpeg',
-    image_2: '../../../../imagens/produtos/desktop/pc_1_2.jpeg',
+    image_1: '../../../../imagens/produtos/desktop/pc_1_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/desktop/pc_1_img_2.jpeg',
     images: [
-      '../../../../imagens/produtos/desktop/pc_1_1.jpeg',
-      '../../../../imagens/produtos/desktop/pc_1_2.jpeg',
-      '../../../../imagens/produtos/desktop/pc_1_3.jpeg',
-      '../../../../imagens/produtos/desktop/pc_1_4.jpeg'
+      '../../../../imagens/produtos/desktop/pc_1_img_1.jpeg',
+      '../../../../imagens/produtos/desktop/pc_1_img_2.jpeg',
+      '../../../../imagens/produtos/desktop/pc_1_img_3.jpeg',
+      '../../../../imagens/produtos/desktop/pc_1_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -31,13 +31,13 @@ const products = [
     category: 'desktop',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_desktop.html?id=2',
-    image_1: '../../../../imagens/produtos/desktop/pc_2_1.jpeg',
-    image_2: '../../../../imagens/produtos/desktop/pc_2_2.jpeg',
+    image_1: '../../../../imagens/produtos/desktop/pc_2_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/desktop/pc_2_img_2.jpeg',
     images: [
-      '../../../../imagens/produtos/desktop/pc_2_1.jpeg',
-      '../../../../imagens/produtos/desktop/pc_2_2.jpeg',
-      '../../../../imagens/produtos/desktop/pc_2_3.jpeg',
-      '../../../../imagens/produtos/desktop/pc_2_4.jpeg'
+      '../../../../imagens/produtos/desktop/pc_2_img_1.jpeg',
+      '../../../../imagens/produtos/desktop/pc_2_img_2.jpeg',
+      '../../../../imagens/produtos/desktop/pc_2_img_3.jpeg',
+      '../../../../imagens/produtos/desktop/pc_2_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -52,13 +52,13 @@ const products = [
     category: 'desktop',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_desktop.html?id=3',
-    image_1: '../../../../imagens/produtos/desktop/pc_3_1.jpeg',
-    image_2: '../../../../imagens/produtos/desktop/pc_3_2.jpeg',
+    image_1: '../../../../imagens/produtos/desktop/pc_3_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/desktop/pc_3_img_2.jpeg',
     images: [
-      '../../../../imagens/produtos/desktop/pc_3_1.jpeg',
-      '../../../../imagens/produtos/desktop/pc_3_2.jpeg',
-      '../../../../imagens/produtos/desktop/pc_3_3.jpeg',
-      '../../../../imagens/produtos/desktop/pc_3_4.jpeg'
+      '../../../../imagens/produtos/desktop/pc_3_img_1.jpeg',
+      '../../../../imagens/produtos/desktop/pc_3_img_2.jpeg',
+      '../../../../imagens/produtos/desktop/pc_3_img_3.jpeg',
+      '../../../../imagens/produtos/desktop/pc_3_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -73,13 +73,13 @@ const products = [
     category: 'desktop',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_desktop.html?id=4',
-    image_1: '../../../../imagens/produtos/desktop/pc_4_1.jpeg',
-    image_2: '../../../../imagens/produtos/desktop/pc_4_2.jpeg',
+    image_1: '../../../../imagens/produtos/desktop/pc_4_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/desktop/pc_4_img_2.jpeg',
     images: [
-      '../../../../imagens/produtos/desktop/pc_4_1.jpeg',
-      '../../../../imagens/produtos/desktop/pc_4_2.jpeg',
-      '../../../../imagens/produtos/desktop/pc_4_3.jpeg',
-      '../../../../imagens/produtos/desktop/pc_4_3.jpeg'
+      '../../../../imagens/produtos/desktop/pc_4_img_1.jpeg',
+      '../../../../imagens/produtos/desktop/pc_4_img_2.jpeg',
+      '../../../../imagens/produtos/desktop/pc_4_img_3.jpeg',
+      '../../../../imagens/produtos/desktop/pc_4_img_3.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -94,13 +94,13 @@ const products = [
     category: 'desktop',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_desktop.html?id=5',
-    image_1: '../../../../imagens/produtos/desktop/pc_5_1.jpeg',
-    image_2: '../../../../imagens/produtos/desktop/pc_5_2.jpeg',
+    image_1: '../../../../imagens/produtos/desktop/pc_5_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/desktop/pc_5_img_2.jpeg',
     images: [
-      '../../../../imagens/produtos/desktop/pc_5_1.jpeg',
-      '../../../../imagens/produtos/desktop/pc_5_2.jpeg',
-      '../../../../imagens/produtos/desktop/pc_5_3.jpeg',
-      '../../../../imagens/produtos/desktop/pc_5_4.jpeg'
+      '../../../../imagens/produtos/desktop/pc_5_img_1.jpeg',
+      '../../../../imagens/produtos/desktop/pc_5_img_2.jpeg',
+      '../../../../imagens/produtos/desktop/pc_5_img_3.jpeg',
+      '../../../../imagens/produtos/desktop/pc_5_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -115,13 +115,13 @@ const products = [
     category: 'desktop',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_desktop.html?id=6',
-    image_1: '../../../../imagens/produtos/desktop/pc_6_1.jpeg',
-    image_2: '../../../../imagens/produtos/desktop/pc_6_2.jpeg',
+    image_1: '../../../../imagens/produtos/desktop/pc_6_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/desktop/pc_6_img_2.jpeg',
     images: [
-      '../../../../imagens/produtos/desktop/pc_6_1.jpeg',
-      '../../../../imagens/produtos/desktop/pc_6_2.jpeg',
-      '../../../../imagens/produtos/desktop/pc_6_3.jpeg',
-      '../../../../imagens/produtos/desktop/pc_6_4.jpeg'
+      '../../../../imagens/produtos/desktop/pc_6_img_1.jpeg',
+      '../../../../imagens/produtos/desktop/pc_6_img_2.jpeg',
+      '../../../../imagens/produtos/desktop/pc_6_img_3.jpeg',
+      '../../../../imagens/produtos/desktop/pc_6_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -136,13 +136,13 @@ const products = [
     category: 'desktop',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_desktop.html?id=7',
-    image_1: '../../../../imagens/produtos/desktop/pc_7_1.jpeg',
-    image_2: '../../../../imagens/produtos/desktop/pc_7_2.jpeg',
+    image_1: '../../../../imagens/produtos/desktop/pc_7_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/desktop/pc_7_img_2.jpeg',
     images: [
-      '../../../../imagens/produtos/desktop/pc_7_1.jpeg',
-      '../../../../imagens/produtos/desktop/pc_7_2.jpeg',
-      '../../../../imagens/produtos/desktop/pc_7_3.jpeg',
-      '../../../../imagens/produtos/desktop/pc_7_4.jpeg'
+      '../../../../imagens/produtos/desktop/pc_7_img_1.jpeg',
+      '../../../../imagens/produtos/desktop/pc_7_img_2.jpeg',
+      '../../../../imagens/produtos/desktop/pc_7_img_3.jpeg',
+      '../../../../imagens/produtos/desktop/pc_7_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -157,13 +157,13 @@ const products = [
     category: 'desktop',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_desktop.html?id=8',
-    image_1: '../../../../imagens/produtos/desktop/pc_8_1.jpeg',
-    image_2: '../../../../imagens/produtos/desktop/pc_8_2.jpeg',
+    image_1: '../../../../imagens/produtos/desktop/pc_8_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/desktop/pc_8_img_2.jpeg',
     images: [
-      '../../../../imagens/produtos/desktop/pc_8_1.jpeg',
-      '../../../../imagens/produtos/desktop/pc_8_2.jpeg',
-      '../../../../imagens/produtos/desktop/pc_8_3.jpeg',
-      '../../../../imagens/produtos/desktop/pc_8_4.jpeg'
+      '../../../../imagens/produtos/desktop/pc_8_img_1.jpeg',
+      '../../../../imagens/produtos/desktop/pc_8_img_2.jpeg',
+      '../../../../imagens/produtos/desktop/pc_8_img_3.jpeg',
+      '../../../../imagens/produtos/desktop/pc_8_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -189,4 +189,3 @@ function formatPrice(price) {
 function getProductById(id) {
   return products.find(product => product.id === id);
 }
-
