@@ -10,13 +10,13 @@ const products = [
     category: 'MOUSE',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_mouse.html?id=1',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_1_img_1.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_1_img_2.jpeg',
+    image_1: '../../../../imagens/produtos/mouse/mouse_1_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/mouse/mouse_1_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_1_img_1.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_1_img_2.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_1_img_3.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_1_img_4.jpeg'
+      '../../../../imagens/produtos/mouse/mouse_1_img_1.jpeg',
+      '../../../../imagens/produtos/mouse/mouse_1_img_2.jpeg',
+      '../../../../imagens/produtos/mouse/mouse_1_img_3.jpeg',
+      '../../../../imagens/produtos/mouse/mouse_1_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -31,13 +31,13 @@ const products = [
     category: 'MOUSE',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_mouse.html?id=2',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_2_img_1.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_2_img_2.jpeg',
+    image_1: '../../../../imagens/produtos/mouse/mouse_1_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/mouse/mouse_1_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_2_img_1.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_2_img_2.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_2_img_3.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_2_img_4.jpeg'
+      '../../../../imagens/produtos/mouse/mouse_1_img_1.jpeg',
+      '../../../../imagens/produtos/mouse/mouse_1_img_2.jpeg',
+      '../../../../imagens/produtos/mouse/mouse_1_img_3.jpeg',
+      '../../../../imagens/produtos/mouse/mouse_1_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -52,13 +52,13 @@ const products = [
     category: 'MOUSE',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_mouse.html?id=3',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_3_img_1.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_3_img_2.jpeg',
+    image_1: '../../../../imagens/produtos/mouse/mouse_1_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/mouse/mouse_1_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_3_img_1.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_3_img_2.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_3_img_3.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_3_img_4.jpeg'
+      '../../../../imagens/produtos/mouse/mouse_1_img_1.jpeg',
+      '../../../../imagens/produtos/mouse/mouse_1_img_2.jpeg',
+      '../../../../imagens/produtos/mouse/mouse_1_img_3.jpeg',
+      '../../../../imagens/produtos/mouse/mouse_1_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -73,13 +73,13 @@ const products = [
     category: 'MOUSE',
     description: 'PC-GAMER',
     link: '../../../pagesProduct/pageProduct/products/page_product_mouse.html?id=4',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_4_img_1.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_4_img_2.jpeg',
+    image_1: '../../../../imagens/produtos/mouse/mouse_1_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/mouse/mouse_1_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_4_img_1.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_4_img_2.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_4_img_3.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/439jsnfdb/mouse_4_img_4.jpeg'
+      '../../../../imagens/produtos/mouse/mouse_1_img_1.jpeg',
+      '../../../../imagens/produtos/mouse/mouse_1_img_2.jpeg',
+      '../../../../imagens/produtos/mouse/mouse_1_img_3.jpeg',
+      '../../../../imagens/produtos/mouse/mouse_1_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -105,3 +105,4 @@ function formatPrice(price) {
 function getProductById(id) {
   return products.find(product => product.id === id);
 }
+
