@@ -10,13 +10,13 @@ const products = [
     category: 'CADEIRA GAMER',
     description: 'COUGAR',
     link: '../../../pagesProduct/pageProduct/products/page_product_gamingChair.html?id=1',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_1_img_1_.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_1_img_2_.jpeg',
+    image_1: '../../../../imagens/produtos/gamingChair/gamingChair_1_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/gamingChair/gamingChair_1_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_1_img_1_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_1_img_2_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_1_img_3_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_1_img_4_.jpeg'
+      '../../../../imagens/produtos/gamingChair/gamingChair_1_img_1.jpeg',
+      '../../../../imagens/produtos/gamingChair/gamingChair_1_img_2.jpeg',
+      '../../../../imagens/produtos/gamingChair/gamingChair_1_img_3.jpeg',
+      '../../../../imagens/produtos/gamingChair/gamingChair_1_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -31,13 +31,13 @@ const products = [
     category: 'CADEIRA GAMER',
     description: 'MANCER',
     link: '../../../pagesProduct/pageProduct/products/page_product_gamingChair.html?id=2',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_2_img_1_.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_2_img_2_.jpeg',
+    image_1: '../../../../imagens/produtos/gamingChair/gamingChair_2_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/gamingChair/gamingChair_2_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_2_img_1_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_2_img_2_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_2_img_3_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_2_img_4_.jpeg'
+      '../../../../imagens/produtos/gamingChair/gamingChair_2_img_1.jpeg',
+      '../../../../imagens/produtos/gamingChair/gamingChair_2_img_2.jpeg',
+      '../../../../imagens/produtos/gamingChair/gamingChair_2_img_3.jpeg',
+      '../../../../imagens/produtos/gamingChair/gamingChair_2_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -52,13 +52,13 @@ const products = [
     category: 'CADEIRA GAMER',
     description: 'COUGAR',
     link: '../../../pagesProduct/pageProduct/products/page_product_gamingChair.html?id=3',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_3_img_1_.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_3_img_2_.jpeg',
+    image_1: '../../../../imagens/produtos/gamingChair/gamingChair_3_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/gamingChair/gamingChair_3_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_3_img_1_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_3_img_2_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_3_img_3_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_3_img_4_.jpeg'
+      '../../../../imagens/produtos/gamingChair/gamingChair_3_img_1.jpeg',
+      '../../../../imagens/produtos/gamingChair/gamingChair_3_img_2.jpeg',
+      '../../../../imagens/produtos/gamingChair/gamingChair_3_img_3.jpeg',
+      '../../../../imagens/produtos/gamingChair/gamingChair_3_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -73,13 +73,13 @@ const products = [
     category: 'CADEIRA GAMER',
     description: 'PICHAU',
     link: '../../../pagesProduct/pageProduct/products/page_product_gamingChair.html?id=4',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_4_img_1_.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_4_img_2_.jpeg',
+    image_1: '../../../../imagens/produtos/gamingChair/gamingChair_4_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/gamingChair/gamingChair_4_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_4_img_1_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_4_img_2_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_4_img_3_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43ae7bmp5/gamingChair_4_img_4_.jpeg'
+      '../../../../imagens/produtos/gamingChair/gamingChair_4_img_1.jpeg',
+      '../../../../imagens/produtos/gamingChair/gamingChair_4_img_2.jpeg',
+      '../../../../imagens/produtos/gamingChair/gamingChair_4_img_3.jpeg',
+      '../../../../imagens/produtos/gamingChair/gamingChair_4_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -105,3 +105,4 @@ function formatPrice(price) {
 function getProductById(id) {
   return products.find(product => product.id === id);
 }
+
