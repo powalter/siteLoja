@@ -10,13 +10,13 @@ const products = [
     category: 'COOLER',
     description: 'THERMALRIGHT',
     link: '../../../pagesProduct/pageProduct/products/page_product_cooler.html?id=1',
-    image_1: '../../../../imagens/produtos/cooler/cooler_1_img_1.jpeg',
-    image_2: '../../../../imagens/produtos/cooler/cooler_1_img_2.jpeg',
+    image_1: '../../../../imagens/produtos/cooler/cooler_1_img_1_.jpeg',
+    image_2: '../../../../imagens/produtos/cooler/cooler_1_img_2_.jpeg',
     images: [
-      '../../../../imagens/produtos/cooler/cooler_1_img_1.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_2.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_3.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_4.jpeg'
+      '../../../../imagens/produtos/cooler/cooler_1_img_1_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_1_img_2_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_1_img_3_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_1_img_4_.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -31,13 +31,13 @@ const products = [
     category: 'COOLER',
     description: 'CORSAIR',
     link: '../../../pagesProduct/pageProduct/products/page_product_cooler.html?id=2',
-    image_1: '../../../../imagens/produtos/cooler/cooler_1_img_1.jpeg',
-    image_2: '../../../../imagens/produtos/cooler/cooler_1_img_2.jpeg',
+    image_1: '../../../../imagens/produtos/cooler/cooler_1_img_1_.jpeg',
+    image_2: '../../../../imagens/produtos/cooler/cooler_1_img_2_.jpeg',
     images: [
-      '../../../../imagens/produtos/cooler/cooler_1_img_1.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_2.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_3.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_4.jpeg'
+      '../../../../imagens/produtos/cooler/cooler_1_img_1_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_1_img_2_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_1_img_3_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_1_img_4_.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -52,13 +52,13 @@ const products = [
     category: 'COOLER',
     description: 'ASUS',
     link: '../../../pagesProduct/pageProduct/products/page_product_cooler.html?id=3',
-    image_1: '../../../../imagens/produtos/cooler/cooler_1_img_1.jpeg',
-    image_2: '../../../../imagens/produtos/cooler/cooler_1_img_2.jpeg',
+    image_1: '../../../../imagens/produtos/cooler/cooler_1_img_1_.jpeg',
+    image_2: '../../../../imagens/produtos/cooler/cooler_1_img_2_.jpeg',
     images: [
-      '../../../../imagens/produtos/cooler/cooler_1_img_1.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_2.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_3.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_4.jpeg'
+      '../../../../imagens/produtos/cooler/cooler_1_img_1_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_1_img_2_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_1_img_3_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_1_img_4_.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -73,13 +73,13 @@ const products = [
     category: 'COOLER',
     description: 'ASUS',
     link: '../../../pagesProduct/pageProduct/products/page_product_cooler.html?id=4',
-    image_1: '../../../../imagens/produtos/cooler/cooler_1_img_1.jpeg',
-    image_2: '../../../../imagens/produtos/cooler/cooler_1_img_2.jpeg',
+    image_1: '../../../../imagens/produtos/cooler/cooler_1_img_1_.jpeg',
+    image_2: '../../../../imagens/produtos/cooler/cooler_1_img_2_.jpeg',
     images: [
-      '../../../../imagens/produtos/cooler/cooler_1_img_1.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_2.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_3.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_4.jpeg'
+      '../../../../imagens/produtos/cooler/cooler_1_img_1_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_1_img_2_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_1_img_3_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_1_img_4_.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
