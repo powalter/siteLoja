@@ -31,13 +31,13 @@ const products = [
     category: 'COOLER',
     description: 'CORSAIR',
     link: '../../../pagesProduct/pageProduct/products/page_product_cooler.html?id=2',
-    image_1: '../../../../imagens/produtos/cooler/cooler_1_img_1_.jpeg',
-    image_2: '../../../../imagens/produtos/cooler/cooler_1_img_2_.jpeg',
+    image_1: '../../../../imagens/produtos/cooler/cooler_2_img_1_.jpeg',
+    image_2: '../../../../imagens/produtos/cooler/cooler_2_img_2_.jpeg',
     images: [
-      '../../../../imagens/produtos/cooler/cooler_1_img_1_.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_2_.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_3_.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_4_.jpeg'
+      '../../../../imagens/produtos/cooler/cooler_2_img_1_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_2_img_2_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_2_img_3_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_2_img_4_.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -52,13 +52,13 @@ const products = [
     category: 'COOLER',
     description: 'ASUS',
     link: '../../../pagesProduct/pageProduct/products/page_product_cooler.html?id=3',
-    image_1: '../../../../imagens/produtos/cooler/cooler_1_img_1_.jpeg',
-    image_2: '../../../../imagens/produtos/cooler/cooler_1_img_2_.jpeg',
+    image_1: '../../../../imagens/produtos/cooler/cooler_3_img_1_.jpeg',
+    image_2: '../../../../imagens/produtos/cooler/cooler_3_img_2_.jpeg',
     images: [
-      '../../../../imagens/produtos/cooler/cooler_1_img_1_.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_2_.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_3_.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_4_.jpeg'
+      '../../../../imagens/produtos/cooler/cooler_3_img_1_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_3_img_2_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_3_img_3_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_3_img_4_.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -73,13 +73,13 @@ const products = [
     category: 'COOLER',
     description: 'ASUS',
     link: '../../../pagesProduct/pageProduct/products/page_product_cooler.html?id=4',
-    image_1: '../../../../imagens/produtos/cooler/cooler_1_img_1_.jpeg',
-    image_2: '../../../../imagens/produtos/cooler/cooler_1_img_2_.jpeg',
+    image_1: '../../../../imagens/produtos/cooler/cooler_4_img_1_.jpeg',
+    image_2: '../../../../imagens/produtos/cooler/cooler_4_img_2_.jpeg',
     images: [
-      '../../../../imagens/produtos/cooler/cooler_1_img_1_.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_2_.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_3_.jpeg',
-      '../../../../imagens/produtos/cooler/cooler_1_img_4_.jpeg'
+      '../../../../imagens/produtos/cooler/cooler_4_img_1_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_4_img_2_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_4_img_3_.jpeg',
+      '../../../../imagens/produtos/cooler/cooler_4_img_4_.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -105,4 +105,5 @@ function formatPrice(price) {
 function getProductById(id) {
   return products.find(product => product.id === id);
 }
+
 
