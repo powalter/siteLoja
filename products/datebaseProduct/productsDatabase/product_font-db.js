@@ -10,13 +10,13 @@ const products = [
     category: 'FONTE',
     description: 'ASUS',
     link: '../../../pagesProduct/pageProduct/products/page_product_font.html?id=1',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_1_img_1_.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_1_img_2_.jpeg',
+    image_1: '../../../../imagens/produtos/font/font_1_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/font/font_1_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_1_img_1_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_1_img_2_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_1_img_3_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_1_img_4_.jpeg'
+      '../../../../imagens/produtos/font/font_1_img_1.jpeg',
+      '../../../../imagens/produtos/font/font_1_img_2.jpeg',
+      '../../../../imagens/produtos/font/font_1_img_3.jpeg',
+      '../../../../imagens/produtos/font/font_1_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -31,13 +31,13 @@ const products = [
     category: 'FONTE',
     description: 'PRIME',
     link: '../../../pagesProduct/pageProduct/products/page_product_font.html?id=2',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_2_img_1_.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_2_img_2_.jpeg',
+    image_1: '../../../../imagens/produtos/font/font_2_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/font/font_2_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_2_img_1_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_2_img_2_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_2_img_3_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_2_img_4_.jpeg'
+      '../../../../imagens/produtos/font/font_2_img_1.jpeg',
+      '../../../../imagens/produtos/font/font_2_img_2.jpeg',
+      '../../../../imagens/produtos/font/font_2_img_3.jpeg',
+      '../../../../imagens/produtos/font/font_2_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -52,13 +52,13 @@ const products = [
     category: 'FONTE',
     description: 'ASUS',
     link: '../../../pagesProduct/pageProduct/products/page_product_font.html?id=3',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_3_img_1_.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_3_img_2_.jpeg',
+    image_1: '../../../../imagens/produtos/font/font_3_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/font/font_3_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_3_img_1_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_3_img_2_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_3_img_3_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_3_img_4_.jpeg'
+      '../../../../imagens/produtos/font/font_3_img_1.jpeg',
+      '../../../../imagens/produtos/font/font_3_img_2.jpeg',
+      '../../../../imagens/produtos/font/font_3_img_3.jpeg',
+      '../../../../imagens/produtos/font/font_3_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -73,13 +73,13 @@ const products = [
     category: 'FONTE',
     description: 'ASUS-ROG',
     link: '../../../pagesProduct/pageProduct/products/page_product_font.html?id=4',
-    image_1: 'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_4_img_1_.jpeg',
-    image_2: 'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_4_img_2_.jpeg',
+    image_1: '../../../../imagens/produtos/font/font_4_img_1.jpeg',
+    image_2: '../../../../imagens/produtos/font/font_4_img_2.jpeg',
     images: [
-      'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_4_img_1_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_4_img_2_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_4_img_3_.jpeg',
-      'https://assets.onecompiler.app/42wu6ajnx/43a87b76p/font_4_img_4_.jpeg'
+      '../../../../imagens/produtos/font/font_4_img_1.jpeg',
+      '../../../../imagens/produtos/font/font_4_img_2.jpeg',
+      '../../../../imagens/produtos/font/font_4_img_3.jpeg',
+      '../../../../imagens/produtos/font/font_4_img_4.jpeg'
     ],
     detailedDescription: 'Carregando . . .'
   },
@@ -105,3 +105,4 @@ function formatPrice(price) {
 function getProductById(id) {
   return products.find(product => product.id === id);
 }
+
