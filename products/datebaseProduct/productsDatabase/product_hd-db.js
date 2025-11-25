@@ -9,7 +9,7 @@ const products = [
     discountOffer: 15,
     category: 'HDD-SSD',
     description: 'Corsair',
-    link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=1',
+    link: '../../../pagesProduct/pageProduct/products/page_product_hd.html?id=1',
     image_1: '../../../../imagens/produtos/hd/hd_ssd_1_1.jpeg',
     image_2: '../../../../imagens/produtos/hd/hd_ssd_1_2.jpeg',
     images: [
@@ -30,7 +30,7 @@ const products = [
     discountOffer: 15,
     category: 'HDD-SSD',
     description: 'Samsung',
-    link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=2',
+    link: '../../../pagesProduct/pageProduct/products/page_product_hd.html?id=2',
     image_1: '../../../../imagens/produtos/hd/hd_ssd_2_1.jpeg',
     image_2: '../../../../imagens/produtos/hd/hd_ssd_2_2.jpeg',
     images: [
@@ -51,7 +51,7 @@ const products = [
     discountOffer: 15,
     category: 'HDD-SSD',
     description: 'HP',
-    link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=3',
+    link: '../../../pagesProduct/pageProduct/products/page_product_hd.html?id=3',
     image_1: '../../../../imagens/produtos/hd/hd_ssd_3_1.jpeg',
     image_2: '../../../../imagens/produtos/hd/hd_ssd_3_2.jpeg',
     images: [
@@ -72,7 +72,7 @@ const products = [
     discountOffer: 15,
     category: 'HDD-SSD',
     description: 'Asus',
-    link: '../../../pagesProduct/pageProduct/products/page_product_case.html?id=4',
+    link: '../../../pagesProduct/pageProduct/products/page_product_hd.html?id=4',
     image_1: '../../../../imagens/produtos/hd/hd_ssd_4_1.jpeg',
     image_2: '../../../../imagens/produtos/hd/hd_ssd_4_2.jpeg',
     images: [
@@ -105,7 +105,6 @@ function formatPrice(price) {
 function getProductById(id) {
   return products.find(product => product.id === id);
 }
-
 
 
 
