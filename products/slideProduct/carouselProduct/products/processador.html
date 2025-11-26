@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0' name='viewport' />
+    <title>Produto</title>
+        
+    <!-- ESTILO DO PRODUTO -->
+    <link rel="stylesheet" href="../product_style.css" />
+
+    <!-- ESTILO DA PAGINA -->
+    <link rel="stylesheet" href="../../../../colorPalette.css" />
+    
+  </head>
+  <body>
+    <!--                                                            -->
+    
+    
+    
+    
+    <!-- Mensagem de erro caso o JavaScript não esteja disponível ou o produto não seja encontrado -->
+    <noscript>
+      <p>O JavaScript está desativado em seu navegador. Para visualizar os detalhes do produto, habilite o JavaScript.</p>
+    </noscript>
+  
+    <!-- Contêiner onde o produto será inserido dinamicamente -->
+    <div id="product-container" role="main">
+      <!-- O produto será inserido aqui dinamicamente -->
+      <p>Carregando detalhes do produto...</p>
+    </div>
+    
+    
+    
+    
+    
+    <!--                                                            -->
+    
+    <!-- Carrega o banco de dados -->
+    <script src="../../../datebaseProduct/productsDatabase/product_processador-db.js"></script>
+    
+    <!-- Carrega a renderização do produto -->
+    <script src="../slide_product_render.js"></script>
+
+  </body>
+</html>
